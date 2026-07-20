@@ -3,47 +3,54 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Level My RV — Free RV Leveling Block Calculator | S'more Outdoors</title>
+<title>Level My RV — Free RV Leveling Block Calculator | S'more's Outdoors</title>
 <meta name="description" content="Match two bubble levels on your camper van, motorhome, or truck camper and get exact blocks-per-tire. Look up your rig by year, make, and model, or enter your own measurements. Free, no signup.">
 <link rel="canonical" href="https://smoreoutdoors.com/level-my-rv/">
 <meta property="og:title" content="Level My RV — Free RV Leveling Block Calculator">
 <meta property="og:description" content="Match two bubble levels and get exact blocks-per-tire for any four-wheeled RV.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://smoreoutdoors.com/level-my-rv/">
-<meta name="theme-color" content="#3f9b1e">
+<meta property="og:image" content="https://smoreoutdoors.com/images/og-image.png">
+<meta name="theme-color" content="#1f5c37">
+<link rel="icon" type="image/png" sizes="512x512" href="../images/favicon-512.png">
+<link rel="icon" type="image/png" sizes="180x180" href="../images/favicon-180.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16.png">
+<link rel="apple-touch-icon" href="../images/apple-touch-icon.png">
 <style>
   :root {
-    --ground:#f4f3ec; --card:#ffffff; --ink:#22271f; --ink-soft:#5d6355; --line:#d9d8cc;
-    --vial:#3f9b1e; --vial-soft:#e3f2d8; --block:#e8842c; --block-soft:#fbe9d4;
-    --warn:#c23b22; --warn-soft:#f7ddd6; --brand:#2c6b8f; --brand-soft:#e2eef4;
+    --ground:#f5f1e2; --card:#fffdf8; --ink:#1c2318; --ink-soft:#5a6152; --line:#1c2318;
+    --vial:#1f5c37; --vial-soft:#dcefdf; --block:#e8620f; --block-soft:#fbe0cc;
+    --warn:#c23b22; --warn-soft:#f7ddd6; --brand:#2f80a3; --brand-soft:#dbeef5;
     --readout:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
   }
   @media (prefers-color-scheme: dark) {
-    :root { --ground:#171a14; --card:#20241c; --ink:#e8e9e0; --ink-soft:#a9ae9e; --line:#3a3f33;
-            --vial:#8fd14f; --vial-soft:#2a3521; --block:#f0954a; --block-soft:#3d2c1a; --warn:#ef7a63; --warn-soft:#45231c;
-            --brand:#7cb8d9; --brand-soft:#1c2c34; }
+    :root { --ground:#12160f; --card:#1b2117; --ink:#eef1e6; --ink-soft:#a9b09c; --line:#eef1e6;
+            --vial:#5cbf7e; --vial-soft:#1e3324; --block:#ff9a52; --block-soft:#3d2413; --warn:#ef7a63; --warn-soft:#45231c;
+            --brand:#6fc0e0; --brand-soft:#173038; }
   }
-  :root[data-theme="light"]{--ground:#f4f3ec;--card:#fff;--ink:#22271f;--ink-soft:#5d6355;--line:#d9d8cc;--vial:#3f9b1e;--vial-soft:#e3f2d8;--block:#e8842c;--block-soft:#fbe9d4;--warn:#c23b22;--warn-soft:#f7ddd6;--brand:#2c6b8f;--brand-soft:#e2eef4;}
-  :root[data-theme="dark"]{--ground:#171a14;--card:#20241c;--ink:#e8e9e0;--ink-soft:#a9ae9e;--line:#3a3f33;--vial:#8fd14f;--vial-soft:#2a3521;--block:#f0954a;--block-soft:#3d2c1a;--warn:#ef7a63;--warn-soft:#45231c;--brand:#7cb8d9;--brand-soft:#1c2c34;}
+  :root[data-theme="light"]{--ground:#f5f1e2;--card:#fffdf8;--ink:#1c2318;--ink-soft:#5a6152;--line:#1c2318;--vial:#1f5c37;--vial-soft:#dcefdf;--block:#e8620f;--block-soft:#fbe0cc;--warn:#c23b22;--warn-soft:#f7ddd6;--brand:#2f80a3;--brand-soft:#dbeef5;}
+  :root[data-theme="dark"]{--ground:#12160f;--card:#1b2117;--ink:#eef1e6;--ink-soft:#a9b09c;--line:#eef1e6;--vial:#5cbf7e;--vial-soft:#1e3324;--block:#ff9a52;--block-soft:#3d2413;--warn:#ef7a63;--warn-soft:#45231c;--brand:#6fc0e0;--brand-soft:#173038;}
   * { box-sizing:border-box; }
   html { background:var(--ground); }
   body { margin:0; padding:0 0 40px; background:var(--ground); color:var(--ink);
     font:16px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif; }
   a { color:var(--brand); }
-  main { width:100%; max-width:820px; margin:0 auto; padding:18px 14px 0; display:flex; flex-direction:column; gap:16px; }
+  main { width:100%; max-width:820px; margin:0 auto; padding:14px 14px 0; display:flex; flex-direction:column; gap:12px; }
 
-  .brandbar { background:var(--card); border-bottom:1px solid var(--line); }
+  .brandbar { background:var(--card); border-bottom:3px solid var(--line); }
   .brandbar-inner { max-width:820px; margin:0 auto; padding:10px 14px; display:flex; align-items:center; justify-content:space-between; gap:10px; }
   .wordmark { font-weight:800; font-size:15px; letter-spacing:-0.01em; color:var(--ink); text-decoration:none; display:flex; align-items:center; gap:7px; }
-  .wordmark .mark { width:20px; height:20px; border-radius:6px; background:linear-gradient(160deg,var(--vial),var(--brand)); display:inline-block; }
+  .wordmark .mark { width:26px; height:26px; display:inline-block; }
+  .wordmark .mark img { width:100%; height:100%; object-fit:contain; display:block; }
   .brandbar .more { font-size:12.5px; color:var(--ink-soft); }
 
   h1 { font-size:28px; font-weight:800; margin:0; letter-spacing:-0.01em; text-wrap:balance; }
   .sub { color:var(--ink-soft); font-size:15px; margin:3px 0 0; }
-  section { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:14px 14px 16px; }
-  .eyebrow { font-size:11px; font-weight:700; letter-spacing:0.09em; text-transform:uppercase; color:var(--ink-soft); margin:0 0 6px; }
-  .note { font-size:15px; line-height:1.45; color:var(--ink-soft); margin:0 0 16px;
-    background:var(--vial-soft); border-radius:8px; padding:11px 13px; }
+  section { background:var(--card); border:3px solid var(--line); border-radius:12px; padding:12px 12px 14px; box-shadow:4px 4px 0 var(--vial-soft); }
+  .eyebrow { font-size:11px; font-weight:700; letter-spacing:0.09em; text-transform:uppercase; color:var(--ink-soft); margin:0 0 5px; }
+  .note { font-size:14.5px; line-height:1.4; color:var(--ink-soft); margin:0 0 10px;
+    background:var(--vial-soft); border-radius:8px; padding:9px 11px; }
   .note b { color:var(--ink); font-weight:700; }
 
   /* --- vehicle picker --- */
@@ -69,27 +76,48 @@
   .pickbtn { background:none; border:none; color:var(--brand); font:600 13px system-ui; cursor:pointer; padding:0; text-decoration:underline; }
   .picker-foot { margin-top:8px; font-size:13px; color:var(--ink-soft); }
 
+  .lookup-cols { display:flex; flex-wrap:wrap; gap:16px; align-items:flex-start; }
+  .lookup-picker { flex:0 1 260px; min-width:0; }
+  .lookup-cfg { flex:1 1 260px; min-width:0; }
+  .lookup-cfg details { border-top:none; margin-top:0; padding-top:0; }
+  .suggest-details { margin-top:14px !important; padding-top:12px !important; border-top:1px solid var(--line) !important; }
+  .suggest-details summary { font-size:12.5px; }
+  .suggest-note { font-size:12.5px; color:var(--ink-soft); margin:8px 0 10px; line-height:1.4; }
+  .suggest-grid { display:grid; grid-template-columns:1fr 1fr; gap:4px 10px; margin-bottom:10px; }
+  .suggest-grid label { font-size:12px; font-weight:700; color:var(--ink-soft); align-self:end; }
+  .suggest-grid input { padding:8px 9px; border:1.5px solid var(--line); border-radius:7px; background:var(--card); color:var(--ink); font:600 13.5px system-ui; }
+  .suggest-grid input:focus-visible { outline:2px solid var(--vial); outline-offset:1px; }
+  .suggest-msg { font-size:12.5px; margin:8px 0 0; min-height:16px; }
+  .suggest-msg.warn { color:var(--warn); }
+  .suggest-msg.ok { color:var(--vial); }
+
   .lvlblk + .lvlblk { margin-top:16px; }
   .lvlttl { font-size:13.5px; font-weight:600; margin:0 0 6px; }
   .lvlttl small { display:block; font-weight:400; color:var(--ink-soft); }
-  .rig { position:relative; width:100%; margin:8px 0 12px; }
+  .rig { position:relative; width:100%; margin:6px 0 8px; }
   .vanbig { display:block; width:100%; height:auto; }
   svg.level { position:absolute; touch-action:none; cursor:grab; filter:drop-shadow(0 2px 4px rgba(0,0,0,.35)); }
   svg.level:active { cursor:grabbing; }
   svg.level:focus-visible { outline:2px solid var(--vial); outline-offset:2px; }
-  .lv-roll  { left:14%; top:58%; width:36%; transform:none; transform-origin:center; }
-  .lv-pitch { left:56%; top:47.5%; width:29%; transform:skewY(-20deg); transform-origin:center; }
-  .ros { display:flex; flex-direction:column; gap:12px; margin-top:4px; }
-  .ro { font-size:16px; display:flex; align-items:center; gap:9px; flex-wrap:wrap; }
-  .ro .rok { color:var(--ink-soft); font-weight:600; flex:1 1 100%; }
-  .step { flex:none; width:52px; height:52px; border:1.5px solid var(--line); border-radius:12px;
-    background:var(--card); color:var(--ink); font:700 26px/1 system-ui; cursor:pointer;
+  .lv-roll  { left:14%; top:48.4%; width:36%; transform:none; transform-origin:center; }
+  .lv-pitch { left:56%; top:35.3%; width:29%; transform:skewY(-20deg); transform-origin:center; }
+  .ros { display:flex; flex-direction:column; align-items:center; gap:6px; margin-top:0; }
+  .ro { display:flex; flex-direction:column; align-items:center; gap:1px; }
+  .ro .rok { font-size:12.5px; font-weight:700; letter-spacing:.02em; text-transform:uppercase; color:var(--ink-soft); }
+  .rorow { display:flex; align-items:center; justify-content:center; gap:7px; }
+  .step { flex:none; width:42px; height:42px; border:1.5px solid var(--line); border-radius:11px;
+    background:var(--card); color:var(--ink); font:700 22px/1 system-ui; cursor:pointer;
     -webkit-tap-highlight-color:transparent; touch-action:manipulation; }
   .step:active { background:var(--vial-soft); border-color:var(--vial); }
   .step:focus-visible { outline:2px solid var(--vial); outline-offset:2px; }
-  .rov { font:800 24px/1.2 var(--readout); color:var(--ink); min-width:74px; text-align:center; font-variant-numeric:tabular-nums; }
+  .rov { font:800 20px/1.2 var(--readout); color:var(--ink); min-width:62px; text-align:center; font-variant-numeric:tabular-nums; }
   .rov.level { color:var(--vial); }
-  .ro .dir { font:600 14px system-ui; color:var(--ink-soft); flex:1 1 auto; }
+  .reset { flex:none; width:34px; height:34px; border:1.5px solid var(--line); border-radius:10px;
+    background:var(--card); color:var(--ink-soft); font-size:16px; line-height:1; cursor:pointer;
+    -webkit-tap-highlight-color:transparent; touch-action:manipulation; }
+  .reset:active { background:var(--vial-soft); border-color:var(--vial); color:var(--vial); }
+  .reset:focus-visible { outline:2px solid var(--vial); outline-offset:2px; }
+  .ro .dir { font:600 12.5px system-ui; color:var(--ink-soft); min-height:15px; }
 
   .van-wrap { display:flex; justify-content:center; padding:10px 0 4px; }
   .van { position:relative; width:340px; height:500px; border:3px solid var(--line); border-radius:80px 80px 44px 44px; max-width:100%; }
@@ -146,7 +174,7 @@
 <!-- shared SVG gradient defs -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
   <linearGradient id="vialg" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0" stop-color="#8ff059"/><stop offset="0.5" stop-color="#4bbf28"/><stop offset="1" stop-color="#2c8b18"/>
+    <stop offset="0" stop-color="#7fd89c"/><stop offset="0.5" stop-color="#3f9b5c"/><stop offset="1" stop-color="#1f5c37"/>
   </linearGradient>
   <radialGradient id="bub" cx="0.4" cy="0.35" r="0.75">
     <stop offset="0" stop-color="#fbffe9"/><stop offset="0.6" stop-color="#c9ee9d"/><stop offset="1" stop-color="#8ccc5a"/>
@@ -156,7 +184,7 @@
 <body>
 
 <div class="brandbar"><div class="brandbar-inner">
-  <a class="wordmark" href="../"><span class="mark" aria-hidden="true"></span>S'more Outdoors</a>
+  <a class="wordmark" href="../"><span class="mark" aria-hidden="true"><img src="../images/favicon-180.png" alt="" width="26" height="26"></span>S'more's Outdoors</a>
   <span class="more">More RV tools coming soon</span>
 </div></div>
 
@@ -172,41 +200,64 @@
     <p class="eyebrow">1 &middot; Find your rig</p>
     <p class="note">Search your <b>year, make, and model</b> to auto-fill wheelbase and track width from our cache. Can't find it, or driving something modified? <b>Enter your own measurements</b> in the fields below — they're always yours to edit.</p>
 
-    <div class="picker-row">
-      <label for="makeInput">Make</label>
-      <input type="text" id="makeInput" placeholder="Start typing, e.g. “Ford”" autocomplete="off" aria-expanded="false" role="combobox" aria-controls="makeList">
-      <div class="ac-list" id="makeList" role="listbox"></div>
-    </div>
-    <div class="picker-row">
-      <label for="modelInput">Model</label>
-      <input type="text" id="modelInput" placeholder="Select a make first" autocomplete="off" disabled aria-expanded="false" role="combobox" aria-controls="modelList">
-      <div class="ac-list" id="modelList" role="listbox"></div>
-    </div>
-    <div class="picker-grid">
-      <div class="picker-row">
-        <label for="yearSelect">Year</label>
-        <select id="yearSelect" disabled><option value="">Select a model first</option></select>
-      </div>
-      <div class="picker-row" id="variantRow" style="display:none">
-        <label for="variantSelect">Configuration</label>
-        <select id="variantSelect"><option value="">Select one</option></select>
-      </div>
-    </div>
+    <div class="lookup-cols">
+      <div class="lookup-picker">
+        <div class="picker-row">
+          <label for="makeInput">Make</label>
+          <input type="text" id="makeInput" placeholder="Start typing, e.g. “Ford”" autocomplete="off" aria-expanded="false" role="combobox" aria-controls="makeList">
+          <div class="ac-list" id="makeList" role="listbox"></div>
+        </div>
+        <div class="picker-row">
+          <label for="modelInput">Model</label>
+          <input type="text" id="modelInput" placeholder="Select a make first" autocomplete="off" disabled aria-expanded="false" role="combobox" aria-controls="modelList">
+          <div class="ac-list" id="modelList" role="listbox"></div>
+        </div>
+        <div class="picker-grid">
+          <div class="picker-row">
+            <label for="yearSelect">Year</label>
+            <select id="yearSelect" disabled><option value="">Select a model first</option></select>
+          </div>
+          <div class="picker-row" id="variantRow" style="display:none">
+            <label for="variantSelect">Configuration</label>
+            <select id="variantSelect"><option value="">Select one</option></select>
+          </div>
+        </div>
 
-    <div class="loaded-vehicle" id="loadedVehicle"></div>
-    <p class="picker-foot"><button class="pickbtn" id="clearVehicle" type="button">Clear vehicle &amp; start over</button></p>
-
-    <details open id="cfgDetails">
-      <summary>Wheelbase, track width &amp; block height</summary>
-      <div class="cfg">
-        <label for="wb">Wheelbase <small>front-axle-to-rear-axle, inches</small></label>
-        <input id="wb" type="number" step="0.1" min="60" max="260" value="120.5" inputmode="decimal">
-        <label for="tr">Track width <small>outside tire centers, inches</small></label>
-        <input id="tr" type="number" step="0.1" min="40" max="100" value="68" inputmode="decimal">
-        <label for="bh">Height per block <small>measure YOUR stack once — most curved blocks &asymp; 1.5"</small></label>
-        <input id="bh" type="number" step="0.05" min="0.25" max="4" value="1.5" inputmode="decimal">
+        <div class="loaded-vehicle" id="loadedVehicle"></div>
+        <p class="picker-foot"><button class="pickbtn" id="clearVehicle" type="button">Clear vehicle &amp; start over</button></p>
       </div>
-    </details>
+
+      <div class="lookup-cfg">
+        <details open id="cfgDetails">
+          <summary>Wheelbase, track width &amp; block height</summary>
+          <div class="cfg">
+            <label for="wb">Wheelbase <small>front-axle-to-rear-axle, inches</small></label>
+            <input id="wb" type="number" step="0.1" min="60" max="260" value="120.5" inputmode="decimal">
+            <label for="tr">Track width <small>outside tire centers, inches</small></label>
+            <input id="tr" type="number" step="0.1" min="40" max="100" value="68" inputmode="decimal">
+            <label for="bh">Height per block <small>measure YOUR stack once — most curved blocks &asymp; 1.5"</small></label>
+            <input id="bh" type="number" step="0.05" min="0.25" max="4" value="1.5" inputmode="decimal">
+          </div>
+        </details>
+
+        <details class="suggest-details">
+          <summary>Using your own measurements? Suggest this vehicle for our database</summary>
+          <p class="suggest-note">Help other campers — tell us the make, model, year, and configuration and we'll review it for the cache above. We'll use the wheelbase/track/block numbers you entered up top.</p>
+          <div class="suggest-grid">
+            <label for="sgMake">Make</label>
+            <input type="text" id="sgMake" placeholder="e.g. Ford">
+            <label for="sgModel">Model</label>
+            <input type="text" id="sgModel" placeholder="e.g. Transit">
+            <label for="sgYear">Year</label>
+            <input type="text" id="sgYear" placeholder="e.g. 2022" inputmode="numeric" maxlength="4">
+            <label for="sgVariant">Configuration</label>
+            <input type="text" id="sgVariant" placeholder="e.g. 148&quot; wheelbase, AWD">
+          </div>
+          <button class="pickbtn" id="suggestBtn" type="button">Submit for review</button>
+          <p class="suggest-msg" id="suggestMsg" role="status" aria-live="polite"></p>
+        </details>
+      </div>
+    </div>
   </section>
 
   <section aria-label="Level readings">
@@ -214,13 +265,13 @@
     <p class="note"><b>Drag each bubble</b> to match your real levels — it floats toward the <b>high</b> side. Put one bubble level on a flat spot at the <b>rear</b> of your rig (bumper, tailgate, back doors) for side-to-side (roll); put the other on a flat spot along the <b>side</b> for fore-aft (pitch).</p>
 
     <div class="rig">
-      <svg class="vanbig" viewBox="0 0 412 236" aria-hidden="true">
-        <ellipse cx="208" cy="216" rx="172" ry="12" fill="#000" opacity="0.06"/>
-        <polygon points="50,110 200,55 365,55 215,110" fill="#e9edf1" stroke="#737c88" stroke-width="2" stroke-linejoin="round"/>
-        <polygon points="215,110 365,55 365,150 215,205" fill="#b3bcc5" stroke="#737c88" stroke-width="2" stroke-linejoin="round"/>
-        <polygon points="50,110 215,110 215,205 50,205" fill="#d3dae1" stroke="#737c88" stroke-width="2" stroke-linejoin="round"/>
-        <text x="132" y="123" text-anchor="middle" font-family="system-ui" font-size="11" font-weight="700" fill="#79818c">REAR</text>
-        <text x="304" y="90" text-anchor="middle" font-family="system-ui" font-size="10" font-weight="700" fill="#5f6873" transform="rotate(-20 304 90)">SIDE</text>
+      <svg class="vanbig" viewBox="0 0 412 190" aria-hidden="true">
+        <ellipse cx="208" cy="171" rx="172" ry="12" fill="#000" opacity="0.06"/>
+        <polygon points="50,65 200,10 365,10 215,65" fill="#e9edf1" stroke="#737c88" stroke-width="2" stroke-linejoin="round"/>
+        <polygon points="215,65 365,10 365,105 215,160" fill="#b3bcc5" stroke="#737c88" stroke-width="2" stroke-linejoin="round"/>
+        <polygon points="50,65 215,65 215,160 50,160" fill="#d3dae1" stroke="#737c88" stroke-width="2" stroke-linejoin="round"/>
+        <text x="132" y="78" text-anchor="middle" font-family="system-ui" font-size="11" font-weight="700" fill="#79818c">REAR</text>
+        <text x="304" y="45" text-anchor="middle" font-family="system-ui" font-size="10" font-weight="700" fill="#5f6873" transform="rotate(-20 304 45)">SIDE</text>
       </svg>
       <svg class="level lv-roll" data-axis="roll" viewBox="0 0 320 96" tabindex="0" role="slider" aria-label="Side-to-side (roll) level, degrees" aria-valuemin="-7" aria-valuemax="7" aria-valuenow="0"></svg>
       <svg class="level lv-pitch" data-axis="pitch" viewBox="0 0 320 96" tabindex="0" role="slider" aria-label="Fore-aft (pitch) level, degrees" aria-valuemin="-7" aria-valuemax="7" aria-valuenow="0"></svg>
@@ -228,17 +279,23 @@
 
     <div class="ros">
       <div class="ro">
-        <span class="rok">Fore&ndash;aft (pitch) &middot; the SIDE level</span>
-        <button class="step" data-axis="pitch" data-d="-1" aria-label="Tilt pitch toward rear">&minus;</button>
-        <span class="rov level" data-role="readout" data-for="pitch">Level</span>
-        <button class="step" data-axis="pitch" data-d="1" aria-label="Tilt pitch toward front">+</button>
+        <span class="rok">Fore&ndash;aft (pitch)</span>
+        <div class="rorow">
+          <button class="step" data-axis="pitch" data-d="-1" aria-label="Tilt pitch toward rear">&minus;</button>
+          <span class="rov level" data-role="readout" data-for="pitch">Level</span>
+          <button class="step" data-axis="pitch" data-d="1" aria-label="Tilt pitch toward front">+</button>
+          <button class="reset" data-axis="pitch" data-role="reset" aria-label="Reset pitch to level" title="Reset to level">&#8634;</button>
+        </div>
         <span class="dir" data-dir-for="pitch"></span>
       </div>
       <div class="ro">
-        <span class="rok">Side&ndash;to&ndash;side (roll) &middot; the REAR level</span>
-        <button class="step" data-axis="roll" data-d="-1" aria-label="Tilt roll toward driver">&minus;</button>
-        <span class="rov level" data-role="readout" data-for="roll">Level</span>
-        <button class="step" data-axis="roll" data-d="1" aria-label="Tilt roll toward passenger">+</button>
+        <span class="rok">Side&ndash;to&ndash;side (roll)</span>
+        <div class="rorow">
+          <button class="step" data-axis="roll" data-d="-1" aria-label="Tilt roll toward driver">&minus;</button>
+          <span class="rov level" data-role="readout" data-for="roll">Level</span>
+          <button class="step" data-axis="roll" data-d="1" aria-label="Tilt roll toward passenger">+</button>
+          <button class="reset" data-axis="roll" data-role="reset" aria-label="Reset roll to level" title="Reset to level">&#8634;</button>
+        </div>
         <span class="dir" data-dir-for="roll"></span>
       </div>
     </div>
@@ -290,12 +347,12 @@
         <span class="gd">A pair — one for the rear, one for the side — is all this tool needs.</span>
       </a>
     </div>
-    <p class="affiliate-disclosure">As an Amazon Associate, S'more Outdoors earns from qualifying purchases. Product links are placeholders pending our Associates account approval.</p>
+    <p class="affiliate-disclosure">As an Amazon Associate, S'more's Outdoors earns from qualifying purchases. Product links are placeholders pending our Associates account approval.</p>
   </section>
 </main>
 
 <footer>
-  <div>Level My RV is a free tool from <a href="../">S'more Outdoors</a>. Vehicle data is best-effort — always verify against your owner's manual.</div>
+  <div>Level My RV is a free tool from <a href="../">S'more's Outdoors</a>. Vehicle data is best-effort — always verify against your owner's manual.</div>
   <div class="flinks">
     <a href="legal/terms.html">Terms</a>
     <a href="legal/privacy.html">Privacy</a>
@@ -412,6 +469,12 @@
     });
   });
 
+  document.querySelectorAll(".reset").forEach(function (b) {
+    b.addEventListener("click", function () {
+      setDeg(levelByAxis(b.dataset.axis), 0);
+    });
+  });
+
   function cfg(id, fallback) { var v = parseFloat(document.getElementById(id).value); return isFinite(v) && v > 0 ? v : fallback; }
 
   function render() {
@@ -517,6 +580,14 @@
     modelInput.focus();
   });
 
+  makeInput.addEventListener("input", function () {
+    if (makeInput.value !== vehicle.make) {
+      vehicle.make = null; vehicle.model = null; vehicle.year = null; vehicle.row = null;
+      modelInput.value = ""; modelInput.disabled = true; modelInput.placeholder = "Select a make first";
+      resetYearAndVariant();
+    }
+  });
+
   attachAutocomplete(modelInput, modelList, function (q) {
     return vehicle.make ? modelsMatching(vehicle.make, q) : [];
   }, function (model) {
@@ -583,6 +654,43 @@
     makeInput.value = ""; modelInput.value = ""; modelInput.disabled = true; modelInput.placeholder = "Select a make first";
     resetYearAndVariant();
     makeInput.focus();
+  });
+
+  // ---------- suggest-a-vehicle ----------
+  var suggestDetails = document.querySelector(".suggest-details");
+  var sgMake = document.getElementById("sgMake");
+  var sgModel = document.getElementById("sgModel");
+  var sgYear = document.getElementById("sgYear");
+  var sgVariant = document.getElementById("sgVariant");
+  var suggestMsg = document.getElementById("suggestMsg");
+
+  suggestDetails.addEventListener("toggle", function () {
+    if (!suggestDetails.open) return;
+    if (!sgMake.value && makeInput.value) sgMake.value = makeInput.value;
+    if (!sgModel.value && modelInput.value) sgModel.value = modelInput.value;
+    if (!sgYear.value && yearSelect.value) sgYear.value = yearSelect.value;
+  });
+
+  document.getElementById("suggestBtn").addEventListener("click", function () {
+    var make = sgMake.value.trim(), model = sgModel.value.trim(), year = sgYear.value.trim(), variant = sgVariant.value.trim();
+    if (!make || !model || !year || !variant) {
+      suggestMsg.textContent = "Make, model, year, and configuration are all required so we can add this to the database.";
+      suggestMsg.className = "suggest-msg warn";
+      return;
+    }
+    var wb = document.getElementById("wb").value, tr = document.getElementById("tr").value, bh = document.getElementById("bh").value;
+    var subject = "Level My RV vehicle suggestion: " + year + " " + make + " " + model;
+    var body = "Vehicle suggestion for the Level My RV database:\n\n" +
+      "Make: " + make + "\n" +
+      "Model: " + model + "\n" +
+      "Year: " + year + "\n" +
+      "Configuration: " + variant + "\n" +
+      "Wheelbase (in): " + wb + "\n" +
+      "Track width (in): " + tr + "\n" +
+      "Height per block (in): " + bh + "\n";
+    window.location.href = "mailto:support@smoreoutdoors.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+    suggestMsg.textContent = "Opening your email client to send this suggestion — thank you!";
+    suggestMsg.className = "suggest-msg ok";
   });
 
   render();

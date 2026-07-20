@@ -1,4 +1,4 @@
-# S'more Outdoors — robots.txt
+# S'more's Outdoors — robots.txt
 # Canonical domain: smoreoutdoors.com
 
 User-agent: *
