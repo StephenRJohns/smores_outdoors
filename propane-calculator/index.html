@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RV Propane Tank Duration Calculator | S'more's Outdoors</title>
+<meta name="author" content="S'more's Outdoors">
+<meta name="description" content="How long will your propane really last? Honest furnace duty-cycle math from tank size, furnace BTU, and the overnight low. Free, no signup.">
+<meta name="keywords" content="propane calculator, how long will propane last, 20 lb propane tank, RV furnace propane usage, propane duration, RV propane cost, winter camping propane, furnace duty cycle, BTU calculator RV">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="googlebot" content="index, follow">
+<link rel="canonical" href="https://smoreoutdoors.com/propane-calculator/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="S'more's Outdoors">
+<meta property="og:title" content="RV Propane Tank Duration Calculator — How Long Will Propane Last?">
+<meta property="og:description" content="Honest propane math: furnace duty cycle driven by outside temperature, plus water heater, stove, and fridge. Free, no signup.">
+<meta property="og:url" content="https://smoreoutdoors.com/propane-calculator/">
+<meta property="og:image" content="https://smoreoutdoors.com/images/og-image.png">
+<meta property="og:image:secure_url" content="https://smoreoutdoors.com/images/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="S'more's Outdoors — the toasted-marshmallow mascot with the brand name, for free RV camping tools.">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="RV Propane Tank Duration Calculator — How Long Will Propane Last?">
+<meta name="twitter:description" content="Honest propane math: furnace duty cycle driven by outside temperature, plus water heater, stove, and fridge. Free, no signup.">
+<meta name="twitter:image" content="https://smoreoutdoors.com/images/og-image.png">
+<meta name="twitter:image:alt" content="S'more's Outdoors — the toasted-marshmallow mascot with the brand name.">
+
+<!-- WebApplication schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Propane Tank Duration Calculator",
+  "url": "https://smoreoutdoors.com/propane-calculator/",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any (web browser)",
+  "offers": {
+    "@type": "Offer",
+    "price": 0,
+    "priceCurrency": "USD"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "S'more's Outdoors",
+    "url": "https://smoreoutdoors.com/"
+  },
+  "description": "Free calculator that estimates how many days your RV propane will last using your furnace's real duty cycle plus water heater, stove, and fridge use."
+}
+</script>
+
+<!-- BreadcrumbList schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://smoreoutdoors.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Propane Tank Duration Calculator",
+      "item": "https://smoreoutdoors.com/propane-calculator/"
+    }
+  ]
+}
+</script>
+
+<!-- FAQPage schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much propane does a 20 lb tank actually hold?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A properly filled 20 lb cylinder holds about 4.6 gallons of liquid propane — roughly 420,000 BTU of heat. Tanks are only ever filled to about 80% of their water capacity because liquid propane expands significantly as it warms; that headspace is a safety requirement, not shortchanging. Watch out for exchange-cabinet tanks at gas stations and big-box stores: many are filled to only 15 lb, which is about 3.5 gallons. The actual fill weight is printed on the label, so check it before you assume you're getting a full 20 lb."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why doesn't my furnace's real propane use match the \"continuous burn\" number?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because your furnace almost never runs continuously. The burner cycles on and off with the thermostat, and the fraction of each hour it actually fires is the duty cycle — driven by how much colder it is outside than your setpoint. A 30,000 BTU furnace at a 50% duty cycle burns propane like a 15,000 BTU appliance, which is why the continuous-burn hours quoted on blogs are so misleading. One thing the propane math hides: the furnace blower also draws serious 12 V power, often 5–8 amps whenever it runs, so on a boondocking trip your battery bank can give out before your propane does."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I know how much propane is left in my tank?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The most accurate method is to weigh the tank: subtract the tare weight (the empty weight, stamped as TW on the collar — typically 17–18 lb for a 20 lb cylinder) from the total, and what's left is your propane. The classic field trick is to pour warm water down the side and feel for where the metal turns cold — the liquid propane inside chills it at the liquid line, and on humid days a condensation or frost line can show up on its own. Stick-on magnetic gauges use the same temperature difference to show the level. One thing that doesn't work: a pressure gauge on the valve, because propane pressure is set by temperature, not by how much liquid is left — it reads nearly the same from full until the tank is almost empty."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will my propane stop working in extreme cold?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It can slow to a trickle. Your appliances burn propane vapor, and that vapor comes from liquid propane boiling off inside the tank — a process that pulls heat from the surrounding air. Propane's boiling point is −44°F, so it will still vaporize in almost any weather you'd camp in, but the colder it gets and the less liquid is left, the slower the boil-off. A nearly-empty tank in deep cold simply can't generate vapor fast enough to feed a big furnace, so the flame starves even though there's propane sloshing inside. The fixes are practical: keep tanks fuller in winter, run larger tanks or twin setups, keep the tank off frozen ground — and never apply open flame to warm one."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is it safe to run the furnace while sleeping?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A properly working built-in RV furnace, yes — it's a vented appliance that draws combustion air from outside and exhausts outside, and it's designed for unattended overnight use. The non-negotiable condition is working carbon monoxide and propane detectors with fresh batteries, tested before the trip, because a cracked heat exchanger or exhaust leak is exactly the failure a CO alarm exists to catch. Unvented portable heaters (buddy-style catalytic heaters) are a different story: they dump combustion byproducts into your living space, consume oxygen, and require cracked-open ventilation plus a CO detector whenever they run. Never let one run while everyone is asleep — even models with a low-oxygen shutoff, since that sensor does not detect carbon monoxide."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I refill a tank instead of exchanging it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — and it's usually the better deal. Refill stations at propane dealers, U-Haul locations, hardware stores, and many campgrounds fill your own tank to the true 80% level and charge by the gallon, which typically works out well below the effective per-gallon price of a cabinet exchange. Exchanges often hand you a tank filled to only 15 lb, so you pay more for less propane; their real advantages are convenience, all-hours availability, and swapping out a tank whose certification date has expired. A reasonable strategy: refill your own tanks as the routine, and treat exchanges as the roadside fallback. Note that tanks must be recertified 12 years after manufacture — a refill station will refuse an out-of-date tank, while an exchange will take it."
+      }
+    }
+  ]
+}
+</script>
+
+<meta name="theme-color" content="#1f5c37">
+<link rel="icon" type="image/png" sizes="512x512" href="../images/favicon-512.png">
+<link rel="icon" type="image/png" sizes="180x180" href="../images/favicon-180.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16.png">
+<link rel="apple-touch-icon" href="../images/apple-touch-icon.png">
+<style>
+  :root {
+    --ground:#f5f1e2; --card:#fffdf8; --ink:#1c2318; --ink-soft:#5a6152; --line:#1c2318;
+    --vial:#1f5c37; --vial-soft:#dcefdf; --block:#e8620f; --block-soft:#fbe0cc;
+    --warn:#c23b22; --warn-soft:#f7ddd6; --brand:#2f80a3; --brand-soft:#dbeef5;
+    --readout:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --ground:#12160f; --card:#1b2117; --ink:#eef1e6; --ink-soft:#a9b09c; --line:#eef1e6;
+            --vial:#5cbf7e; --vial-soft:#1e3324; --block:#ff9a52; --block-soft:#3d2413; --warn:#ef7a63; --warn-soft:#45231c;
+            --brand:#6fc0e0; --brand-soft:#173038; }
+  }
+  :root[data-theme="light"]{--ground:#f5f1e2;--card:#fffdf8;--ink:#1c2318;--ink-soft:#5a6152;--line:#1c2318;--vial:#1f5c37;--vial-soft:#dcefdf;--block:#e8620f;--block-soft:#fbe0cc;--warn:#c23b22;--warn-soft:#f7ddd6;--brand:#2f80a3;--brand-soft:#dbeef5;}
+  :root[data-theme="dark"]{--ground:#12160f;--card:#1b2117;--ink:#eef1e6;--ink-soft:#a9b09c;--line:#eef1e6;--vial:#5cbf7e;--vial-soft:#1e3324;--block:#ff9a52;--block-soft:#3d2413;--warn:#ef7a63;--warn-soft:#45231c;--brand:#6fc0e0;--brand-soft:#173038;}
+  * { box-sizing:border-box; }
+  html { background:var(--ground); }
+  body { margin:0; padding:0 0 40px; background:var(--ground); color:var(--ink);
+    font:16px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif; }
+  a { color:var(--brand); }
+  main { width:100%; max-width:820px; margin:0 auto; padding:14px 14px 0; display:flex; flex-direction:column; gap:12px; }
+
+  .brandbar { background:var(--card); border-bottom:3px solid var(--line); }
+  .brandbar-inner { max-width:820px; margin:0 auto; padding:10px 14px; display:flex; align-items:center; justify-content:space-between; gap:10px; }
+  .wordmark { font-weight:800; font-size:15px; letter-spacing:-0.01em; color:var(--ink); text-decoration:none; display:flex; align-items:center; gap:7px; }
+  .wordmark .mark { width:26px; height:26px; display:inline-block; }
+  .wordmark .mark img { width:100%; height:100%; object-fit:contain; display:block; }
+  .brandbar .more { font-size:12.5px; }
+  .brandbar .more a { color:var(--ink-soft); }
+
+  h1 { font-size:28px; font-weight:800; margin:0; letter-spacing:-0.01em; text-wrap:balance; }
+  .sub { color:var(--ink-soft); font-size:15px; margin:3px 0 0; }
+  section { background:var(--card); border:3px solid var(--line); border-radius:12px; padding:12px 12px 14px; box-shadow:4px 4px 0 var(--vial-soft); }
+  .eyebrow { font-size:11px; font-weight:700; letter-spacing:0.09em; text-transform:uppercase; color:var(--ink-soft); margin:0 0 5px; }
+  .note { font-size:14.5px; line-height:1.4; color:var(--ink-soft); margin:0 0 10px;
+    background:var(--vial-soft); border-radius:8px; padding:9px 11px; }
+  .note b { color:var(--ink); font-weight:700; }
+  .note.safety { background:var(--warn-soft); color:var(--ink); margin:0; }
+  .note.safety b { color:var(--warn); }
+
+  /* --- form fields --- */
+  .grid2 { display:grid; grid-template-columns:1fr 1fr; gap:10px 12px; }
+  .field { min-width:0; }
+  .field label { display:block; font-size:13px; font-weight:700; color:var(--ink-soft); margin-bottom:4px; }
+  .field label small { display:block; font-weight:400; }
+  .field input[type="number"], .field select {
+    width:100%; padding:10px 11px; border:1.5px solid var(--line); border-radius:8px;
+    background:var(--card); color:var(--ink); font:600 15px/1.2 system-ui; }
+  .field input:focus-visible, .field select:focus-visible { outline:2px solid var(--vial); outline-offset:1px; }
+  .field input[type="range"] { width:100%; margin:12px 0 4px; accent-color:var(--vial); }
+  .field input[type="range"]:focus-visible { outline:2px solid var(--vial); outline-offset:3px; border-radius:4px; }
+  .field .hint { font-size:12.5px; color:var(--ink-soft); margin-top:4px; line-height:1.35; }
+  .stepper { display:flex; align-items:center; gap:8px; }
+  .stepper button { flex:none; width:42px; height:42px; border:1.5px solid var(--line); border-radius:11px;
+    background:var(--card); color:var(--ink); font:700 22px/1 system-ui; cursor:pointer;
+    -webkit-tap-highlight-color:transparent; touch-action:manipulation; }
+  .stepper button:active { background:var(--vial-soft); border-color:var(--vial); }
+  .stepper button:focus-visible { outline:2px solid var(--vial); outline-offset:2px; }
+  .stepper button:disabled { opacity:0.4; cursor:default; }
+  .stepper .qv { font:800 20px/1.2 var(--readout); min-width:44px; text-align:center; font-variant-numeric:tabular-nums; }
+  .checkrow { display:flex; align-items:center; gap:9px; padding:6px 0 2px; }
+  .checkrow input[type="checkbox"] { width:20px; height:20px; accent-color:var(--vial); flex:none; }
+  .checkrow input[type="checkbox"]:focus-visible { outline:2px solid var(--vial); outline-offset:2px; }
+  .checkrow label { font-size:14px; font-weight:700; color:var(--ink); margin:0; }
+  .checkrow label small { display:block; font-weight:400; color:var(--ink-soft); }
+  .subfields { margin:8px 0 2px 29px; }
+  .duty-readout { margin-top:12px; border-radius:8px; padding:10px 12px; font-size:14px; background:var(--brand-soft); }
+  .duty-readout b { font-variant-numeric:tabular-nums; }
+
+  /* --- results --- */
+  .big { text-align:center; padding:8px 0 4px; }
+  .big .n { font:800 54px/1 var(--readout); color:var(--vial); font-variant-numeric:tabular-nums; letter-spacing:-0.02em; }
+  .big .u { font-size:16px; font-weight:700; color:var(--ink); }
+  .big .ref { font-size:13.5px; color:var(--ink-soft); margin-top:5px; }
+  .big .ref b { color:var(--ink); font-variant-numeric:tabular-nums; }
+  .bar { display:flex; height:22px; border:1.5px solid var(--line); border-radius:7px; overflow:hidden; margin:12px 0 8px; background:var(--ground); }
+  .bar i { display:block; height:100%; min-width:0; }
+  .seg-furnace { background:var(--block); } .seg-water { background:var(--brand); }
+  .seg-stove { background:var(--vial); } .seg-fridge { background:var(--warn); }
+  .seg-portable { background:var(--ink-soft); }
+  table.breakdown { width:100%; border-collapse:collapse; font-size:13.5px; }
+  table.breakdown th { text-align:left; font-size:11.5px; text-transform:uppercase; letter-spacing:0.06em; color:var(--ink-soft); padding:5px 6px; border-bottom:1.5px solid var(--line); }
+  table.breakdown th.num, table.breakdown td.num { text-align:right; font-variant-numeric:tabular-nums; }
+  table.breakdown td { padding:5px 6px; border-bottom:1px solid var(--vial-soft); }
+  table.breakdown td.num { font:600 13.5px var(--readout); }
+  table.breakdown tr.total td { border-bottom:none; font-weight:800; border-top:1.5px solid var(--line); }
+  table.breakdown tr.total td.num { font-weight:800; }
+  .swatch { display:inline-block; width:11px; height:11px; border-radius:3px; margin-right:6px; vertical-align:-1px; border:1px solid var(--line); }
+  .verdict { margin-top:12px; border-radius:8px; padding:10px 12px; font-size:14px; background:var(--vial-soft); }
+  .verdict.blocks { background:var(--block-soft); } .verdict.bad { background:var(--warn-soft); }
+  .verdict b { font-variant-numeric:tabular-nums; }
+  .trip-grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px 12px; margin-top:12px; padding-top:12px; border-top:1px solid var(--line); }
+  .trip-out { border:1.5px solid var(--line); border-radius:8px; padding:8px 10px; }
+  .trip-out .tk { font-size:11.5px; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; color:var(--ink-soft); }
+  .trip-out .tv { font:800 20px/1.3 var(--readout); font-variant-numeric:tabular-nums; }
+  .trip-out .tv small { font:600 12.5px system-ui; color:var(--ink-soft); }
+  .cost-line { margin-top:10px; font-size:14px; color:var(--ink-soft); }
+  .cost-line b { color:var(--ink); font-variant-numeric:tabular-nums; }
+
+  details { border-top:1px solid var(--line); margin-top:12px; padding-top:10px; }
+  summary { cursor:pointer; font-size:13px; font-weight:600; color:var(--ink-soft); }
+  summary:focus-visible { outline:2px solid var(--vial); outline-offset:1px; }
+  ul.how { margin:8px 0 0; padding-left:20px; font-size:13.5px; color:var(--ink-soft); }
+  ul.how li { margin:5px 0; } ul.how b { color:var(--ink); }
+  ul.how code { font:600 12.5px var(--readout); background:var(--vial-soft); border-radius:4px; padding:1px 5px; color:var(--ink); }
+  .faq-a { margin:8px 0 0; font-size:13.5px; line-height:1.5; color:var(--ink-soft); }
+  .faq-a b { color:var(--ink); }
+
+  /* --- ad slots ---
+     Placeholders only. Once you have a Google AdSense publisher ID:
+       1. Add the loader script to <head>:
+          <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+       2. Replace each .ad-slot div's contents with an <ins class="adsbygoogle"> unit
+          for that slot ID, then call (adsbygoogle = window.adsbygoogle || []).push({});
+       3. Add a real ads.txt at the site root (see /ads.txt).
+  */
+  .ad-slot { border:1px dashed var(--line); border-radius:8px; background:var(--ground);
+    display:flex; align-items:center; justify-content:center; color:var(--ink-soft);
+    font-size:12px; letter-spacing:0.04em; text-transform:uppercase; min-height:90px; }
+  .ad-slot.leaderboard { min-height:90px; }
+  .ad-slot.rectangle { min-height:250px; max-width:336px; margin:0 auto; }
+
+  /* --- affiliate section --- */
+  .gear-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:10px; margin-top:10px; }
+  .gear-card { border:1px solid var(--line); border-radius:8px; padding:11px; text-decoration:none; color:var(--ink); display:flex; flex-direction:column; gap:4px; }
+  .gear-card:hover { border-color:var(--brand); }
+  .gear-card .gt { font-size:14px; font-weight:700; }
+  .gear-card .gd { font-size:12.5px; color:var(--ink-soft); }
+  .affiliate-disclosure { font-size:12px; color:var(--ink-soft); margin-top:10px; }
+
+  footer { max-width:820px; margin:8px auto 0; padding:14px; font-size:12.5px; color:var(--ink-soft); text-align:center; }
+  footer a { color:var(--ink-soft); text-decoration:underline; }
+  footer .flinks { margin-top:6px; display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
+
+  @media (max-width: 480px) {
+    .grid2 { grid-template-columns:1fr; }
+    .trip-grid { grid-template-columns:1fr; }
+    .big .n { font-size:44px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="brandbar"><div class="brandbar-inner">
+  <a class="wordmark" href="../"><span class="mark" aria-hidden="true"><img src="../images/favicon-180.png" alt="" width="26" height="26"></span>S'more's Outdoors</a>
+  <span class="more"><a href="../">More free RV tools</a></span>
+</div></div>
+
+<main>
+  <header>
+    <h1>How Long Will Your Propane Last?</h1>
+    <p class="sub">Honest propane math for cold-weather camping — built around the furnace <b>duty cycle</b>, the number every "how long does a 20 lb tank last" blog post gets wrong.</p>
+  </header>
+
+  <!-- AdSense slot — un-comment once the account is approved:
+  <div class="ad-slot leaderboard" role="complementary" aria-label="Advertisement">Advertisement</div>
+  -->
+
+  <section aria-label="Your propane supply">
+    <p class="eyebrow">1 &middot; Your propane supply</p>
+    <p class="note">A <b>"20 lb" tank</b> actually holds about <b>4.6 gallons</b> of propane (&asymp;420,000 BTU) when properly filled — tanks are never filled to their water capacity. Pick your setup and how full it is right now.</p>
+    <div class="grid2">
+      <div class="field">
+        <label for="tankSize">Tank size</label>
+        <select id="tankSize">
+          <option value="4.6">20 lb cylinder (4.6 gal)</option>
+          <option value="7.0">30 lb cylinder (7.0 gal)</option>
+          <option value="9.4">40 lb cylinder (9.4 gal)</option>
+          <option value="asme">Built-in ASME tank (enter gallons)</option>
+        </select>
+      </div>
+      <div class="field" id="qtyField">
+        <label id="qtyLabel">How many tanks? <small>twin-tank setups pick 2</small></label>
+        <div class="stepper" role="group" aria-labelledby="qtyLabel">
+          <button type="button" id="qtyDown" aria-label="One fewer tank">&minus;</button>
+          <span class="qv" id="qtyOut" aria-live="polite">1</span>
+          <button type="button" id="qtyUp" aria-label="One more tank">+</button>
+        </div>
+      </div>
+      <div class="field" id="asmeField" hidden>
+        <label for="asmeGal">ASME tank capacity <small>usable gallons — check the data plate (often 80% of water capacity)</small></label>
+        <input id="asmeGal" type="number" min="5" max="200" step="0.5" value="24" inputmode="decimal">
+      </div>
+      <div class="field">
+        <label for="fillPct">Current fill: <span id="fillOut">100%</span></label>
+        <input id="fillPct" type="range" min="5" max="100" step="5" value="100" aria-label="Current fill percentage">
+        <p class="hint">No gauge? Pour warm water down the side and feel for the cold line, or weigh the tank (tare weight is stamped on the collar).</p>
+      </div>
+    </div>
+  </section>
+
+  <section aria-label="Your furnace">
+    <p class="eyebrow">2 &middot; Your furnace &mdash; the big one</p>
+    <p class="note">Your furnace's BTU rating is its <b>input while the burner is firing</b> — but the burner cycles on and off with the thermostat. The fraction of each hour it actually fires is the <b>duty cycle</b>, and it's driven by how much colder it is outside than your setpoint. Skipping the furnace? Just set the thermostat to the overnight low.</p>
+    <div class="grid2">
+      <div class="field">
+        <label for="furnBtu">Furnace input BTU/hr <small>it's on the furnace data plate — typical RV furnaces run 16,000&ndash;40,000</small></label>
+        <input id="furnBtu" type="number" min="0" max="80000" step="1000" value="30000" placeholder="30000" inputmode="numeric">
+      </div>
+      <div class="field">
+        <label for="furnHours">Furnace running hours</label>
+        <select id="furnHours">
+          <option value="8">Nights only (8 h/day)</option>
+          <option value="14">Evening + night (14 h/day)</option>
+          <option value="24">Around the clock (24 h/day)</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="lowF">Expected overnight low (&deg;F)</label>
+        <input id="lowF" type="number" min="-40" max="90" step="1" value="30" inputmode="numeric">
+      </div>
+      <div class="field">
+        <label for="setF">Thermostat setting (&deg;F)</label>
+        <input id="setF" type="number" min="40" max="90" step="1" value="68" inputmode="numeric">
+      </div>
+      <div class="field">
+        <label for="insul">How well does your rig hold heat?</label>
+        <select id="insul">
+          <option value="0.0267">Tent-like — vintage trailer, pop-up, canvas</option>
+          <option value="0.0183" selected>Average RV — most travel trailers &amp; motorhomes</option>
+          <option value="0.0117">Well-insulated — true 4-season rig</option>
+        </select>
+      </div>
+    </div>
+    <div class="duty-readout" id="dutyReadout" aria-live="polite">Computed duty cycle: <b>—</b></div>
+  </section>
+
+  <section aria-label="Everything else">
+    <p class="eyebrow">3 &middot; Everything else</p>
+    <p class="note">In cold weather these are rounding errors next to the furnace — but they add up on mild trips, so we count them anyway.</p>
+    <div class="grid2">
+      <div class="field">
+        <label for="showers">Hot showers per day <small>&asymp;0.1 gal each — a full 6-gal recovery uses roughly 0.07 gal once burner efficiency is counted; we round up to cover standby losses</small></label>
+        <input id="showers" type="number" min="0" max="12" step="1" value="1" inputmode="numeric">
+      </div>
+      <div class="field">
+        <label for="stoveMin">Stove / oven minutes per day <small>&asymp;9,000 BTU/hr for a typical burner on high</small></label>
+        <input id="stoveMin" type="number" min="0" max="600" step="5" value="20" inputmode="numeric">
+      </div>
+    </div>
+    <div class="checkrow">
+      <input type="checkbox" id="fridgeOn">
+      <label for="fridgeOn">Absorption fridge running on propane <small>&asymp;1.5 lb/day — skip this if you're plugged in or have a 12 V compressor fridge</small></label>
+    </div>
+    <div class="checkrow">
+      <input type="checkbox" id="buddyOn">
+      <label for="buddyOn">Portable buddy-style heater <small>the vanlife / car-camping favorite — runs at full burn, no duty cycle</small></label>
+    </div>
+    <div class="subfields grid2" id="buddyFields" hidden>
+      <div class="field">
+        <label for="buddyBtu">Heater setting</label>
+        <select id="buddyBtu">
+          <option value="4000">Low — 4,000 BTU/hr</option>
+          <option value="9000" selected>High — 9,000 BTU/hr</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="buddyHrs">Hours per day</label>
+        <input id="buddyHrs" type="number" min="0" max="24" step="0.5" value="4" inputmode="decimal">
+      </div>
+    </div>
+  </section>
+
+  <section aria-label="Results">
+    <p class="eyebrow">Your propane forecast</p>
+    <div class="big" aria-live="polite">
+      <div><span class="n" id="bigDays">—</span> <span class="u" id="bigUnit">days</span></div>
+      <p class="ref" id="bigRef">Enter your setup above.</p>
+    </div>
+
+    <div class="bar" id="useBar" role="img" aria-label="Propane use by appliance"></div>
+    <table class="breakdown" id="breakdownTable">
+      <thead><tr><th>Appliance</th><th class="num">lb/day</th><th class="num">gal/day</th></tr></thead>
+      <tbody id="breakdownBody"></tbody>
+    </table>
+
+    <div class="verdict" id="verdict">Dialing it in&hellip;</div>
+
+    <div class="trip-grid">
+      <div class="field">
+        <label for="tripDays">Planning a trip of&hellip; <small>days</small></label>
+        <input id="tripDays" type="number" min="1" max="60" step="1" value="3" inputmode="numeric">
+      </div>
+      <div class="trip-out">
+        <span class="tk">Propane needed</span>
+        <div class="tv" id="tripGal">—</div>
+      </div>
+      <div class="trip-out">
+        <span class="tk">Tanks to bring</span>
+        <div class="tv" id="tripTanks">—</div>
+      </div>
+    </div>
+    <div class="grid2" style="margin-top:10px">
+      <div class="field">
+        <label for="priceGal">Propane price ($/gal) <small>refill price — exchanges cost more per gallon</small></label>
+        <input id="priceGal" type="number" min="0" max="20" step="0.05" value="3.50" inputmode="decimal">
+      </div>
+      <div class="trip-out">
+        <span class="tk">Cost estimate</span>
+        <div class="tv" id="costOut">—</div>
+      </div>
+    </div>
+
+    <details>
+      <summary>How the math works (constants &amp; formulas)</summary>
+      <ul class="how">
+        <li><b>Energy content:</b> propane delivers <b>91,502 BTU per gallon</b>; 1 lb of propane &asymp; <b>21,548 BTU</b>. A properly filled "20 lb" cylinder holds <b>4.6 gal &asymp; 420,000 BTU</b> usable (30 lb &asymp; 7.0 gal, 40 lb &asymp; 9.4 gal).</li>
+        <li><b>Furnace duty cycle:</b> <code>duty = (T<sub>set</sub> &minus; T<sub>low</sub>) &times; k</code>, clamped between 5% and 95%. We use <code>k</code> = <b>0.0267</b> tent-like, <b>0.0183</b> average, <b>0.0117</b> well-insulated — calibrated so a 30&deg;F gap runs an average rig's burner about <b>55%</b> of each hour (tent-like &asymp; 80%, 4-season &asymp; 35%). Wind, humidity, and single-pane windows push it higher.</li>
+        <li><b>Furnace propane:</b> <code>gal/day = BTU/hr &times; duty &times; hours &divide; 91,502</code>. The overnight low is a conservative stand-in for the average temperature across the hours the furnace runs.</li>
+        <li><b>Water heater:</b> &asymp;0.1 gal per shower — a full 6-gallon recovery uses roughly 0.07 gal of propane once burner efficiency is counted; we round up to cover standby losses.</li>
+        <li><b>Stove/oven:</b> minutes per day at &asymp;9,000 BTU/hr. <b>Absorption fridge:</b> &asymp;1.5 lb/day (&asymp;0.35 gal). <b>Portable heater:</b> rated BTU &times; hours, straight through — those run continuously at their setting.</li>
+        <li>Everything here is an <b>estimate</b>. Regulators ice up, tanks lose pressure below &asymp;&minus;10&deg;F, and real weather doesn't read forecasts. Carry margin.</li>
+      </ul>
+    </details>
+  </section>
+
+  <!-- AdSense slot — un-comment once the account is approved:
+  <div class="ad-slot rectangle" role="complementary" aria-label="Advertisement">Advertisement</div>
+  -->
+
+  <section aria-label="Propane safety">
+    <p class="eyebrow">Before you light anything</p>
+    <p class="note safety"><b>Safety first:</b> never sleep with an unvented portable heater running unless you have a <b>working CO detector</b> and cracked-open ventilation — carbon monoxide is odorless and kills campers every winter. Check tank connections for leaks with <b>soapy water, never a flame</b>. And treat every number on this page as an estimate, not a guarantee — see our <a href="./legal/disclaimer.html">disclaimer</a>.</p>
+  </section>
+
+  <section aria-label="Recommended propane gear">
+    <p class="eyebrow">Gear that pairs with this calculator</p>
+    <div class="gear-grid">
+      <!-- Amazon links point at product searches; append the Associates tag
+           (&tag=...) to each URL once the account is live. -->
+      <a class="gear-card" href="https://www.amazon.com/s?k=magnetic+propane+tank+level+gauge" rel="sponsored noopener" target="_blank">
+        <span class="gt">Magnetic tank level gauge</span>
+        <span class="gd">Stick-on strip that shows the liquid line — the easy answer to "how full am I?"</span>
+      </a>
+      <a class="gear-card" href="https://www.amazon.com/s?k=rv+carbon+monoxide+propane+detector" rel="sponsored noopener" target="_blank">
+        <span class="gt">CO / propane detector</span>
+        <span class="gd">Dual-sensor alarm for the rig. Non-negotiable if you heat with propane.</span>
+      </a>
+      <a class="gear-card" href="https://www.amazon.com/s?k=extend+a+stay+propane+adapter+kit" rel="sponsored noopener" target="_blank">
+        <span class="gt">Extend-a-Stay adapter kit</span>
+        <span class="gd">Tee into a motorhome's built-in tank to run off external cylinders — or refill small bottles.</span>
+      </a>
+      <a class="gear-card" href="https://www.amazon.com/s?k=rv+propane+hose+and+regulator" rel="sponsored noopener" target="_blank">
+        <span class="gt">Hose + regulator</span>
+        <span class="gd">Two-stage regulator with pigtails — the part that actually meters all this propane.</span>
+      </a>
+    </div>
+    <p class="affiliate-disclosure">As an Amazon Associate, S'more's Outdoors earns from qualifying purchases.</p>
+  </section>
+
+  <section aria-label="Frequently asked questions">
+    <p class="eyebrow">FAQ</p>
+    <details>
+      <summary>How much propane does a 20 lb tank actually hold?</summary>
+      <p class="faq-a">A properly filled 20 lb cylinder holds about <b>4.6 gallons</b> of liquid propane — roughly <b>420,000 BTU</b> of heat. Tanks are only ever filled to about <b>80% of their water capacity</b> because liquid propane expands significantly as it warms; that headspace is a safety requirement, not shortchanging. Watch out for exchange-cabinet tanks at gas stations and big-box stores: many are filled to only <b>15 lb</b>, which is about 3.5 gallons. The actual fill weight is printed on the label, so check it before you assume you're getting a full 20 lb.</p>
+    </details>
+    <details>
+      <summary>Why doesn't my furnace's real propane use match the "continuous burn" number?</summary>
+      <p class="faq-a">Because your furnace almost never runs continuously. The burner cycles on and off with the thermostat, and the fraction of each hour it actually fires is the <b>duty cycle</b> — driven by how much colder it is outside than your setpoint. A 30,000 BTU furnace at a 50% duty cycle burns propane like a 15,000 BTU appliance, which is why the continuous-burn hours quoted on blogs are so misleading. One thing the propane math hides: the furnace <b>blower also draws serious 12 V power</b>, often 5&ndash;8 amps whenever it runs, so on a boondocking trip your battery bank can give out before your propane does.</p>
+    </details>
+    <details>
+      <summary>How do I know how much propane is left in my tank?</summary>
+      <p class="faq-a">The most accurate method is to <b>weigh the tank</b>: subtract the tare weight (the empty weight, stamped as <b>TW</b> on the collar — typically 17&ndash;18 lb for a 20 lb cylinder) from the total, and what's left is your propane. The classic field trick is to pour <b>warm water</b> down the side and feel for where the metal turns cold — the liquid propane inside chills it at the liquid line, and on humid days a condensation or frost line can show up on its own. Stick-on magnetic gauges use the same temperature difference to show the level. One thing that <b>doesn't</b> work: a pressure gauge on the valve, because propane pressure is set by <b>temperature</b>, not by how much liquid is left — it reads nearly the same from full until the tank is almost empty.</p>
+    </details>
+    <details>
+      <summary>Will my propane stop working in extreme cold?</summary>
+      <p class="faq-a">It can slow to a trickle. Your appliances burn propane <b>vapor</b>, and that vapor comes from liquid propane boiling off inside the tank — a process that pulls heat from the surrounding air. Propane's boiling point is <b>&minus;44&deg;F</b>, so it will still vaporize in almost any weather you'd camp in, but the colder it gets and the less liquid is left, the slower the boil-off. A nearly-empty tank in deep cold simply can't generate vapor fast enough to feed a big furnace, so the flame starves even though there's propane sloshing inside. The fixes are practical: <b>keep tanks fuller in winter</b>, run larger tanks or twin setups, keep the tank off frozen ground — and never apply open flame to warm one.</p>
+    </details>
+    <details>
+      <summary>Is it safe to run the furnace while sleeping?</summary>
+      <p class="faq-a">A properly working built-in RV furnace, <b>yes</b> — it's a <b>vented</b> appliance that draws combustion air from outside and exhausts outside, and it's designed for unattended overnight use. The non-negotiable condition is <b>working carbon monoxide and propane detectors</b> with fresh batteries, tested before the trip, because a cracked heat exchanger or exhaust leak is exactly the failure a CO alarm exists to catch. <b>Unvented</b> portable heaters (buddy-style catalytic heaters) are a different story: they dump combustion byproducts into your living space, consume oxygen, and require cracked-open ventilation plus a CO detector whenever they run. Never let one run while everyone is asleep — even models with a low-oxygen shutoff, since that sensor does not detect carbon monoxide.</p>
+    </details>
+    <details>
+      <summary>Can I refill a tank instead of exchanging it?</summary>
+      <p class="faq-a">Yes — and it's usually the better deal. Refill stations at propane dealers, U-Haul locations, hardware stores, and many campgrounds fill <b>your own tank to the true 80% level</b> and charge by the gallon, which typically works out well below the effective per-gallon price of a cabinet exchange. Exchanges often hand you a tank filled to only <b>15 lb</b>, so you pay more for less propane; their real advantages are convenience, all-hours availability, and swapping out a tank whose certification date has expired. A reasonable strategy: refill your own tanks as the routine, and treat exchanges as the roadside fallback. Note that tanks must be <b>recertified 12 years</b> after manufacture — a refill station will refuse an out-of-date tank, while an exchange will take it.</p>
+    </details>
+  </section>
+</main>
+
+<footer>
+  <div>The Propane Tank Duration Calculator is a free tool from <a href="../">S'more's Outdoors</a>. Estimates only — your rig, weather, and regulator will disagree a little.</div>
+  <div class="flinks">
+    <a href="./legal/terms.html">Terms</a>
+    <a href="./legal/privacy.html">Privacy</a>
+    <a href="./legal/disclaimer.html">Disclaimer</a>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var BTU_PER_GAL = 91502;
+  var BTU_PER_LB = 21548;
+  var LB_PER_GAL = BTU_PER_GAL / BTU_PER_LB; // ≈ 4.25 lb/gal
+  var STORE_KEY = "propaneCalc";
+
+  var $ = function (id) { return document.getElementById(id); };
+  var els = {
+    tankSize: $("tankSize"), asmeGal: $("asmeGal"), asmeField: $("asmeField"),
+    qtyField: $("qtyField"), qtyOut: $("qtyOut"), qtyDown: $("qtyDown"), qtyUp: $("qtyUp"),
+    fillPct: $("fillPct"), fillOut: $("fillOut"),
+    furnBtu: $("furnBtu"), furnHours: $("furnHours"), lowF: $("lowF"), setF: $("setF"), insul: $("insul"),
+    dutyReadout: $("dutyReadout"),
+    showers: $("showers"), stoveMin: $("stoveMin"), fridgeOn: $("fridgeOn"),
+    buddyOn: $("buddyOn"), buddyFields: $("buddyFields"), buddyBtu: $("buddyBtu"), buddyHrs: $("buddyHrs"),
+    bigDays: $("bigDays"), bigUnit: $("bigUnit"), bigRef: $("bigRef"),
+    useBar: $("useBar"), breakdownBody: $("breakdownBody"), verdict: $("verdict"),
+    tripDays: $("tripDays"), tripGal: $("tripGal"), tripTanks: $("tripTanks"),
+    priceGal: $("priceGal"), costOut: $("costOut")
+  };
+  var qty = 1;
+
+  function num(el, fallback) {
+    var v = parseFloat(el.value);
+    return isFinite(v) ? v : fallback;
+  }
+  function clamp(v, lo, hi) { return Math.max(lo, Math.min(hi, v)); }
+  function fmt(v, dp) { return v.toFixed(dp === undefined ? 2 : dp); }
+
+  // ---------- restore ----------
+  try {
+    var saved = JSON.parse(localStorage.getItem(STORE_KEY) || "{}");
+    ["tankSize","asmeGal","fillPct","furnBtu","furnHours","lowF","setF","insul",
+     "showers","stoveMin","buddyBtu","buddyHrs","tripDays","priceGal"].forEach(function (k) {
+      if (saved[k] !== undefined && els[k]) els[k].value = saved[k];
+    });
+    if (saved.fridgeOn !== undefined) els.fridgeOn.checked = !!saved.fridgeOn;
+    if (saved.buddyOn !== undefined) els.buddyOn.checked = !!saved.buddyOn;
+    if (saved.qty !== undefined) qty = clamp(parseInt(saved.qty, 10) || 1, 1, 6);
+  } catch (e) {}
+
+  function persist(m) {
+    try {
+      localStorage.setItem(STORE_KEY, JSON.stringify({
+        tankSize: els.tankSize.value, asmeGal: els.asmeGal.value, qty: qty, fillPct: els.fillPct.value,
+        furnBtu: els.furnBtu.value, furnHours: els.furnHours.value, lowF: els.lowF.value,
+        setF: els.setF.value, insul: els.insul.value,
+        showers: els.showers.value, stoveMin: els.stoveMin.value,
+        fridgeOn: els.fridgeOn.checked, buddyOn: els.buddyOn.checked,
+        buddyBtu: els.buddyBtu.value, buddyHrs: els.buddyHrs.value,
+        tripDays: els.tripDays.value, priceGal: els.priceGal.value
+      }));
+    } catch (e) {}
+  }
+
+  // ---------- model ----------
+  function supplyGallons() {
+    var isAsme = els.tankSize.value === "asme";
+    var perTank = isAsme ? clamp(num(els.asmeGal, 24), 1, 500) : parseFloat(els.tankSize.value);
+    var n = isAsme ? 1 : qty;
+    var fill = clamp(num(els.fillPct, 100), 0, 100) / 100;
+    return { perTank: perTank, tanks: n, fillFrac: fill, gal: perTank * n * fill, isAsme: isAsme };
+  }
+
+  function furnaceModel() {
+    var btu = clamp(num(els.furnBtu, 0), 0, 200000);
+    var hours = parseFloat(els.furnHours.value);
+    var delta = num(els.setF, 68) - num(els.lowF, 30);
+    var k = parseFloat(els.insul.value);
+    var duty = clamp(delta * k, 0.05, 0.95);
+    var galPerDay = btu > 0 ? btu * duty * hours / BTU_PER_GAL : 0;
+    return { btu: btu, hours: hours, delta: delta, duty: duty, gal: galPerDay };
+  }
+
+  function dailyUse() {
+    var f = furnaceModel();
+    var rows = [
+      { key: "furnace",  label: "Furnace",         cls: "seg-furnace",  gal: f.gal },
+      { key: "water",    label: "Water heater",    cls: "seg-water",    gal: clamp(num(els.showers, 0), 0, 50) * 0.1 },
+      { key: "stove",    label: "Stove / oven",    cls: "seg-stove",    gal: clamp(num(els.stoveMin, 0), 0, 1440) / 60 * 9000 / BTU_PER_GAL },
+      { key: "fridge",   label: "Fridge",          cls: "seg-fridge",   gal: els.fridgeOn.checked ? 1.5 / LB_PER_GAL : 0 },
+      { key: "portable", label: "Portable heater", cls: "seg-portable", gal: els.buddyOn.checked ? parseFloat(els.buddyBtu.value) * clamp(num(els.buddyHrs, 0), 0, 24) / BTU_PER_GAL : 0 }
+    ];
+    var total = rows.reduce(function (s, r) { return s + r.gal; }, 0);
+    return { furnace: f, rows: rows, total: total };
+  }
+
+  // ---------- render ----------
+  function renderDuty(f) {
+    if (f.btu <= 0) {
+      els.dutyReadout.innerHTML = "Furnace set to <b>0 BTU</b> — we'll count it as off.";
+      return;
+    }
+    var pct = Math.round(f.duty * 100);
+    var minPerHr = Math.round(f.duty * 60);
+    var extra = f.delta <= 0
+      ? " It's no colder outside than your setpoint, so the burner barely fires (5% floor covers cycling)."
+      : (f.duty >= 0.95 ? " That's the 95% ceiling — your furnace may simply not keep up. Consider a warmer setpoint or a warmer campsite." : "");
+    els.dutyReadout.innerHTML = "Computed duty cycle: <b>" + pct + "%</b> — the burner fires about <b>" +
+      minPerHr + " min of every hour</b> while the furnace is on." + extra + " Gut-check it against how often you hear yours kick on.";
+  }
+
+  function renderBreakdown(use) {
+    els.breakdownBody.innerHTML = "";
+    els.useBar.innerHTML = "";
+    use.rows.forEach(function (r) {
+      if (r.gal <= 0) return;
+      var tr = document.createElement("tr");
+      tr.innerHTML = "<td><span class='swatch " + r.cls + "'></span>" + r.label + "</td>" +
+        "<td class='num'>" + fmt(r.gal * LB_PER_GAL) + "</td>" +
+        "<td class='num'>" + fmt(r.gal) + "</td>";
+      els.breakdownBody.appendChild(tr);
+      var seg = document.createElement("i");
+      seg.className = r.cls;
+      seg.style.width = (r.gal / use.total * 100) + "%";
+      seg.title = r.label + ": " + fmt(r.gal) + " gal/day";
+      els.useBar.appendChild(seg);
+    });
+    var totalRow = document.createElement("tr");
+    totalRow.className = "total";
+    totalRow.innerHTML = "<td>Total per day</td>" +
+      "<td class='num'>" + fmt(use.total * LB_PER_GAL) + "</td>" +
+      "<td class='num'>" + fmt(use.total) + "</td>";
+    els.breakdownBody.appendChild(totalRow);
+    els.useBar.style.display = use.total > 0 ? "" : "none";
+  }
+
+  function tankNoun(supply) {
+    if (supply.isAsme) return "tank fill";
+    var lb = { "4.6": "20 lb", "7.0": "30 lb", "9.4": "40 lb" }[els.tankSize.value] || "";
+    return lb + " tank";
+  }
+
+  function supplyLabel(supply) {
+    if (supply.isAsme) {
+      return "built-in " + fmt(supply.perTank, 1) + "-gal tank at " + Math.round(supply.fillFrac * 100) + "%";
+    }
+    return supply.tanks + " &times; " + tankNoun(supply) + (supply.tanks === 1 ? "" : "s") +
+      " at " + Math.round(supply.fillFrac * 100) + "%";
+  }
+
+  function render() {
+    var supply = supplyGallons();
+    var use = dailyUse();
+    renderDuty(use.furnace);
+    renderBreakdown(use);
+
+    var tripDays = clamp(num(els.tripDays, 3), 1, 365);
+    var price = clamp(num(els.priceGal, 3.5), 0, 100);
+
+    // big number
+    var burnHrs = use.furnace.btu > 0 ? supply.gal * BTU_PER_GAL / use.furnace.btu : 0;
+    if (use.total <= 0.001) {
+      els.bigDays.textContent = "∞";
+      els.bigUnit.textContent = "days";
+      els.bigRef.textContent = "Nothing's burning propane — your supply lasts until the next leak check.";
+    } else {
+      var days = supply.gal / use.total;
+      els.bigDays.textContent = days >= 100 ? "99+" : fmt(days, 1);
+      els.bigUnit.textContent = "days";
+      els.bigRef.innerHTML = "From <b>" + fmt(supply.gal, 1) + " gal</b> on board (" + supplyLabel(supply) + ")." +
+        (use.furnace.gal > 0
+          ? " For reference: that's <b>" + fmt(burnHrs, 0) + " hours</b> of continuous furnace burn — the misleading number most blogs quote — but at your <b>" +
+            Math.round(use.furnace.duty * 100) + "% duty cycle</b> the furnace alone would run <b>" +
+            fmt(supply.gal / use.furnace.gal, 1) + " days</b>."
+          : "");
+    }
+
+    // trip planning
+    var tripGal = use.total * tripDays;
+    els.tripGal.innerHTML = fmt(tripGal, 1) + " <small>gal (" + fmt(tripGal * LB_PER_GAL, 0) + " lb) for " + tripDays + " day" + (tripDays === 1 ? "" : "s") + "</small>";
+    var tanksNeeded = use.total > 0 ? Math.max(1, Math.ceil(tripGal / supply.perTank)) : 1;
+    els.tripTanks.innerHTML = tanksNeeded + " <small>full " + tankNoun(supply) + (tanksNeeded === 1 ? "" : "s") + "</small>";
+
+    // cost
+    els.costOut.innerHTML = "$" + fmt(use.total * price) + "<small>/day</small> <small>&middot; $" + fmt(tripGal * price) + " trip</small>";
+
+    // verdict
+    var v = els.verdict;
+    if (use.total <= 0.001) {
+      v.className = "verdict";
+      v.textContent = "No propane load entered — add your furnace or appliances above and we'll do the math.";
+    } else {
+      var supplyDays = supply.gal / use.total;
+      var ratio = supplyDays / tripDays;
+      if (ratio >= 1.25) {
+        v.className = "verdict";
+        v.innerHTML = "<b>Comfortable.</b> Your " + fmt(supply.gal, 1) + " gal covers the " + tripDays + "-day trip with about <b>" +
+          fmt(supplyDays - tripDays, 1) + " days of margin</b>. Enjoy the marshmallows.";
+      } else if (ratio >= 1) {
+        v.className = "verdict blocks";
+        v.innerHTML = "<b>Cutting it close.</b> You'd finish the trip with roughly <b>" + fmt(supplyDays - tripDays, 1) +
+          " days</b> to spare — one cold snap eats that. Top off before you roll, or pack a spare tank.";
+      } else {
+        v.className = "verdict bad";
+        v.innerHTML = "<b>Bring more propane.</b> Your supply runs dry around <b>day " + fmt(supplyDays, 1) + "</b> of a " +
+          tripDays + "-day trip. You need about <b>" + fmt(tripGal, 1) + " gal</b> total — that's " + tanksNeeded +
+          " full " + tankNoun(supply) + (tanksNeeded === 1 ? "" : "s") + ".";
+      }
+    }
+
+    persist();
+  }
+
+  // ---------- wiring ----------
+  function syncVisibility() {
+    var isAsme = els.tankSize.value === "asme";
+    els.asmeField.hidden = !isAsme;
+    els.qtyDown.disabled = isAsme || qty <= 1;
+    els.qtyUp.disabled = isAsme || qty >= 6;
+    els.qtyOut.textContent = isAsme ? "1" : String(qty);
+    els.buddyFields.hidden = !els.buddyOn.checked;
+  }
+
+  els.qtyDown.addEventListener("click", function () { qty = clamp(qty - 1, 1, 6); syncVisibility(); render(); });
+  els.qtyUp.addEventListener("click", function () { qty = clamp(qty + 1, 1, 6); syncVisibility(); render(); });
+  els.fillPct.addEventListener("input", function () { els.fillOut.textContent = Math.round(num(els.fillPct, 100)) + "%"; });
+
+  ["tankSize","asmeGal","fillPct","furnBtu","furnHours","lowF","setF","insul",
+   "showers","stoveMin","fridgeOn","buddyOn","buddyBtu","buddyHrs","tripDays","priceGal"].forEach(function (k) {
+    var evt = (els[k].tagName === "SELECT" || els[k].type === "checkbox") ? "change" : "input";
+    els[k].addEventListener(evt, function () { syncVisibility(); render(); });
+  });
+
+  els.fillOut.textContent = Math.round(num(els.fillPct, 100)) + "%";
+  syncVisibility();
+  render();
+})();
+</script>
+</body>
+</html>

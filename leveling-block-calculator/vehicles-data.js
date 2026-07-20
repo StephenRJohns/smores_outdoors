@@ -1,5 +1,5 @@
 /*
- * Level My RV — vehicle geometry cache.
+ * RV Leveling Block Calculator — vehicle geometry cache.
  *
  * Starter dataset seeded from publicly available manufacturer spec sheets.
  * Values are BEST-EFFORT ESTIMATES, not verified against every trim/option

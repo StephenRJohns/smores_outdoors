@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RV 30/50 Amp &amp; Generator Sizing Calculator | S'more's Outdoors</title>
+<meta name="description" content="Add up your RV's real loads against a 30 or 50 amp pedestal or your generator — including A/C starting watts, soft starts, and altitude. Free, no signup.">
+<meta name="author" content="S'more's Outdoors">
+<meta name="keywords" content="30 amp RV calculator, 50 amp RV, will generator run AC, generator size for RV, air conditioner starting watts, soft start RV, RV breaker trips, shore power calculator, RV electrical load">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="googlebot" content="index, follow">
+<link rel="canonical" href="https://smoreoutdoors.com/rv-power-budget/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="S'more's Outdoors">
+<meta property="og:title" content="Will It Trip the Breaker? — RV Power Calculator">
+<meta property="og:description" content="What can you run at once on 30 or 50 amps? Will your generator start the AC? Starting watts, soft starts, and altitude derating — calculated live.">
+<meta property="og:url" content="https://smoreoutdoors.com/rv-power-budget/">
+<meta property="og:image" content="https://smoreoutdoors.com/images/og-image.png">
+<meta property="og:image:secure_url" content="https://smoreoutdoors.com/images/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="S'more's Outdoors — the toasted-marshmallow mascot with the brand name, for free RV camping tools.">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Will It Trip the Breaker? — RV Power Calculator">
+<meta name="twitter:description" content="What can you run at once on 30 or 50 amps? Will your generator start the AC? Starting watts, soft starts, and altitude derating — calculated live.">
+<meta name="twitter:image" content="https://smoreoutdoors.com/images/og-image.png">
+<meta name="twitter:image:alt" content="S'more's Outdoors — the toasted-marshmallow mascot with the brand name">
+
+<!-- WebApplication schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Will It Trip the Breaker?",
+  "url": "https://smoreoutdoors.com/rv-power-budget/",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any (web browser)",
+  "description": "Free RV electrical load calculator — add up appliances on 30 or 50 amp shore power or a generator, with air conditioner starting watts, soft starts, and altitude derating.",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "S'more's Outdoors",
+    "url": "https://smoreoutdoors.com/"
+  }
+}
+</script>
+
+<!-- BreadcrumbList schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://smoreoutdoors.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Will It Trip the Breaker?",
+      "item": "https://smoreoutdoors.com/rv-power-budget/"
+    }
+  ]
+}
+</script>
+
+<!-- FAQPage schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why does my A/C trip a generator that's \"big enough\" on paper?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The number that matters at the instant the compressor kicks on isn't running watts — it's starting (locked-rotor) watts, which are typically 3–4× higher. A 13,500 BTU rooftop unit that runs on about 1,350 W can spike to roughly 4,500 W for a fraction of a second while the rotor gets moving. A generator's surge rating only lasts a few seconds, and an inverter generator has a hard electronic ceiling at its peak watts. Altitude compounds it: engine generators lose roughly 3% of output per 1,000 ft above 500 ft, so a generator that looks big enough on the sticker can bog down or trip its overload the moment the compressor starts."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does a soft start actually do?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A soft start staggers the compressor's start, ramping it up over a fraction of a second instead of slamming it across the line — which cuts the inrush surge by roughly 60–70%. On a typical 13,500 BTU unit the start spike drops from around 4,500 W to roughly 1,800 W. That reduction is exactly what lets a 2,200 W-class inverter generator start a 13.5k rooftop A/C at all. The device installs at the A/C unit itself, wired in with the compressor's start components, and it's a one-time install per air conditioner."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is 50 amp twice as much power as 30 amp?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It's much more than twice. A 30 amp RV connection is a single 120 V leg: 30 A × 120 V = 3,600 W total. A 50 amp RV connection is two separate 120 V legs at 50 A each: 2 × 50 A × 120 V = 12,000 W — more than three times the power. That's why a 50 amp rig can run two air conditioners, an electric water heater, and a microwave at once, while a 30 amp rig has to juggle which big loads run at the same time."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I plug my 30A RV into a house outlet?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — a 30A-to-15A dogbone adapter lets the RV cord plug into an ordinary household outlet. But the adapter doesn't add capacity: you get whatever the house circuit delivers, about 1,800 W on a 15 A circuit or 2,400 W on a dedicated 20 A one. That's enough for the converter, the refrigerator, lights, and chargers — but in most cases not enough to start and run the air conditioner. Use a single heavy-gauge (10 or 12 AWG) extension cord kept as short as practical, never daisy-chain light-duty cords, and check that the cord and outlet aren't getting warm."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do campground pedestals damage RV air conditioners?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "On hot afternoons a crowded campground's voltage can sag well below a healthy 120 V — a brownout. When voltage drops, a compressor draws more amps to do the same work, and that extra current turns into heat in the compressor windings. Running through repeated low-voltage spells shortens compressor life and can kill the unit outright. A surge protector with EMS (electrical management system) features monitors the pedestal and disconnects on low voltage, high voltage, miswiring, or an open ground — cheap insurance compared to replacing a rooftop air conditioner."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What runs on 12V vs 120V in my RV?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "An RV has two electrical systems. The 12 V DC side runs off the batteries: interior lights, vent fans, the water pump, the furnace blower (propane makes the heat, but the fan is 12 V), and control boards — including the controls on an absorption fridge. The 120 V AC side needs shore power, a generator, or an inverter: the air conditioner, microwave, wall outlets, the electric water heater element, and the converter that charges the batteries. The split matters most when boondocking without an inverter — everything on the 12 V list keeps working from the batteries, and nothing on the 120 V list does."
+      }
+    }
+  ]
+}
+</script>
+
+<meta name="theme-color" content="#1f5c37">
+<link rel="icon" type="image/png" sizes="512x512" href="../images/favicon-512.png">
+<link rel="icon" type="image/png" sizes="180x180" href="../images/favicon-180.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16.png">
+<link rel="apple-touch-icon" href="../images/apple-touch-icon.png">
+<style>
+  :root {
+    --ground:#f5f1e2; --card:#fffdf8; --ink:#1c2318; --ink-soft:#5a6152; --line:#1c2318;
+    --vial:#1f5c37; --vial-soft:#dcefdf; --block:#e8620f; --block-soft:#fbe0cc;
+    --warn:#c23b22; --warn-soft:#f7ddd6; --brand:#2f80a3; --brand-soft:#dbeef5;
+    --readout:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --ground:#12160f; --card:#1b2117; --ink:#eef1e6; --ink-soft:#a9b09c; --line:#eef1e6;
+            --vial:#5cbf7e; --vial-soft:#1e3324; --block:#ff9a52; --block-soft:#3d2413; --warn:#ef7a63; --warn-soft:#45231c;
+            --brand:#6fc0e0; --brand-soft:#173038; }
+  }
+  :root[data-theme="light"]{--ground:#f5f1e2;--card:#fffdf8;--ink:#1c2318;--ink-soft:#5a6152;--line:#1c2318;--vial:#1f5c37;--vial-soft:#dcefdf;--block:#e8620f;--block-soft:#fbe0cc;--warn:#c23b22;--warn-soft:#f7ddd6;--brand:#2f80a3;--brand-soft:#dbeef5;}
+  :root[data-theme="dark"]{--ground:#12160f;--card:#1b2117;--ink:#eef1e6;--ink-soft:#a9b09c;--line:#eef1e6;--vial:#5cbf7e;--vial-soft:#1e3324;--block:#ff9a52;--block-soft:#3d2413;--warn:#ef7a63;--warn-soft:#45231c;--brand:#6fc0e0;--brand-soft:#173038;}
+  * { box-sizing:border-box; }
+  html { background:var(--ground); }
+  body { margin:0; padding:0 0 40px; background:var(--ground); color:var(--ink);
+    font:16px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif; }
+  a { color:var(--brand); }
+  main { width:100%; max-width:820px; margin:0 auto; padding:14px 14px 0; display:flex; flex-direction:column; gap:12px; }
+
+  .brandbar { background:var(--card); border-bottom:3px solid var(--line); }
+  .brandbar-inner { max-width:820px; margin:0 auto; padding:10px 14px; display:flex; align-items:center; justify-content:space-between; gap:10px; }
+  .wordmark { font-weight:800; font-size:15px; letter-spacing:-0.01em; color:var(--ink); text-decoration:none; display:flex; align-items:center; gap:7px; }
+  .wordmark .mark { width:26px; height:26px; display:inline-block; }
+  .wordmark .mark img { width:100%; height:100%; object-fit:contain; display:block; }
+  .brandbar .more { font-size:12.5px; color:var(--ink-soft); text-decoration:underline; white-space:nowrap; }
+
+  h1 { font-size:28px; font-weight:800; margin:0; letter-spacing:-0.01em; text-wrap:balance; }
+  .sub { color:var(--ink-soft); font-size:15px; margin:3px 0 0; }
+  section { background:var(--card); border:3px solid var(--line); border-radius:12px; padding:12px 12px 14px; box-shadow:4px 4px 0 var(--vial-soft); }
+  .eyebrow { font-size:11px; font-weight:700; letter-spacing:0.09em; text-transform:uppercase; color:var(--ink-soft); margin:0 0 5px; }
+  .note { font-size:14.5px; line-height:1.4; color:var(--ink-soft); margin:0 0 10px;
+    background:var(--vial-soft); border-radius:8px; padding:9px 11px; }
+  .note b { color:var(--ink); font-weight:700; }
+  .note.warn { background:var(--warn-soft); margin:12px 0 0; }
+  .note.leg { background:var(--brand-soft); margin:10px 0 0; }
+
+  input:focus-visible, select:focus-visible, button:focus-visible, summary:focus-visible, a:focus-visible {
+    outline:2px solid var(--vial); outline-offset:1px; }
+
+  /* --- power source cards --- */
+  .src-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(146px,1fr)); gap:8px; }
+  .src-card { position:relative; border:1.5px solid var(--line); border-radius:10px; padding:10px 11px 11px;
+    cursor:pointer; display:flex; flex-direction:column; gap:2px; background:var(--card);
+    -webkit-tap-highlight-color:transparent; }
+  .src-card input { position:absolute; opacity:0; width:1px; height:1px; margin:0; pointer-events:none; }
+  .src-card .st { font-size:13.5px; font-weight:700; line-height:1.25; }
+  .src-card .sw { font:700 14px/1.3 var(--readout); color:var(--ink-soft); font-variant-numeric:tabular-nums; }
+  .src-card .sd { font-size:11.5px; color:var(--ink-soft); line-height:1.3; }
+  .src-card.sel { border-color:var(--vial); background:var(--vial-soft); box-shadow:inset 0 0 0 1.5px var(--vial); }
+  .src-card.sel .sw { color:var(--ink); }
+  .src-card:focus-within { outline:2px solid var(--vial); outline-offset:2px; }
+
+  .gen-cfg { margin-top:10px; border-top:1px dashed var(--line); padding-top:10px; }
+  .gen-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px 12px; }
+  .fld { display:flex; flex-direction:column; gap:3px; }
+  .fld > span { font-size:12px; font-weight:700; color:var(--ink-soft); }
+  .fld > span small { font-weight:400; display:block; }
+  .fld input[type="number"], .fld select { width:100%; padding:8px 9px; border:1.5px solid var(--line); border-radius:7px;
+    background:var(--card); color:var(--ink); font:600 14.5px/1.2 var(--readout); }
+  .derate { font-size:13px; color:var(--ink-soft); margin:9px 0 0; line-height:1.45; }
+  .derate b { color:var(--ink); font-variant-numeric:tabular-nums; }
+
+  /* --- appliance board --- */
+  .app-grid { display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+  @media (max-width:600px) { .app-grid { grid-template-columns:1fr; } }
+  .app-card { border:1.5px solid var(--line); border-radius:10px; background:var(--card); }
+  .app-card.on { border-color:var(--vial); box-shadow:3px 3px 0 var(--vial-soft); }
+  .app-head { display:flex; align-items:center; gap:9px; padding:9px 11px; cursor:pointer; -webkit-tap-highlight-color:transparent; }
+  .app-head input { width:18px; height:18px; margin:0; accent-color:var(--vial); flex:none; }
+  .app-name { font-size:13.5px; font-weight:700; flex:1; line-height:1.25; }
+  .app-wh { font:700 12px/1.3 var(--readout); color:var(--ink-soft); white-space:nowrap; text-align:right; font-variant-numeric:tabular-nums; }
+  .app-body { display:none; border-top:1px dashed var(--line); padding:9px 11px 11px; }
+  .app-card.on .app-body { display:flex; flex-wrap:wrap; gap:8px 12px; align-items:flex-end; }
+  .app-body .fld { width:104px; }
+  .app-body .fld.wide { width:150px; }
+  .softs { display:flex; flex-direction:column; gap:5px; }
+  .soft { display:flex; align-items:center; gap:6px; font-size:12.5px; font-weight:600; cursor:pointer; }
+  .soft input { width:16px; height:16px; margin:0; accent-color:var(--vial); }
+  .fld-hint { font-size:11.5px; color:var(--ink-soft); }
+
+  .custom-wrap { margin-top:10px; display:flex; flex-direction:column; gap:8px; }
+  .custom-row { border:1.5px dashed var(--line); border-radius:10px; padding:9px 11px;
+    display:flex; flex-wrap:wrap; gap:8px 12px; align-items:flex-end; }
+  .custom-row.on { border-style:solid; border-color:var(--vial); }
+  .custom-row .conlab { display:flex; align-items:center; gap:8px; font-size:13px; font-weight:700; cursor:pointer; padding-bottom:8px; }
+  .custom-row .conlab input { width:18px; height:18px; margin:0; accent-color:var(--vial); }
+  .custom-row .fld.name { flex:1 1 130px; }
+  .custom-row .fld.name input { font-family:system-ui,sans-serif; }
+  .custom-row .rm { flex:none; width:32px; height:32px; border:1.5px solid var(--line); border-radius:8px;
+    background:var(--card); color:var(--ink-soft); font-size:15px; line-height:1; cursor:pointer; }
+  .custom-row .rm:hover { border-color:var(--warn); color:var(--warn); }
+  .pickbtn { background:none; border:none; color:var(--brand); font:600 13px system-ui; cursor:pointer; padding:0; text-decoration:underline; }
+  .custom-foot { margin:10px 0 0; font-size:13px; }
+
+  /* --- meter + results --- */
+  .meter-nums { display:flex; gap:8px 22px; flex-wrap:wrap; margin:2px 0 4px; }
+  .mn .mv { display:block; font:800 27px/1.15 var(--readout); font-variant-numeric:tabular-nums; letter-spacing:-0.01em; }
+  .mn .mk { font-size:10.5px; font-weight:700; letter-spacing:0.07em; text-transform:uppercase; color:var(--ink-soft); }
+  .meter-track { position:relative; height:36px; border:2px solid var(--line); border-radius:9px;
+    background:var(--ground); overflow:hidden; }
+  .meter-fill { position:absolute; left:0; top:0; bottom:0; width:0; background:var(--vial); border-radius:0 4px 4px 0;
+    transition:width .45s cubic-bezier(.25,.9,.3,1), background-color .3s; }
+  .meter-fill.a { background:var(--block); }
+  .meter-fill.r { background:var(--warn); }
+  .meter-amber { position:absolute; top:0; bottom:0; left:70.833%; border-left:2px dashed var(--line); opacity:.4; }
+  .meter-cap { position:absolute; top:0; bottom:0; left:83.333%; border-left:3px solid var(--line); }
+  .meter-scale { position:relative; height:20px; font:600 11.5px/1.6 var(--readout); color:var(--ink-soft); font-variant-numeric:tabular-nums; }
+  .meter-scale .zero { position:absolute; left:0; }
+  .meter-scale .cap-lab { position:absolute; left:83.333%; transform:translateX(-50%); white-space:nowrap; }
+  @media (max-width:430px) { .meter-scale .cap-lab { transform:translateX(-88%); } }
+
+  .verdict { margin-top:12px; border-radius:8px; padding:10px 12px; font-size:14px; line-height:1.45; background:var(--vial-soft); }
+  .verdict.blocks { background:var(--block-soft); } .verdict.bad { background:var(--warn-soft); }
+  .verdict b { font-variant-numeric:tabular-nums; }
+  .vk { display:block; font-size:10.5px; font-weight:700; letter-spacing:0.07em; text-transform:uppercase; color:var(--ink-soft); margin-bottom:2px; }
+
+  .fixes { margin-top:12px; border:1.5px dashed var(--line); border-radius:8px; padding:10px 12px; }
+  .fixes-t { margin:0 0 4px; font-size:12px; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; color:var(--ink-soft); }
+  .fixes ul { margin:0; padding-left:19px; font-size:13.5px; line-height:1.5; }
+  .fixes li { margin:3px 0; }
+  .fixes b { font-variant-numeric:tabular-nums; }
+
+  details { border-top:1px solid var(--line); margin-top:12px; padding-top:10px; }
+  summary { cursor:pointer; font-size:13px; font-weight:600; color:var(--ink-soft); }
+  ol.how { margin:8px 0 0; padding-left:20px; font-size:13.5px; color:var(--ink-soft); }
+  ol.how li { margin:5px 0; } ol.how b { color:var(--ink); }
+
+  /* --- FAQ --- */
+  .faq details:first-of-type { border-top:none; margin-top:0; padding-top:0; }
+  .faq summary { color:var(--ink); font-size:13.5px; }
+  .faq details p { margin:8px 0 0; font-size:13.5px; line-height:1.55; color:var(--ink-soft); }
+  .faq details p b { color:var(--ink); }
+
+  /* --- ad slots ---
+     Placeholders only. Once you have a Google AdSense publisher ID:
+       1. Add the loader script to <head>:
+          <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+       2. Replace each .ad-slot div's contents with an <ins class="adsbygoogle"> unit
+          for that slot ID, then call (adsbygoogle = window.adsbygoogle || []).push({});
+       3. Add a real ads.txt at the site root (see /ads.txt).
+  */
+  .ad-slot { border:1px dashed var(--line); border-radius:8px; background:var(--ground);
+    display:flex; align-items:center; justify-content:center; color:var(--ink-soft);
+    font-size:12px; letter-spacing:0.04em; text-transform:uppercase; min-height:90px; }
+  .ad-slot.leaderboard { min-height:90px; }
+  .ad-slot.rectangle { min-height:250px; max-width:336px; margin:0 auto; }
+
+  /* --- affiliate section --- */
+  .gear-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:10px; margin-top:10px; }
+  .gear-card { border:1px solid var(--line); border-radius:8px; padding:11px; text-decoration:none; color:var(--ink); display:flex; flex-direction:column; gap:4px; }
+  .gear-card:hover { border-color:var(--brand); }
+  .gear-card .gt { font-size:14px; font-weight:700; }
+  .gear-card .gd { font-size:12.5px; color:var(--ink-soft); }
+  .affiliate-disclosure { font-size:12px; color:var(--ink-soft); margin-top:10px; }
+
+  footer { max-width:820px; margin:8px auto 0; padding:14px; font-size:12.5px; color:var(--ink-soft); text-align:center; }
+  footer a { color:var(--ink-soft); text-decoration:underline; }
+  footer .flinks { margin-top:6px; display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
+</style>
+</head>
+<body>
+
+<div class="brandbar"><div class="brandbar-inner">
+  <a class="wordmark" href="../"><span class="mark" aria-hidden="true"><img src="../images/favicon-180.png" alt="" width="26" height="26"></span>S'more's Outdoors</a>
+  <a class="more" href="../">More free RV tools</a>
+</div></div>
+
+<main>
+  <header>
+    <h1>Will It Trip the Breaker?</h1>
+    <p class="sub">Add up what you want to run on shore power or a generator — and check the number that actually trips things: <b>starting watts</b>, the split-second surge when a compressor kicks on.</p>
+  </header>
+
+  <!-- AdSense slot — un-comment once the account is approved:
+  <div class="ad-slot leaderboard" role="complementary" aria-label="Advertisement">Advertisement</div>
+  -->
+
+  <section aria-label="Power source">
+    <p class="eyebrow">1 &middot; Pick your power source</p>
+    <p class="note">Plugged into a friend's garage? A campground pedestal? Boondocking on a generator? Your <b>budget</b> is whatever that source can deliver — pick it here.</p>
+
+    <div class="src-grid" role="radiogroup" aria-label="Power source" id="srcGrid">
+      <label class="src-card"><input type="radio" name="source" value="s15">
+        <span class="st">House outlet &mdash; 15A</span><span class="sw">1,800 W</span>
+        <span class="sd">Driveway cord + dogbone adapter</span></label>
+      <label class="src-card"><input type="radio" name="source" value="s20">
+        <span class="st">House outlet &mdash; 20A</span><span class="sw">2,400 W</span>
+        <span class="sd">Dedicated 20A circuit</span></label>
+      <label class="src-card"><input type="radio" name="source" value="s30">
+        <span class="st">RV pedestal &mdash; 30A</span><span class="sw">3,600 W</span>
+        <span class="sd">The classic single-AC hookup</span></label>
+      <label class="src-card"><input type="radio" name="source" value="s50">
+        <span class="st">RV pedestal &mdash; 50A</span><span class="sw">12,000 W</span>
+        <span class="sd">Two 120V legs &times; 6,000 W each</span></label>
+      <label class="src-card"><input type="radio" name="source" value="gen">
+        <span class="st">Generator</span><span class="sw">You tell us</span>
+        <span class="sd">Rated + peak watts, altitude-derated</span></label>
+    </div>
+
+    <div class="gen-cfg" id="genCfg" hidden>
+      <div class="gen-grid">
+        <label class="fld"><span>Rated running watts <small>the continuous number, e.g. 1,800</small></span>
+          <input type="number" id="genRated" min="100" max="20000" step="50" value="1800" inputmode="numeric"></label>
+        <label class="fld"><span>Peak / surge watts <small>the big number on the sticker, e.g. 2,200</small></span>
+          <input type="number" id="genPeak" min="100" max="25000" step="50" value="2200" inputmode="numeric"></label>
+        <label class="fld"><span>Altitude <small>feet above sea level</small></span>
+          <input type="number" id="genAlt" min="0" max="15000" step="100" value="0" inputmode="numeric"></label>
+      </div>
+      <p class="derate" id="genDerate"></p>
+    </div>
+  </section>
+
+  <section aria-label="Appliances">
+    <p class="eyebrow">2 &middot; Flip on your appliances</p>
+    <p class="note"><b>Check everything that would run at the same time.</b> Watts are typical presets — tap an appliance open to match your actual labels. Air conditioners can be doubled up (front + rear), each with its own soft start.</p>
+    <div class="app-grid" id="appGrid"></div>
+    <div class="custom-wrap" id="customWrap"></div>
+    <p class="custom-foot"><button class="pickbtn" id="addCustom" type="button">+ Add a custom appliance (up to 3)</button></p>
+  </section>
+
+  <section aria-label="Results">
+    <p class="eyebrow">3 &middot; The verdict</p>
+
+    <div aria-live="polite">
+      <div class="meter-nums">
+        <div class="mn"><span class="mv" id="mWatts">0</span><span class="mk">watts running</span></div>
+        <div class="mn"><span class="mv" id="mAmps">0.0</span><span class="mk">amps @ 120V</span></div>
+        <div class="mn"><span class="mv" id="mPct">0%</span><span class="mk">of capacity</span></div>
+      </div>
+      <div class="meter-track" id="meterTrack" role="meter" aria-valuemin="0" aria-valuemax="3600" aria-valuenow="0" aria-label="Total running load versus capacity">
+        <div class="meter-fill" id="mFill"></div>
+        <div class="meter-amber" aria-hidden="true"></div>
+        <div class="meter-cap" aria-hidden="true"></div>
+      </div>
+      <div class="meter-scale" aria-hidden="true"><span class="zero">0 W</span><span class="cap-lab" id="mCapLab">3,600 W capacity</span></div>
+
+      <div class="verdict" id="runVerdict"><span class="vk">Running load</span>Nothing's switched on yet — flip on some appliances above.</div>
+      <div class="verdict" id="startVerdict"><span class="vk">Worst-case start check</span>Toggle on an appliance with a motor or compressor and we'll check the start-up surge too.</div>
+      <p class="note leg" id="legNote" hidden><b>50A fine print:</b> your rig splits circuits across <b>two 120V legs of 6,000&nbsp;W each</b>. The panel decides which leg each circuit lives on — worst case, assume the big loads share one leg and keep the heavy hitters under ~6,000&nbsp;W. And because a big start surge hits whichever single leg that appliance lives on, the worst-case start check above is figured against one 6,000&nbsp;W leg — not the full 12,000&nbsp;W.</p>
+
+      <div class="fixes" id="fixes" hidden>
+        <p class="fixes-t">Ways to get under budget</p>
+        <ul id="fixList"></ul>
+      </div>
+    </div>
+
+    <p class="note warn"><b>Estimates only.</b> These presets are typical loads — your actual nameplate ratings vary, wiring and pedestal condition matter, and hot weather raises compressor draw. <b>Never bypass or upsize a breaker</b> to "fix" a trip; the breaker is protecting your wiring. See our <a href="./legal/disclaimer.html">full disclaimer</a>.</p>
+
+    <details>
+      <summary>How the math works</summary>
+      <ol class="how">
+        <li><b>Running vs. starting watts.</b> Running watts are the steady draw once an appliance is going. Anything with a compressor or motor also needs a much bigger <b>starting</b> (inrush) surge for a fraction of a second — that surge, not the steady load, is what stalls generators and trips marginal circuits.</li>
+        <li><b>LRA — locked-rotor amps.</b> The instant an AC compressor starts, the rotor isn't spinning yet, so it briefly draws its locked-rotor current — a 13,500&nbsp;BTU rooftop unit can spike to ~4,500&nbsp;W even though it runs on ~1,350&nbsp;W.</li>
+        <li><b>The worst-case start check</b> adds the running load of everything else that's on, plus the single largest start surge among your appliances, and compares it to what your source can deliver at that instant.</li>
+        <li><b>Breakers ride through a brief surge; generators don't.</b> A thermal breaker takes seconds to heat up, so for shore power we allow roughly 2&times; the rating for the split-second start. A generator's inverter has a hard electronic ceiling — its <b>peak watts</b> — so that's the limit we use.</li>
+        <li><b>Altitude derating.</b> Thin air means less oxygen per intake stroke, so engine generators lose roughly <b>3% of output per 1,000&nbsp;ft above ~500&nbsp;ft</b>. A "2,200&nbsp;W" generator at 5,000&nbsp;ft is really a ~1,900&nbsp;W generator.</li>
+        <li><b>What a soft start does.</b> A soft start ramps the compressor up instead of slamming it on, cutting the start surge from ~4,500&nbsp;W to ~1,800&nbsp;W on a 13.5k unit — it's how small inverter generators start rooftop ACs.</li>
+        <li><b>Presets are typical values.</b> Check the data plate or label on your actual appliances and edit the numbers — that's why every field is editable.</li>
+      </ol>
+    </details>
+  </section>
+
+  <!-- AdSense slot — un-comment once the account is approved:
+  <div class="ad-slot rectangle" role="complementary" aria-label="Advertisement">Advertisement</div>
+  -->
+
+  <section aria-label="Recommended power gear">
+    <p class="eyebrow">Gear that pairs with this calculator</p>
+    <div class="gear-grid">
+      <!-- Amazon search links. Once the Associates account is live, append the
+           Associates tracking-tag query parameter to each URL. -->
+      <a class="gear-card" href="https://www.amazon.com/s?k=rv+air+conditioner+soft+start" rel="sponsored noopener" target="_blank">
+        <span class="gt">AC soft-start kit</span>
+        <span class="gd">Cuts your air conditioner's start surge by more than half — the single biggest fix this calculator will suggest.</span>
+      </a>
+      <a class="gear-card" href="https://www.amazon.com/s?k=30+amp+rv+surge+protector+ems" rel="sponsored noopener" target="_blank">
+        <span class="gt">30A surge protector / EMS</span>
+        <span class="gd">Catches miswired pedestals and low voltage before they cook your rig's electronics.</span>
+      </a>
+      <a class="gear-card" href="https://www.amazon.com/s?k=kill+a+watt+meter" rel="sponsored noopener" target="_blank">
+        <span class="gt">Plug-in watt meter</span>
+        <span class="gd">Measure what your appliances really draw, then feed the true numbers into this tool.</span>
+      </a>
+      <a class="gear-card" href="https://www.amazon.com/s?k=50+amp+to+30+amp+rv+adapter" rel="sponsored noopener" target="_blank">
+        <span class="gt">50A-to-30A dogbone adapter</span>
+        <span class="gd">Lets a 30A rig plug into a 50A pedestal (your budget stays 3,600 W — the adapter doesn't add amps).</span>
+      </a>
+    </div>
+    <p class="affiliate-disclosure">As an Amazon Associate, S'more's Outdoors earns from qualifying purchases.</p>
+  </section>
+
+  <section class="faq" aria-label="Frequently asked questions">
+    <p class="eyebrow">FAQ</p>
+
+    <details>
+      <summary>Why does my A/C trip a generator that's "big enough" on paper?</summary>
+      <p>The number that matters at the instant the compressor kicks on isn't running watts — it's <b>starting (locked-rotor) watts</b>, which are typically 3&ndash;4&times; higher. A 13,500&nbsp;BTU rooftop unit that runs on about 1,350&nbsp;W can spike to roughly 4,500&nbsp;W for a fraction of a second while the rotor gets moving. A generator's surge rating only lasts a few seconds, and an inverter generator has a hard electronic ceiling at its peak watts. Altitude compounds it: engine generators lose roughly <b>3% of output per 1,000&nbsp;ft above 500&nbsp;ft</b>, so a generator that looks big enough on the sticker can bog down or trip its overload the moment the compressor starts.</p>
+    </details>
+
+    <details>
+      <summary>What does a soft start actually do?</summary>
+      <p>A soft start <b>staggers the compressor's start</b>, ramping it up over a fraction of a second instead of slamming it across the line — which cuts the inrush surge by roughly <b>60&ndash;70%</b>. On a typical 13,500&nbsp;BTU unit the start spike drops from around 4,500&nbsp;W to roughly 1,800&nbsp;W. That reduction is exactly what lets a 2,200&nbsp;W-class inverter generator start a 13.5k rooftop A/C at all. The device installs at the A/C unit itself, wired in with the compressor's start components, and it's a one-time install per air conditioner.</p>
+    </details>
+
+    <details>
+      <summary>Is 50 amp twice as much power as 30 amp?</summary>
+      <p>It's much more than twice. A 30&nbsp;amp RV connection is a <b>single 120&nbsp;V leg</b>: 30&nbsp;A &times; 120&nbsp;V = <b>3,600&nbsp;W</b> total. A 50&nbsp;amp RV connection is <b>two separate 120&nbsp;V legs</b> at 50&nbsp;A each: 2 &times; 50&nbsp;A &times; 120&nbsp;V = <b>12,000&nbsp;W</b> — more than three times the power. That's why a 50&nbsp;amp rig can run two air conditioners, an electric water heater, and a microwave at once, while a 30&nbsp;amp rig has to juggle which big loads run at the same time.</p>
+    </details>
+
+    <details>
+      <summary>Can I plug my 30A RV into a house outlet?</summary>
+      <p>Yes — a 30A-to-15A <b>dogbone adapter</b> lets the RV cord plug into an ordinary household outlet. But the adapter doesn't add capacity: you get whatever the house circuit delivers, about <b>1,800&nbsp;W on a 15&nbsp;A circuit</b> or 2,400&nbsp;W on a dedicated 20&nbsp;A one. That's enough for the converter, the refrigerator, lights, and chargers — but in most cases <b>not enough to start and run the air conditioner</b>. Use a single heavy-gauge (10 or 12&nbsp;AWG) extension cord kept as short as practical, never daisy-chain light-duty cords, and check that the cord and outlet aren't getting warm.</p>
+    </details>
+
+    <details>
+      <summary>Why do campground pedestals damage RV air conditioners?</summary>
+      <p>On hot afternoons a crowded campground's voltage can sag well below a healthy 120&nbsp;V — a <b>brownout</b>. When voltage drops, a compressor draws more amps to do the same work, and that extra current turns into heat in the compressor windings. Running through repeated low-voltage spells shortens compressor life and can kill the unit outright. A <b>surge protector with EMS</b> (electrical management system) features monitors the pedestal and disconnects on low voltage, high voltage, miswiring, or an open ground — cheap insurance compared to replacing a rooftop air conditioner.</p>
+    </details>
+
+    <details>
+      <summary>What runs on 12V vs 120V in my RV?</summary>
+      <p>An RV has two electrical systems. The <b>12&nbsp;V DC side</b> runs off the batteries: interior lights, vent fans, the water pump, the furnace blower (propane makes the heat, but the fan is 12&nbsp;V), and control boards — including the controls on an absorption fridge. The <b>120&nbsp;V AC side</b> needs shore power, a generator, or an inverter: the air conditioner, microwave, wall outlets, the electric water heater element, and the converter that charges the batteries. The split matters most when boondocking without an inverter — everything on the 12&nbsp;V list keeps working from the batteries, and nothing on the 120&nbsp;V list does.</p>
+    </details>
+  </section>
+</main>
+
+<footer>
+  <div>Will It Trip the Breaker? is a free tool from <a href="../">S'more's Outdoors</a>. Wattage presets are typical values — always verify against your appliance labels.</div>
+  <div class="flinks">
+    <a href="./legal/terms.html">Terms</a>
+    <a href="./legal/privacy.html">Privacy</a>
+    <a href="./legal/disclaimer.html">Disclaimer</a>
+  </div>
+</footer>
+
+<script>
+var Power = (function () {
+  "use strict";
+
+  var LS_KEY = "rvPowerBudget";
+  var VOLTS = 120;
+  var SHORE_INRUSH = 2;      // thermal breakers tolerate ~2x briefly at the start instant
+  var TRACK_MAX = 1.2;       // meter track spans 0..120% of capacity
+  var DERATE_PER_KFT = 0.03; // 3% per 1,000 ft above 500 ft
+
+  var SOURCES = {
+    s15: { cap: 1800,  label: "15A house outlet" },
+    s20: { cap: 2400,  label: "20A house outlet" },
+    s30: { cap: 3600,  label: "30A pedestal" },
+    s50: { cap: 12000, label: "50A pedestal", perLeg: 6000 },
+    gen: { label: "generator" }
+  };
+
+  var PRESETS = [
+    { id: "ac135",  name: "Air conditioner — 13,500 BTU", run: 1350, surge: 4500, soft: 1800, ac: true },
+    { id: "ac150",  name: "Air conditioner — 15,000 BTU", run: 1600, surge: 5200, soft: 2100, ac: true },
+    { id: "wh",     name: "Electric water heater",        run: 1400 },
+    { id: "micro",  name: "Microwave",                    run: 1100 },
+    { id: "coffee", name: "Coffee maker",                 run: 900 },
+    { id: "space",  name: "Space heater",                 run: 1500, lohi: true },
+    { id: "hair",   name: "Hair dryer",                   run: 1500 },
+    { id: "fridge", name: "Residential fridge",           run: 400,  surge: 1200 },
+    { id: "conv",   name: "RV converter / charger",       run: 500 },
+    { id: "tv",     name: "TV + misc electronics",        run: 200 },
+    { id: "induct", name: "Induction cooktop",            run: 1800 },
+    { id: "cpap",   name: "CPAP",                         run: 60 },
+    { id: "ebike",  name: "Battery / e-bike charger",     run: 300 }
+  ];
+  var MAX_CUSTOM = 3;
+
+  function num(v, fallback) {
+    var n = parseFloat(v);
+    return isFinite(n) && n >= 0 ? n : (fallback || 0);
+  }
+  function fmtW(n) { return Math.round(n).toLocaleString("en-US"); }
+
+  function defaultState() {
+    var st = { source: "s30", gen: { rated: 1800, peak: 2200, alt: 0 }, apps: {}, custom: [] };
+    PRESETS.forEach(function (p) {
+      st.apps[p.id] = { on: false, run: p.run, surge: p.surge || 0, qty: 1, soft: [false, false] };
+    });
+    return st;
+  }
+
+  function mergeSaved(st, saved) {
+    if (!saved || typeof saved !== "object") return st;
+    if (SOURCES[saved.source]) st.source = saved.source;
+    if (saved.gen && typeof saved.gen === "object") {
+      st.gen.rated = num(saved.gen.rated, st.gen.rated) || st.gen.rated;
+      st.gen.peak  = num(saved.gen.peak,  st.gen.peak)  || st.gen.peak;
+      st.gen.alt   = num(saved.gen.alt, 0);
+    }
+    if (saved.apps && typeof saved.apps === "object") {
+      PRESETS.forEach(function (p) {
+        var s = saved.apps[p.id], a = st.apps[p.id];
+        if (!s || typeof s !== "object") return;
+        a.on = !!s.on;
+        a.run = num(s.run, p.run);
+        a.surge = num(s.surge, p.surge || 0);
+        a.qty = s.qty === 2 ? 2 : 1;
+        a.soft = [!!(s.soft && s.soft[0]), !!(s.soft && s.soft[1])];
+      });
+    }
+    if (Array.isArray(saved.custom)) {
+      st.custom = saved.custom.slice(0, MAX_CUSTOM).map(function (c) {
+        c = c && typeof c === "object" ? c : {};
+        return { on: !!c.on, name: String(c.name || "").slice(0, 60), run: num(c.run, 0), surge: num(c.surge, 0) };
+      });
+    }
+    return st;
+  }
+
+  function presetById(id) {
+    for (var i = 0; i < PRESETS.length; i++) if (PRESETS[i].id === id) return PRESETS[i];
+    return null;
+  }
+
+  // Every ON appliance expanded to individual units (ACs can be x2: front/rear).
+  function activeUnits(st) {
+    var units = [];
+    PRESETS.forEach(function (p) {
+      var a = st.apps[p.id];
+      if (!a || !a.on) return;
+      var run = num(a.run, p.run);
+      if (p.ac) {
+        var q = a.qty === 2 ? 2 : 1;
+        for (var i = 0; i < q; i++) {
+          var soft = !!a.soft[i];
+          units.push({
+            id: p.id, unit: i, ac: true, soft: soft, softVal: p.soft,
+            name: p.name + (q === 2 ? (i === 0 ? " (front)" : " (rear)") : ""),
+            run: run,
+            surge: soft ? p.soft : num(a.surge, p.surge)
+          });
+        }
+      } else {
+        units.push({ id: p.id, name: p.name, run: run, surge: num(a.surge, 0) });
+      }
+    });
+    st.custom.forEach(function (c, i) {
+      if (!c.on) return;
+      units.push({ id: "custom" + i, name: c.name || ("Custom appliance " + (i + 1)), run: num(c.run, 0), surge: num(c.surge, 0) });
+    });
+    return units;
+  }
+
+  function derateFactor(altFt) {
+    var f = 1 - DERATE_PER_KFT * Math.max(0, altFt - 500) / 1000;
+    return Math.max(0.1, f);
+  }
+
+  function calc(st) {
+    var units = activeUnits(st);
+    var totalRun = 0;
+    units.forEach(function (u) { totalRun += u.run; });
+
+    var capRun, capStart, f = 1;
+    if (st.source === "gen") {
+      f = derateFactor(num(st.gen.alt, 0));
+      var rated = Math.max(100, num(st.gen.rated, 1800));
+      var peak = Math.max(100, num(st.gen.peak, rated));
+      capRun = rated * f;
+      capStart = Math.max(capRun, peak * f);
+    } else {
+      var src = SOURCES[st.source];
+      capRun = src.cap;
+      // A single compressor's start surge lands on ONE leg, so on 50A the
+      // start-instant allowance is per-leg (6,000 W x 2x inrush = 12,000 W),
+      // not the full two-leg 24,000 W. Running budget stays the full cap.
+      capStart = (src.perLeg || src.cap) * SHORE_INRUSH;
+    }
+
+    // Worst-case start instant: everything else running + the single biggest surge.
+    var culprit = null, extra = 0;
+    units.forEach(function (u) {
+      var e = (u.surge || 0) - u.run;
+      if (e > extra) { extra = e; culprit = u; }
+    });
+    var startWorst = totalRun + extra;
+
+    var runPct = capRun > 0 ? totalRun / capRun : 0;
+    var startPct = capStart > 0 ? startWorst / capStart : 0;
+
+    var runState = units.length === 0 ? "none" : (runPct > 1 ? "over" : (runPct >= 0.85 ? "warn" : "ok"));
+    var startState;
+    if (units.length === 0) startState = "none";
+    else if (!culprit) startState = "nosurge";
+    else if (startPct > 1) startState = "fail";
+    else if (startPct > 0.85) startState = "marginal";
+    else startState = "ok";
+
+    return {
+      units: units, totalRun: totalRun, amps: totalRun / VOLTS,
+      capRun: capRun, capStart: capStart, derate: f,
+      runPct: runPct, startPct: startPct, startWorst: startWorst,
+      culprit: culprit, runState: runState, startState: startState,
+      fixes: buildFixes(st, units, { runPct: runPct, startPct: startPct, totalRun: totalRun, capRun: capRun, capStart: capStart, startState: startState, derate: f })
+    };
+  }
+
+  function buildFixes(st, units, r) {
+    var fixes = [];
+    var overRun = r.runPct > 1;
+    var startTrouble = r.startState === "fail" || r.startState === "marginal";
+    if (!overRun && !startTrouble) return fixes;
+
+    // Soft starts fix the start instant.
+    if (startTrouble) {
+      units.forEach(function (u) {
+        if (u.ac && !u.soft && u.surge > u.softVal) {
+          fixes.push("Add a soft start to the " + u.name + " (−" + fmtW(u.surge - u.softVal) + " W at the start instant).");
+        }
+      });
+      if (st.source === "gen" && num(st.gen.alt, 0) > 500) {
+        var lost = Math.round((1 - r.derate) * 100);
+        fixes.push("Altitude is costing you " + lost + "% of the generator — at " + fmtW(num(st.gen.alt, 0)) + " ft, its " + fmtW(num(st.gen.peak, 0)) + " W peak is really about " + fmtW(r.capStart) + " W.");
+      }
+    }
+
+    if (overRun) {
+      var apps = st.apps;
+      if (apps.wh && apps.wh.on) {
+        fixes.push("Flip the water heater to propane (−" + fmtW(num(apps.wh.run, 1400)) + " W running).");
+      }
+      var acUnits = units.filter(function (u) { return u.ac; });
+      if (acUnits.length >= 2) {
+        var minRun = acUnits.reduce(function (m, u) { return Math.min(m, u.run); }, Infinity);
+        fixes.push("Run one air conditioner at a time (−" + fmtW(minRun) + " W running).");
+      }
+      if (apps.space && apps.space.on && num(apps.space.run, 0) > 750) {
+        fixes.push("Turn the space heater to low (−" + fmtW(num(apps.space.run, 1500) - 750) + " W).");
+      }
+      var kitchen = ["micro", "coffee", "induct", "hair"].filter(function (id) { return apps[id] && apps[id].on; });
+      if (kitchen.length >= 2) {
+        fixes.push("Stagger the heat-makers — microwave, coffee maker, induction cooktop, and hair dryer don't all need to run at once.");
+      }
+      if (fixes.length === 0 && units.length) {
+        var sorted = units.slice().sort(function (a, b) { return b.run - a.run; });
+        var top = sorted.slice(0, 2).map(function (u) { return u.name + " (" + fmtW(u.run) + " W)"; }).join(" and ");
+        fixes.push("You're over by " + fmtW(r.totalRun - r.capRun) + " W — the biggest running draws are " + top + "; shed or stagger one of them.");
+      }
+    }
+    return fixes.slice(0, 5);
+  }
+
+  return {
+    LS_KEY: LS_KEY, SOURCES: SOURCES, PRESETS: PRESETS, MAX_CUSTOM: MAX_CUSTOM,
+    TRACK_MAX: TRACK_MAX, num: num, fmtW: fmtW,
+    defaultState: defaultState, mergeSaved: mergeSaved, presetById: presetById,
+    derateFactor: derateFactor, calc: calc
+  };
+})();
+
+if (typeof module !== "undefined" && module.exports) { module.exports = Power; }
+
+if (typeof document !== "undefined") (function () {
+  "use strict";
+
+  var state = Power.defaultState();
+  try {
+    state = Power.mergeSaved(state, JSON.parse(localStorage.getItem(Power.LS_KEY) || "null"));
+  } catch (e) {}
+
+  function save() {
+    try { localStorage.setItem(Power.LS_KEY, JSON.stringify(state)); } catch (e) {}
+  }
+  function $(id) { return document.getElementById(id); }
+  var fmtW = Power.fmtW, num = Power.num;
+
+  // ---------- power source ----------
+  var srcGrid = $("srcGrid");
+  var genCfg = $("genCfg"), genRated = $("genRated"), genPeak = $("genPeak"), genAlt = $("genAlt"), genDerate = $("genDerate");
+
+  function syncSourceUI() {
+    var radios = srcGrid.querySelectorAll('input[name="source"]');
+    radios.forEach(function (r) {
+      r.checked = (r.value === state.source);
+      r.closest(".src-card").classList.toggle("sel", r.checked);
+    });
+    genCfg.hidden = state.source !== "gen";
+    $("legNote").hidden = state.source !== "s50";
+  }
+
+  srcGrid.addEventListener("change", function (e) {
+    if (e.target.name !== "source") return;
+    state.source = e.target.value;
+    syncSourceUI();
+    update();
+  });
+
+  genRated.value = state.gen.rated;
+  genPeak.value = state.gen.peak;
+  genAlt.value = state.gen.alt;
+  [genRated, genPeak, genAlt].forEach(function (inp) {
+    inp.addEventListener("input", function () {
+      state.gen.rated = num(genRated.value, 1800);
+      state.gen.peak = num(genPeak.value, 2200);
+      state.gen.alt = num(genAlt.value, 0);
+      update();
+    });
+  });
+
+  // ---------- appliance board ----------
+  var appGrid = $("appGrid");
+
+  function whHint(p) {
+    if (p.ac) return fmtW(p.run) + " W run · " + fmtW(p.surge) + " W start";
+    if (p.surge) return fmtW(p.run) + " W run · " + fmtW(p.surge) + " W start";
+    if (p.lohi) return "750 / 1,500 W";
+    return fmtW(p.run) + " W";
+  }
+
+  function buildCard(p) {
+    var a = state.apps[p.id];
+    var card = document.createElement("div");
+    card.className = "app-card" + (a.on ? " on" : "");
+    card.dataset.id = p.id;
+
+    var body = "";
+    if (p.lohi) {
+      body += '<label class="fld"><span>Setting</span><select class="f-run">' +
+        '<option value="750">Low — 750 W</option><option value="1500">High — 1,500 W</option></select></label>';
+    } else {
+      body += '<label class="fld"><span>Running watts</span><input type="number" class="f-run" min="0" max="6000" step="10" inputmode="numeric"></label>';
+    }
+    if (p.surge) {
+      body += '<label class="fld"><span>Starting watts</span><input type="number" class="f-surge" min="0" max="9000" step="50" inputmode="numeric"></label>';
+    }
+    if (p.ac) {
+      body += '<label class="fld wide"><span>Units</span><select class="f-qty">' +
+        '<option value="1">1</option><option value="2">2 — front + rear</option></select></label>';
+      body += '<div class="softs">' +
+        '<label class="soft"><input type="checkbox" class="f-soft0"><span class="s0lab">Soft start installed</span></label>' +
+        '<label class="soft s1" hidden><input type="checkbox" class="f-soft1"><span>Rear: soft start</span></label>' +
+        '<span class="fld-hint">A soft start cuts the surge to ~' + fmtW(p.soft) + ' W</span></div>';
+    }
+
+    card.innerHTML =
+      '<label class="app-head"><input type="checkbox" class="app-on">' +
+      '<span class="app-name">' + p.name + '</span>' +
+      '<span class="app-wh">' + whHint(p) + '</span></label>' +
+      '<div class="app-body">' + body + '</div>';
+
+    var onBox = card.querySelector(".app-on");
+    onBox.checked = a.on;
+    onBox.addEventListener("change", function () {
+      a.on = onBox.checked;
+      card.classList.toggle("on", a.on);
+      update();
+    });
+
+    var runInp = card.querySelector(".f-run");
+    runInp.value = p.lohi ? (num(a.run, p.run) > 750 ? "1500" : "750") : a.run;
+    runInp.addEventListener(p.lohi ? "change" : "input", function () {
+      a.run = num(runInp.value, p.run);
+      update();
+    });
+
+    var surgeInp = card.querySelector(".f-surge");
+    if (surgeInp) {
+      surgeInp.value = a.surge;
+      surgeInp.addEventListener("input", function () {
+        a.surge = num(surgeInp.value, p.surge);
+        update();
+      });
+    }
+
+    if (p.ac) {
+      var qtySel = card.querySelector(".f-qty");
+      var s0 = card.querySelector(".f-soft0"), s1 = card.querySelector(".f-soft1");
+      var s0lab = card.querySelector(".s0lab"), s1row = card.querySelector(".soft.s1");
+      function syncQty() {
+        var two = a.qty === 2;
+        qtySel.value = two ? "2" : "1";
+        s1row.hidden = !two;
+        s0lab.textContent = two ? "Front: soft start" : "Soft start installed";
+      }
+      qtySel.addEventListener("change", function () {
+        a.qty = qtySel.value === "2" ? 2 : 1;
+        syncQty();
+        update();
+      });
+      s0.checked = a.soft[0];
+      s1.checked = a.soft[1];
+      s0.addEventListener("change", function () { a.soft[0] = s0.checked; update(); });
+      s1.addEventListener("change", function () { a.soft[1] = s1.checked; update(); });
+      syncQty();
+    }
+
+    return card;
+  }
+
+  Power.PRESETS.forEach(function (p) { appGrid.appendChild(buildCard(p)); });
+
+  // ---------- custom appliances ----------
+  var customWrap = $("customWrap"), addCustomBtn = $("addCustom");
+
+  function renderCustom() {
+    customWrap.innerHTML = "";
+    state.custom.forEach(function (c, i) {
+      var row = document.createElement("div");
+      row.className = "custom-row" + (c.on ? " on" : "");
+      row.innerHTML =
+        '<label class="conlab"><input type="checkbox" class="c-on"> On</label>' +
+        '<label class="fld name"><span>Name</span><input type="text" class="c-name" maxlength="60" placeholder="e.g. Instant Pot"></label>' +
+        '<label class="fld"><span>Running watts</span><input type="number" class="c-run" min="0" max="6000" step="10" inputmode="numeric"></label>' +
+        '<label class="fld"><span>Starting watts <small>0 if none</small></span><input type="number" class="c-surge" min="0" max="9000" step="50" inputmode="numeric"></label>' +
+        '<button class="rm" type="button" aria-label="Remove custom appliance ' + (i + 1) + '" title="Remove">✕</button>';
+      var on = row.querySelector(".c-on"), name = row.querySelector(".c-name"),
+          run = row.querySelector(".c-run"), surge = row.querySelector(".c-surge");
+      on.checked = c.on; name.value = c.name; run.value = c.run; surge.value = c.surge;
+      on.addEventListener("change", function () { c.on = on.checked; row.classList.toggle("on", c.on); update(); });
+      name.addEventListener("input", function () { c.name = name.value.slice(0, 60); update(); });
+      run.addEventListener("input", function () { c.run = num(run.value, 0); update(); });
+      surge.addEventListener("input", function () { c.surge = num(surge.value, 0); update(); });
+      row.querySelector(".rm").addEventListener("click", function () {
+        state.custom.splice(i, 1);
+        renderCustom();
+        update();
+      });
+      customWrap.appendChild(row);
+    });
+    addCustomBtn.disabled = state.custom.length >= Power.MAX_CUSTOM;
+    addCustomBtn.style.opacity = addCustomBtn.disabled ? "0.5" : "";
+  }
+
+  addCustomBtn.addEventListener("click", function () {
+    if (state.custom.length >= Power.MAX_CUSTOM) return;
+    state.custom.push({ on: true, name: "", run: 0, surge: 0 });
+    renderCustom();
+    var last = customWrap.lastElementChild;
+    if (last) last.querySelector(".c-name").focus();
+    update();
+  });
+
+  // ---------- results ----------
+  var mWatts = $("mWatts"), mAmps = $("mAmps"), mPct = $("mPct"), mFill = $("mFill"),
+      mCapLab = $("mCapLab"), meterTrack = $("meterTrack"),
+      runVerdict = $("runVerdict"), startVerdict = $("startVerdict"),
+      fixesBox = $("fixes"), fixList = $("fixList");
+
+  function verdictClass(el, kind) { el.className = "verdict" + (kind ? " " + kind : ""); }
+
+  function capLabel(r) {
+    if (state.source === "gen") {
+      return fmtW(r.capRun) + " W " + (r.derate < 1 ? "derated " : "") + "capacity";
+    }
+    if (state.source === "s50") return "12,000 W · two 6,000 W legs";
+    return fmtW(r.capRun) + " W capacity";
+  }
+
+  function sourceNoun() {
+    return state.source === "gen" ? "generator" : Power.SOURCES[state.source].label;
+  }
+
+  function renderDerate(r) {
+    var g = state.gen;
+    if (num(g.alt, 0) > 500) {
+      var lost = Math.round((1 - r.derate) * 1000) / 10;
+      genDerate.innerHTML = "Above 500 ft, figure −3% per 1,000 ft: at <b>" + fmtW(g.alt) +
+        " ft</b> your " + fmtW(g.rated) + " W / " + fmtW(g.peak) + " W generator behaves like <b>" +
+        fmtW(r.capRun) + " W running / " + fmtW(r.capStart) + " W peak</b> (−" + lost + "%).";
+    } else {
+      genDerate.innerHTML = "At this altitude there's no derating — the full <b>" +
+        fmtW(g.rated) + " W running / " + fmtW(g.peak) + " W peak</b> is available.";
+    }
+  }
+
+  function renderRunVerdict(r) {
+    var head = '<span class="vk">Running load</span>';
+    if (r.runState === "none") {
+      verdictClass(runVerdict, "");
+      runVerdict.innerHTML = head + "Nothing's switched on yet — flip on some appliances above.";
+    } else if (r.runState === "ok") {
+      verdictClass(runVerdict, "");
+      runVerdict.innerHTML = head + "<b>" + fmtW(r.totalRun) + " W running</b> — " +
+        Math.round(r.runPct * 100) + "% of your " + sourceNoun() + "'s " + fmtW(r.capRun) + " W. Comfortable headroom.";
+    } else if (r.runState === "warn") {
+      verdictClass(runVerdict, "blocks");
+      runVerdict.innerHTML = head + "<b>" + fmtW(r.totalRun) + " W running</b> — " +
+        Math.round(r.runPct * 100) + "% of capacity. You're in the amber zone; one more big appliance tips it.";
+    } else {
+      verdictClass(runVerdict, "bad");
+      runVerdict.innerHTML = head + "<b>Over budget by " + fmtW(r.totalRun - r.capRun) + " W.</b> At " +
+        fmtW(r.totalRun) + " W against " + fmtW(r.capRun) + " W, " +
+        (state.source === "gen"
+          ? "the generator overloads once everything is running at the same time."
+          : "the breaker trips once everything is running at the same time.");
+    }
+  }
+
+  function renderStartVerdict(r) {
+    var head = '<span class="vk">Worst-case start check</span>';
+    if (r.startState === "none") {
+      verdictClass(startVerdict, "");
+      startVerdict.innerHTML = head + "Toggle on an appliance with a motor or compressor and we'll check the start-up surge too.";
+      return;
+    }
+    if (r.startState === "nosurge") {
+      verdictClass(startVerdict, r.runState === "over" ? "bad" : "");
+      startVerdict.innerHTML = head + "Nothing you've selected has a big starting surge — if the running number above fits, you're set.";
+      return;
+    }
+    var cName = r.culprit.name;
+    if (r.startState === "ok") {
+      verdictClass(startVerdict, "");
+      startVerdict.innerHTML = head + "<b>Starts fine.</b> Worst instant is the " + cName +
+        " kicking on while everything else runs: <b>" + fmtW(r.startWorst) + " W</b> for a split second, against about " +
+        fmtW(r.capStart) + " W available at the start instant.";
+    } else if (r.startState === "marginal") {
+      verdictClass(startVerdict, "blocks");
+      startVerdict.innerHTML = head + "<b>Marginal — it should start, but it's tight.</b> The " + cName +
+        " needs <b>" + fmtW(r.startWorst) + " W</b> at the start instant; you have about " + fmtW(r.capStart) +
+        " W. A cool morning, probably; a hot afternoon" + (state.source === "gen" ? " on a tired generator" : "") + ", maybe not.";
+    } else {
+      verdictClass(startVerdict, "bad");
+      startVerdict.innerHTML = head + (state.source === "gen"
+        ? "<b>Won't start.</b> When the " + cName + " tries to start, the load spikes to <b>" + fmtW(r.startWorst) +
+          " W</b> — past the " + fmtW(r.capStart) + " W your generator can deliver at that instant. It will bog down or trip its overload."
+        : "<b>Will trip.</b> When the " + cName + " tries to start, the load spikes to <b>" + fmtW(r.startWorst) +
+          " W</b> — past the ~" + fmtW(r.capStart) + " W a " + sourceNoun() + " breaker will tolerate even for an instant.");
+    }
+  }
+
+  function update() {
+    var r = Power.calc(state);
+
+    // meter
+    var width = Math.min(r.runPct, Power.TRACK_MAX) / Power.TRACK_MAX * 100;
+    mFill.style.width = (r.totalRun > 0 ? Math.max(width, 0.8) : 0) + "%";
+    mFill.className = "meter-fill" + (r.runPct > 1 ? " r" : (r.runPct >= 0.85 ? " a" : ""));
+    mWatts.textContent = fmtW(r.totalRun);
+    mAmps.textContent = r.amps.toFixed(1);
+    mPct.textContent = Math.round(r.runPct * 100) + "%";
+    mCapLab.textContent = capLabel(r);
+    meterTrack.setAttribute("aria-valuemax", Math.round(r.capRun));
+    meterTrack.setAttribute("aria-valuenow", Math.round(r.totalRun));
+    meterTrack.setAttribute("aria-valuetext", fmtW(r.totalRun) + " watts of " + fmtW(r.capRun) + " watt capacity");
+
+    renderRunVerdict(r);
+    renderStartVerdict(r);
+    if (state.source === "gen") renderDerate(r);
+
+    // fixes
+    if (r.fixes.length) {
+      fixList.innerHTML = "";
+      r.fixes.forEach(function (f) {
+        var li = document.createElement("li");
+        li.textContent = f;
+        fixList.appendChild(li);
+      });
+      fixesBox.hidden = false;
+    } else {
+      fixesBox.hidden = true;
+    }
+
+    save();
+  }
+
+  syncSourceUI();
+  renderCustom();
+  update();
+})();
+</script>
+</body>
+</html>

@@ -4,14 +4,80 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>S'more's Outdoors — Free Tools for RV, Van &amp; Overland Life</title>
-<meta name="description" content="Free browser-based tools for RVers, van lifers, and overlanders. Start with Level My RV, our leveling block calculator — more tools coming soon.">
+<meta name="author" content="S'more's Outdoors">
+<meta name="description" content="Free browser-based tools for RVers and van lifers: leveling blocks, towing safety, boondocking water, propane, and shore power. No signup.">
+<meta name="keywords" content="RV calculators, RV tools, leveling block calculator, towing capacity calculator, boondocking calculator, propane calculator, 30 amp calculator, camper van tools, vanlife calculators, free RV tools">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="googlebot" content="index, follow">
 <link rel="canonical" href="https://smoreoutdoors.com/">
-<meta property="og:title" content="S'more's Outdoors — Free Tools for RV, Van & Overland Life">
-<meta property="og:description" content="Free browser-based tools for RVers, van lifers, and overlanders.">
+
+<!-- Open Graph -->
 <meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="S'more's Outdoors">
+<meta property="og:title" content="S'more's Outdoors — Free Tools for RV, Van &amp; Overland Life">
+<meta property="og:description" content="Free browser-based calculators for RVers, van lifers, and overlanders — leveling, towing safety, boondocking water, propane, and shore power. No accounts, no signup.">
 <meta property="og:url" content="https://smoreoutdoors.com/">
 <meta property="og:image" content="https://smoreoutdoors.com/images/og-image.png">
+<meta property="og:image:secure_url" content="https://smoreoutdoors.com/images/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The S'more's Outdoors mascot — a happy s'more character with an explorer backpack — beside the site name.">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="S'more's Outdoors — Free Tools for RV, Van &amp; Overland Life">
+<meta name="twitter:description" content="Free browser-based calculators for RVers, van lifers, and overlanders. No accounts, no signup.">
+<meta name="twitter:image" content="https://smoreoutdoors.com/images/og-image.png">
+<meta name="twitter:image:alt" content="The S'more's Outdoors mascot beside the site name.">
+
 <meta name="theme-color" content="#1f5c37">
+
+<!-- Organization schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "S'more's Outdoors",
+  "url": "https://smoreoutdoors.com/",
+  "logo": "https://smoreoutdoors.com/images/favicon-512.png",
+  "email": "support@smoreoutdoors.com",
+  "description": "S'more's Outdoors builds small, free, browser-based tools for the RV and van-life community.",
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "email": "support@smoreoutdoors.com",
+      "availableLanguage": ["English"]
+    },
+    {
+      "@type": "ContactPoint",
+      "contactType": "legal",
+      "email": "legal@smoreoutdoors.com"
+    }
+  ]
+}
+</script>
+
+<!-- WebSite + tool catalog schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "S'more's Outdoors",
+  "url": "https://smoreoutdoors.com/",
+  "description": "Free browser-based tools for RVers, van lifers, and overlanders.",
+  "publisher": { "@type": "Organization", "name": "S'more's Outdoors", "url": "https://smoreoutdoors.com/" },
+  "hasPart": [
+    { "@type": "WebApplication", "name": "RV Leveling Block Calculator", "url": "https://smoreoutdoors.com/leveling-block-calculator/", "applicationCategory": "UtilitiesApplication" },
+    { "@type": "WebApplication", "name": "Can I Tow It?", "url": "https://smoreoutdoors.com/can-i-tow-it/", "applicationCategory": "UtilitiesApplication" },
+    { "@type": "WebApplication", "name": "How Long Can We Boondock?", "url": "https://smoreoutdoors.com/boondocking-calculator/", "applicationCategory": "UtilitiesApplication" },
+    { "@type": "WebApplication", "name": "Propane Tank Duration Calculator", "url": "https://smoreoutdoors.com/propane-calculator/", "applicationCategory": "UtilitiesApplication" },
+    { "@type": "WebApplication", "name": "Will It Trip the Breaker?", "url": "https://smoreoutdoors.com/rv-power-budget/", "applicationCategory": "UtilitiesApplication" }
+  ]
+}
+</script>
 <link rel="icon" type="image/png" sizes="512x512" href="images/favicon-512.png">
 <link rel="icon" type="image/png" sizes="180x180" href="images/favicon-180.png">
 <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
@@ -121,7 +187,7 @@
 
     <div class="hero-inner">
       <div class="hero">
-        <img class="mascot" src="images/mascot-hero.png" alt="The S'more's Outdoors mascot: a happy s'more character wearing a tiny explorer backpack and compass">
+        <img class="mascot" src="images/mascot-hero.png" width="640" height="494" alt="The S'more's Outdoors mascot: a happy s'more character wearing a tiny explorer backpack and compass">
         <div class="badge-row"><span class="spark-badge">100% free &middot; no signup</span></div>
         <h1>Free tools for RV, van &amp; overland life</h1>
         <p>Practical, no-signup calculators and helpers built by people who actually camp out of their rigs.</p>
@@ -130,18 +196,46 @@
   </div>
 
   <div class="tools">
-    <a class="tool-card" href="level-my-rv/">
+    <a class="tool-card" href="leveling-block-calculator/">
       <span class="icon" aria-hidden="true">📐</span>
-      <span class="tt">Level My RV</span>
-      <span class="td">Match two bubble levels and get exact blocks-per-tire for any four-wheeled RV — camper van, motorhome, or truck camper. Look up your rig by year/make/model or enter your own measurements.</span>
+      <span class="tt">RV Leveling Block Calculator</span>
+      <span class="td">Match two bubble levels and get exact blocks-per-tire for any four-wheeled RV — camper van, motorhome, or truck camper. Look up your rig by make/model/year or enter your own measurements.</span>
       <span class="cta">Open the calculator &rarr;</span>
+    </a>
+
+    <a class="tool-card" href="can-i-tow-it/">
+      <span class="icon" aria-hidden="true">🚚</span>
+      <span class="tt">Can I Tow It?</span>
+      <span class="td">The towing check most buyers skip: tongue weight plus passengers and cargo has to fit your truck's payload sticker — not just the tow rating. Check every limit at once and see which one binds.</span>
+      <span class="cta">Run the safety check &rarr;</span>
+    </a>
+
+    <a class="tool-card" href="boondocking-calculator/">
+      <span class="icon" aria-hidden="true">💧</span>
+      <span class="tt">How Long Can We Boondock?</span>
+      <span class="td">Fresh, grey, and black tank duration for your crew and habits — including the part everyone learns the hard way: the grey tank usually fills before the fresh runs dry.</span>
+      <span class="cta">Plan your water &rarr;</span>
+    </a>
+
+    <a class="tool-card" href="propane-calculator/">
+      <span class="icon" aria-hidden="true">🔥</span>
+      <span class="tt">Propane Duration</span>
+      <span class="td">How long a 20-lb tank really lasts running the furnace in the cold — honest duty-cycle math from your furnace BTU and the overnight low, plus water heater, stove, and fridge.</span>
+      <span class="cta">Do the math &rarr;</span>
+    </a>
+
+    <a class="tool-card" href="rv-power-budget/">
+      <span class="icon" aria-hidden="true">⚡</span>
+      <span class="tt">Will It Trip the Breaker?</span>
+      <span class="td">Toggle your appliances against a 30/50-amp pedestal or your generator's real starting watts — including A/C surge, soft starts, and altitude derating.</span>
+      <span class="cta">Check your loads &rarr;</span>
     </a>
 
     <div class="tool-card soon">
       <span class="icon" aria-hidden="true">🧰</span>
       <span class="badge">Coming soon</span>
       <span class="tt">More RV tools</span>
-      <span class="td">We're building out the S'more's Outdoors toolbox — check back for what's next.</span>
+      <span class="td">Next up: tire pressure by axle weight, winterization antifreeze amounts, and a "will my trailer scrape?" driveway checker.</span>
     </div>
   </div>
 
@@ -153,9 +247,11 @@
 
 <footer>
   &copy; 2026 S'more's Outdoors &middot;
-  <a href="level-my-rv/legal/terms.html">Terms</a> &middot;
-  <a href="level-my-rv/legal/privacy.html">Privacy</a> &middot;
-  <a href="level-my-rv/legal/disclaimer.html">Disclaimer</a>
+  <a href="about.html">About</a> &middot;
+  <a href="contact.html">Contact</a> &middot;
+  <a href="legal/terms.html">Terms</a> &middot;
+  <a href="legal/privacy.html">Privacy</a> &middot;
+  <a href="legal/disclaimer.html">Disclaimer</a>
 </footer>
 </body>
 </html>

@@ -13,7 +13,7 @@ smore_outdoors/
 ├── robots.txt
 ├── ads.txt                   # PLACEHOLDER — needs a real AdSense pub- ID before launch
 │
-└── level-my-rv/              # Level My RV — RV leveling block calculator
+└── leveling-block-calculator/              # RV Leveling Block Calculator
     ├── index.html
     ├── vehicles-data.js       # Make/model/year/variant → wheelbase & track width cache
     ├── robots.txt
@@ -25,10 +25,10 @@ smore_outdoors/
 ```
 
 As more tools are added, each gets its own top-level directory following the same
-`index.html` + `robots.txt` + `sitemap.xml` + `legal/` shape as `level-my-rv/`, and a
+`index.html` + `robots.txt` + `sitemap.xml` + `legal/` shape as `leveling-block-calculator/`, and a
 card on the root `index.html`.
 
-## Level My RV
+## RV Leveling Block Calculator
 
 A calculator that turns two bubble-level readings (roll + pitch) into a
 blocks-per-tire count, using a vehicle's wheelbase and track width. It ships with:
@@ -50,7 +50,7 @@ blocks-per-tire count, using a vehicle's wheelbase and track width. It ships wit
 Ad and affiliate placements are wired in as **placeholders**, ready to activate
 once accounts exist:
 
-- `.ad-slot` divs in `level-my-rv/index.html` — see the CSS comment above `.ad-slot`
+- `.ad-slot` divs in `leveling-block-calculator/index.html` — see the CSS comment above `.ad-slot`
   for the exact steps to swap in a real Google AdSense unit.
 - `ads.txt` at the repo root needs your real `pub-` ID before AdSense will serve
   ads on this domain.
@@ -68,4 +68,4 @@ repo root containing the domain, and set the corresponding DNS record.
 
 - **Source of the original leveling calculator:** `sienna_camper` repo
   (`leveling_calculator.html`), built for a single Toyota Sienna camper van
-  conversion. Level My RV generalizes that tool for any four-wheeled RV.
+  conversion. The RV Leveling Block Calculator generalizes that tool for any four-wheeled RV.

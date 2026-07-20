@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Can I Tow It? — Towing &amp; Payload Calculator | S'more's Outdoors</title>
+<meta name="description" content="Check a trailer against every truck limit at once — payload, tongue weight, GVWR, GCWR, and hitch ratings. See which one binds. Free, no signup.">
+<meta name="author" content="S'more's Outdoors">
+<meta name="keywords" content="towing capacity calculator, payload calculator, tongue weight calculator, GVWR, GCWR, truck payload, can my truck tow, travel trailer weight, weight distribution hitch, RV towing safety">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="googlebot" content="index, follow">
+<link rel="canonical" href="https://smoreoutdoors.com/can-i-tow-it/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="S'more's Outdoors">
+<meta property="og:title" content="Can I Tow It? — Free RV Towing &amp; Payload Safety Calculator">
+<meta property="og:description" content="Payload — not tow rating — is what stops most half-ton trucks. Check every limit at once and see which one binds.">
+<meta property="og:url" content="https://smoreoutdoors.com/can-i-tow-it/">
+<meta property="og:image" content="https://smoreoutdoors.com/images/og-image.png">
+<meta property="og:image:secure_url" content="https://smoreoutdoors.com/images/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="S'more's Outdoors — the toasted-marshmallow mascot with the brand name, for free RV and camping tools.">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Can I Tow It? — Free RV Towing &amp; Payload Safety Calculator">
+<meta name="twitter:description" content="Payload — not tow rating — is what stops most half-ton trucks. Check every limit at once and see which one binds.">
+<meta name="twitter:image" content="https://smoreoutdoors.com/images/og-image.png">
+<meta name="twitter:image:alt" content="S'more's Outdoors — the toasted-marshmallow mascot with the brand name.">
+
+<!-- WebApplication schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Can I Tow It?",
+  "url": "https://smoreoutdoors.com/can-i-tow-it/",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any (web browser)",
+  "description": "Free towing and payload safety calculator that checks a trailer against your truck's payload, tow rating, GVWR, GCWR, and hitch ratings at once — and shows which limit actually binds.",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "S'more's Outdoors",
+    "url": "https://smoreoutdoors.com/"
+  }
+}
+</script>
+
+<!-- BreadcrumbList schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://smoreoutdoors.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Can I Tow It?",
+      "item": "https://smoreoutdoors.com/can-i-tow-it/"
+    }
+  ]
+}
+</script>
+
+<!-- FAQPage schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why is payload almost always the limit before tow rating?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because tongue weight lands in the truck, not behind it. A properly loaded travel trailer carries 10-15% of its weight on the tongue, and every pound of that counts against the payload number on the yellow door-jamb sticker. Add a family of four (400-600 lb), a bed full of camping gear (150-300 lb), and roughly 100 lb of weight-distribution hitch hardware, and a typical half-ton's 1,500-1,900 lb of payload is spent long before the trailer approaches an 11,000-lb brochure tow rating. An 8,000-lb trailer at 12.5% puts 1,000 lb on the tongue all by itself. That is why the calculator so often shows payload hitting red while the tow-rating bar still looks comfortable."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the difference between GVWR, GAWR, GCWR, and payload?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "GVWR (Gross Vehicle Weight Rating) is the most your truck itself may weigh fully loaded — truck, people, cargo, and tongue weight combined. GAWR (Gross Axle Weight Rating) is the same idea per axle: separate front and rear limits that each axle must stay under on its own. GCWR (Gross Combined Weight Rating) is the ceiling for the truck and trailer together, everything rolling down the road as one unit. Payload is simply GVWR minus your truck's actual curb weight — the budget left over for occupants, cargo, and tongue weight. You can be under GVWR overall and still exceed the rear GAWR, which is why weighing each axle separately at a truck scale is worth the few dollars."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where do I find my truck's real payload?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Open the driver's door and look for the yellow 'Tire and Loading Information' sticker on the door jamb or pillar. The line reading 'the combined weight of occupants and cargo should never exceed XXX lbs' is your payload — measured for your specific truck as it left the factory, with every option package, trim upgrade, and factory accessory already subtracted. It is routinely hundreds of pounds lower than the brochure or website figure for the same model, because published numbers describe a stripped-down configuration. Anything added after the factory — a toolbox, bed cap, lift kit, heavy bumper — reduces the real number further. Use the sticker, not the brochure."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I measure actual tongue weight?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The simplest tool is a dedicated tongue weight scale: set it under the coupler at normal ride height and read the number directly. No scale? Use a CAT scale at a truck stop — weigh the truck alone, then weigh it again hitched to the trailer with the trailer's own axles off the platform and any weight-distribution bars unhooked; the increase in the truck's weight is your tongue weight. For small trailers, a bathroom scale works up to its limit, or you can extend it with the classic lever trick: rest the coupler partway along a beam that spans between the scale and a fixed pivot, so the scale reads a known fraction of the true load. Whatever method you use, measure with the trailer loaded the way you actually camp — tongue weight shifts with how you pack."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does a weight-distribution hitch increase what I can tow?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. A weight-distribution hitch does not raise your payload, tow rating, GVWR, or GCWR by a single pound. What it does is use spring bars to lever part of the tongue load off the truck's rear axle and back onto the front axle and the trailer's axles, restoring steering grip, braking balance, and headlight aim. It actually consumes payload — the hardware itself weighs roughly 100 lb and rides on the receiver, which is why this calculator has a checkbox for it. Many trucks require one above a threshold, commonly around 5,000-6,000 lb of trailer or 500-600 lb of tongue weight, and some receivers only publish their higher rating when used with weight distribution. Check your owner's manual and the receiver's sticker."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens if I tow over my ratings?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The truck will usually still pull it, which is exactly the trap. Overloading stretches braking distances, dulls steering response, and invites sway — the margins that decide whether an emergency lane change or a downhill grade ends well. It also accelerates wear on the transmission, brakes, rear axle, suspension, and tires; overloaded tires run hot and can fail outright. After an accident, operating over the manufacturer's ratings can be used to establish negligence, and insurers may scrutinize or contest a claim on that basis. Overweight-axle citations are also possible at inspections in some states. If a combination only works above a rating, the fix is a lighter trailer or a more capable truck — not optimism."
+      }
+    }
+  ]
+}
+</script>
+
+<meta name="theme-color" content="#1f5c37">
+<link rel="icon" type="image/png" sizes="512x512" href="../images/favicon-512.png">
+<link rel="icon" type="image/png" sizes="180x180" href="../images/favicon-180.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16.png">
+<link rel="apple-touch-icon" href="../images/apple-touch-icon.png">
+<style>
+  :root {
+    --ground:#f5f1e2; --card:#fffdf8; --ink:#1c2318; --ink-soft:#5a6152; --line:#1c2318;
+    --vial:#1f5c37; --vial-soft:#dcefdf; --block:#e8620f; --block-soft:#fbe0cc;
+    --warn:#c23b22; --warn-soft:#f7ddd6; --brand:#2f80a3; --brand-soft:#dbeef5;
+    --readout:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --ground:#12160f; --card:#1b2117; --ink:#eef1e6; --ink-soft:#a9b09c; --line:#eef1e6;
+            --vial:#5cbf7e; --vial-soft:#1e3324; --block:#ff9a52; --block-soft:#3d2413; --warn:#ef7a63; --warn-soft:#45231c;
+            --brand:#6fc0e0; --brand-soft:#173038; }
+  }
+  :root[data-theme="light"]{--ground:#f5f1e2;--card:#fffdf8;--ink:#1c2318;--ink-soft:#5a6152;--line:#1c2318;--vial:#1f5c37;--vial-soft:#dcefdf;--block:#e8620f;--block-soft:#fbe0cc;--warn:#c23b22;--warn-soft:#f7ddd6;--brand:#2f80a3;--brand-soft:#dbeef5;}
+  :root[data-theme="dark"]{--ground:#12160f;--card:#1b2117;--ink:#eef1e6;--ink-soft:#a9b09c;--line:#eef1e6;--vial:#5cbf7e;--vial-soft:#1e3324;--block:#ff9a52;--block-soft:#3d2413;--warn:#ef7a63;--warn-soft:#45231c;--brand:#6fc0e0;--brand-soft:#173038;}
+  * { box-sizing:border-box; }
+  html { background:var(--ground); }
+  body { margin:0; padding:0 0 40px; background:var(--ground); color:var(--ink);
+    font:16px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif; }
+  a { color:var(--brand); }
+  main { width:100%; max-width:820px; margin:0 auto; padding:14px 14px 0; display:flex; flex-direction:column; gap:12px; }
+
+  .brandbar { background:var(--card); border-bottom:3px solid var(--line); }
+  .brandbar-inner { max-width:820px; margin:0 auto; padding:10px 14px; display:flex; align-items:center; justify-content:space-between; gap:10px; }
+  .wordmark { font-weight:800; font-size:15px; letter-spacing:-0.01em; color:var(--ink); text-decoration:none; display:flex; align-items:center; gap:7px; }
+  .wordmark .mark { width:26px; height:26px; display:inline-block; }
+  .wordmark .mark img { width:100%; height:100%; object-fit:contain; display:block; }
+  .brandbar a.more { font-size:12.5px; color:var(--ink-soft); text-decoration:underline; }
+  .brandbar a.more:focus-visible { outline:2px solid var(--vial); outline-offset:1px; }
+
+  h1 { font-size:28px; font-weight:800; margin:0; letter-spacing:-0.01em; text-wrap:balance; }
+  .sub { color:var(--ink-soft); font-size:15px; margin:3px 0 0; }
+  section { background:var(--card); border:3px solid var(--line); border-radius:12px; padding:12px 12px 14px; box-shadow:4px 4px 0 var(--vial-soft); }
+  .eyebrow { font-size:11px; font-weight:700; letter-spacing:0.09em; text-transform:uppercase; color:var(--ink-soft); margin:0 0 5px; }
+  .note { font-size:14.5px; line-height:1.4; color:var(--ink-soft); margin:0 0 10px;
+    background:var(--vial-soft); border-radius:8px; padding:9px 11px; }
+  .note b { color:var(--ink); }
+  .note.warn { background:var(--warn-soft); color:var(--ink); margin:0; }
+  .note.warn a { color:var(--ink); }
+
+  /* --- input fields --- */
+  .fields { display:grid; grid-template-columns:1fr auto; gap:12px 14px; align-items:center; margin-top:4px; }
+  .fields label { font-size:13.5px; font-weight:700; }
+  .fields label small { display:block; font-weight:400; color:var(--ink-soft); line-height:1.35; margin-top:1px; }
+  .fields input[type="number"] { width:112px; padding:8px 9px; border:1.5px solid var(--line); border-radius:7px;
+    background:var(--card); color:var(--ink); font:600 15px/1.2 var(--readout); text-align:right; }
+  .fields input[type="number"]:focus-visible { outline:2px solid var(--vial); outline-offset:1px; }
+  .fields input::placeholder { color:var(--ink-soft); opacity:0.6; font-weight:400; }
+  .opt { font-weight:400; font-size:11px; letter-spacing:0.06em; text-transform:uppercase; color:var(--ink-soft);
+    border:1px solid var(--ink-soft); border-radius:999px; padding:0 6px; vertical-align:1px; }
+
+  .checkrow { display:flex; align-items:flex-start; gap:9px; margin-top:12px; }
+  .checkrow input[type="checkbox"] { width:20px; height:20px; margin:1px 0 0; accent-color:var(--vial); flex:none; cursor:pointer; }
+  .checkrow input[type="checkbox"]:focus-visible { outline:2px solid var(--vial); outline-offset:2px; }
+  .checkrow label { font-size:13.5px; font-weight:700; cursor:pointer; }
+  .checkrow label small { display:block; font-weight:400; color:var(--ink-soft); line-height:1.35; }
+
+  .slider-block { margin-top:12px; }
+  .slider-block > label { display:block; font-size:13.5px; font-weight:700; }
+  .slider-block > label small { display:block; font-weight:400; color:var(--ink-soft); line-height:1.35; margin-top:1px; }
+  .slider-row { display:flex; align-items:center; gap:12px; margin-top:7px; }
+  .slider-row input[type="range"] { flex:1; min-width:0; accent-color:var(--vial); height:28px; cursor:pointer; }
+  .slider-row input[type="range"]:focus-visible { outline:2px solid var(--vial); outline-offset:2px; }
+  .slider-out { font:800 15px/1.3 var(--readout); font-variant-numeric:tabular-nums; text-align:right; min-width:118px; }
+  .slider-out small { display:block; font:400 12px/1.3 system-ui; color:var(--ink-soft); }
+
+  /* --- results --- */
+  .limit { margin-top:12px; }
+  .limit:first-child { margin-top:2px; }
+  .lhead { display:flex; align-items:baseline; justify-content:space-between; gap:8px; flex-wrap:wrap; }
+  .lname { font-size:14px; font-weight:700; }
+  .lnums { font:600 13px/1.3 var(--readout); font-variant-numeric:tabular-nums; color:var(--ink-soft); }
+  .lnums b { color:var(--ink); }
+  .gauge { margin-top:5px; height:14px; border:1.5px solid var(--line); border-radius:7px; background:var(--ground); overflow:hidden; }
+  .gauge i { display:block; height:100%; border-radius:0 5px 5px 0; transition:width .15s ease; }
+  .gauge i.g-ok { background:var(--vial); }
+  .gauge i.g-warn { background:var(--block); }
+  .gauge i.g-bad { background:var(--warn); }
+  .lstat { flex:none; font-size:11px; font-weight:800; letter-spacing:0.07em; text-transform:uppercase;
+    border-radius:999px; padding:2px 8px; }
+  .lstat.ok { color:var(--vial); background:var(--vial-soft); }
+  .lstat.warn { color:var(--block); background:var(--block-soft); }
+  .lstat.bad { color:var(--warn); background:var(--warn-soft); }
+  .lsub { font-size:12px; color:var(--ink-soft); margin-top:3px; font-variant-numeric:tabular-nums; }
+  .results-empty { font-size:14px; color:var(--ink-soft); padding:6px 0 2px; }
+
+  .verdict { margin-top:14px; border-radius:8px; padding:10px 12px; font-size:14px; background:var(--vial-soft); }
+  .verdict.blocks { background:var(--block-soft); } .verdict.bad { background:var(--warn-soft); }
+  .verdict b { font-variant-numeric:tabular-nums; }
+  .reverse { margin-top:10px; border-radius:8px; padding:10px 12px; font-size:14px; background:var(--brand-soft); display:none; }
+  .reverse.show { display:block; }
+  .reverse b { font-variant-numeric:tabular-nums; }
+
+  details { border-top:1px solid var(--line); margin-top:12px; padding-top:10px; }
+  summary { cursor:pointer; font-size:13px; font-weight:600; color:var(--ink-soft); }
+  summary:focus-visible { outline:2px solid var(--vial); outline-offset:1px; }
+  ol.how { margin:8px 0 0; padding-left:20px; font-size:13.5px; color:var(--ink-soft); }
+  ol.how li { margin:6px 0; } ol.how b { color:var(--ink); }
+
+  /* --- FAQ --- */
+  .faq-a { margin:8px 0 0; font-size:13.5px; line-height:1.5; color:var(--ink-soft); }
+  .faq-a b { color:var(--ink); }
+
+  /* --- ad slots ---
+     Placeholders only. Once you have a Google AdSense publisher ID:
+       1. Add the loader script to <head>:
+          <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+       2. Replace each .ad-slot div's contents with an <ins class="adsbygoogle"> unit
+          for that slot ID, then call (adsbygoogle = window.adsbygoogle || []).push({});
+       3. Add a real ads.txt at the site root (see /ads.txt).
+  */
+  .ad-slot { border:1px dashed var(--line); border-radius:8px; background:var(--ground);
+    display:flex; align-items:center; justify-content:center; color:var(--ink-soft);
+    font-size:12px; letter-spacing:0.04em; text-transform:uppercase; min-height:90px; }
+  .ad-slot.leaderboard { min-height:90px; }
+  .ad-slot.rectangle { min-height:250px; max-width:336px; margin:0 auto; }
+
+  /* --- affiliate section --- */
+  .gear-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:10px; margin-top:10px; }
+  .gear-card { border:1px solid var(--line); border-radius:8px; padding:11px; text-decoration:none; color:var(--ink); display:flex; flex-direction:column; gap:4px; }
+  .gear-card:hover { border-color:var(--brand); }
+  .gear-card:focus-visible { outline:2px solid var(--vial); outline-offset:2px; }
+  .gear-card .gt { font-size:14px; font-weight:700; }
+  .gear-card .gd { font-size:12.5px; color:var(--ink-soft); }
+  .affiliate-disclosure { font-size:12px; color:var(--ink-soft); margin-top:10px; }
+
+  footer { max-width:820px; margin:8px auto 0; padding:14px; font-size:12.5px; color:var(--ink-soft); text-align:center; }
+  footer a { color:var(--ink-soft); text-decoration:underline; }
+  footer .flinks { margin-top:6px; display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
+
+  @media (max-width:420px) {
+    .fields { grid-template-columns:1fr; gap:4px 0; }
+    .fields > input[type="number"] { justify-self:start; margin-bottom:8px; width:140px; }
+    .slider-out { min-width:104px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="brandbar"><div class="brandbar-inner">
+  <a class="wordmark" href="../"><span class="mark" aria-hidden="true"><img src="../images/favicon-180.png" alt="" width="26" height="26"></span>S'more's Outdoors</a>
+  <a class="more" href="../">More free RV tools</a>
+</div></div>
+
+<main>
+  <header>
+    <h1>Can I Tow It?</h1>
+    <p class="sub">The trailer that "fits your tow rating" usually blows past your truck's <b>payload</b> first — this checks payload, tow rating, hitch, and GCWR all at once and tells you which limit actually binds.</p>
+  </header>
+
+  <!-- AdSense slot — un-comment once the account is approved:
+  <div class="ad-slot leaderboard" role="complementary" aria-label="Advertisement">Advertisement</div>
+  -->
+
+  <section aria-label="Your tow vehicle">
+    <p class="eyebrow">1 &middot; Your tow vehicle</p>
+    <p class="note">Use <b>your</b> truck's numbers, not the brochure's. Payload varies hundreds of pounds between two identical-looking trucks — every option package eats into it. The first two fields are the must-haves; add the rest for a tighter answer.</p>
+    <div class="fields">
+      <label for="payload">Payload capacity (lb)
+        <small>Yellow "Tire and Loading Information" sticker on the driver's door jamb: "the combined weight of occupants and cargo should never exceed XXX lbs." That exact number.</small></label>
+      <input id="payload" type="number" min="0" step="10" inputmode="numeric" placeholder="e.g. 1750">
+
+      <label for="towRating">Max tow rating (lb)
+        <small>Owner's manual or the manufacturer's towing guide — match your exact cab, bed, engine, and axle-ratio combo.</small></label>
+      <input id="towRating" type="number" min="0" step="50" inputmode="numeric" placeholder="e.g. 11300">
+
+      <label for="gvwr">GVWR (lb) <span class="opt">optional</span>
+        <small>Silver/white certification sticker, same door jamb. Used here (with payload) to estimate your truck's curb weight for the GCWR check.</small></label>
+      <input id="gvwr" type="number" min="0" step="50" inputmode="numeric" placeholder="e.g. 7050">
+
+      <label for="gcwr">GCWR (lb) <span class="opt">optional</span>
+        <small>Gross Combined Weight Rating — truck + trailer together. In the owner's manual or towing guide. Enter GVWR and payload too so we can check it.</small></label>
+      <input id="gcwr" type="number" min="0" step="50" inputmode="numeric" placeholder="e.g. 17000">
+
+      <label for="hitchTongue">Hitch: max tongue weight (lb) <span class="opt">optional</span>
+        <small>Stamped or labeled on the receiver itself. Use the <b>weight-carrying</b> number unless you run a weight-distribution hitch.</small></label>
+      <input id="hitchTongue" type="number" min="0" step="10" inputmode="numeric" placeholder="e.g. 1200">
+
+      <label for="hitchTow">Hitch: max towing capacity (lb) <span class="opt">optional</span>
+        <small>The receiver's own max trailer weight, from the same stamp. Often lower than the truck's rating — the weaker one wins.</small></label>
+      <input id="hitchTow" type="number" min="0" step="50" inputmode="numeric" placeholder="e.g. 12000">
+    </div>
+
+    <details>
+      <summary>How to find these numbers</summary>
+      <ol class="how">
+        <li><b>Payload — the yellow sticker.</b> Open the driver's door. The yellow "Tire and Loading Information" sticker says "the combined weight of occupants and cargo should never exceed XXX lbs." That's your payload, as built, options and all. Not the brochure number.</li>
+        <li><b>GVWR — the silver sticker.</b> On the same door jamb there's a silver/white certification label listing GVWR (the most the loaded truck may weigh) plus front and rear axle ratings.</li>
+        <li><b>Tow rating &amp; GCWR — the manual.</b> Your owner's manual or the manufacturer's downloadable towing guide lists max tow rating and GCWR by cab, bed length, engine, and axle ratio. Match your exact configuration — they vary wildly.</li>
+        <li><b>Hitch ratings — the receiver stamp.</b> The receiver under your bumper has its own stamped or stickered limits: max tongue weight and max trailer weight, usually one pair for weight-carrying and a higher pair for weight-distributing.</li>
+        <li><b>Trailer weight — the trailer's VIN sticker.</b> Use the trailer's GVWR from the sticker on its frame or tongue, not the brochure "dry weight" — nobody tows an empty trailer.</li>
+      </ol>
+    </details>
+  </section>
+
+  <section aria-label="What's in the truck">
+    <p class="eyebrow">2 &middot; What's in the truck</p>
+    <p class="note">Everything and everyone riding <b>in or on the truck</b> counts against payload — before the trailer's tongue even touches the ball.</p>
+    <div class="fields">
+      <label for="occupants">Occupants, total (lb)
+        <small>Driver plus every passenger and pet. Be honest — the sticker assumes nothing, not even you.</small></label>
+      <input id="occupants" type="number" min="0" step="10" inputmode="numeric" placeholder="e.g. 400">
+
+      <label for="cargo">Cargo in cab &amp; bed (lb)
+        <small>Coolers, firewood, tools, generator, bikes, the bed full of camp gear. A "few things" is usually 150–300 lb.</small></label>
+      <input id="cargo" type="number" min="0" step="10" inputmode="numeric" placeholder="e.g. 200">
+    </div>
+    <div class="checkrow">
+      <input id="wdh" type="checkbox">
+      <label for="wdh">Weight-distribution hitch on board
+        <small>Adds about 100 lb of hardware at the receiver — it counts against payload too.</small></label>
+    </div>
+  </section>
+
+  <section aria-label="The trailer">
+    <p class="eyebrow">3 &middot; The trailer</p>
+    <p class="note">Use the trailer's <b>GVWR</b> (its own max loaded weight, on the trailer's VIN sticker) — not the brochure dry weight. If your loaded trailer fits at its GVWR, it fits on every trip.</p>
+    <div class="fields">
+      <label for="trailer">Loaded trailer weight (lb)
+        <small>Trailer GVWR is the safe number to plan around. Dry weight + 1,000–1,500 lb of gear, water, and propane is typical if you must estimate.</small></label>
+      <input id="trailer" type="number" min="0" step="50" inputmode="numeric" placeholder="e.g. 8000">
+    </div>
+
+    <div class="slider-block">
+      <label for="tonguePct">Tongue weight (% of trailer weight)
+        <small>Travel trailers should carry 10–15% of their weight on the tongue; 12–13% is typical. Too little causes sway.</small></label>
+      <div class="slider-row">
+        <input id="tonguePct" type="range" min="9" max="16" step="0.5" value="12.5"
+               aria-describedby="tongueOut">
+        <span class="slider-out" id="tongueOut" aria-live="polite">12.5%<small>&approx; 0 lb</small></span>
+      </div>
+    </div>
+
+    <div class="fields" style="margin-top:12px">
+      <label for="tongueLbs">Measured tongue weight (lb) <span class="opt">optional</span>
+        <small>If you've weighed the actual tongue with a tongue scale, enter it here — it overrides the slider.</small></label>
+      <input id="tongueLbs" type="number" min="0" step="10" inputmode="numeric" placeholder="overrides %">
+    </div>
+  </section>
+
+  <section aria-label="Results">
+    <p class="eyebrow">4 &middot; The verdict</p>
+    <div id="limits" aria-live="polite"></div>
+    <div class="verdict" id="verdict" role="status" aria-live="polite">Enter your truck's payload and tow rating, what's riding in it, and a trailer weight — the verdict updates live.</div>
+    <div class="reverse" id="reverse" aria-live="polite"></div>
+  </section>
+
+  <section aria-label="Safety note">
+    <p class="eyebrow">Before you trust any of this</p>
+    <p class="note warn"><b>These are estimates, not gospel.</b> Brochure tow ratings assume a stripped-down truck with a single 150-lb driver and nothing in the bed — a configuration no real camping trip has ever seen. The only numbers that settle it are real ones: load the truck and trailer the way you actually travel and weigh them at a CAT scale (most truck stops, a few dollars). This tool is not professional advice — see our <a href="./legal/disclaimer.html">full disclaimer</a>.</p>
+  </section>
+
+  <!-- AdSense slot — un-comment once the account is approved:
+  <div class="ad-slot rectangle" role="complementary" aria-label="Advertisement">Advertisement</div>
+  -->
+
+  <section aria-label="Recommended towing gear">
+    <p class="eyebrow">Gear that pairs with this calculator</p>
+    <div class="gear-grid">
+      <!-- Once the Associates account is live, append the tracking tag to each URL: &tag=YOURTAG-20 -->
+      <a class="gear-card" href="https://www.amazon.com/s?k=tongue+weight+scale" rel="sponsored noopener" target="_blank">
+        <span class="gt">Tongue weight scale</span>
+        <span class="gd">Measure real tongue weight in your driveway — the single number this calculator most wants to be exact.</span>
+      </a>
+      <a class="gear-card" href="https://www.amazon.com/s?k=weight+distribution+hitch" rel="sponsored noopener" target="_blank">
+        <span class="gt">Weight-distribution hitch</span>
+        <span class="gd">Puts weight back on the front axle for steering and braking — most trucks require one above ~5,000 lb of trailer.</span>
+      </a>
+      <a class="gear-card" href="https://www.amazon.com/s?k=adjustable+trailer+hitch+ball+mount" rel="sponsored noopener" target="_blank">
+        <span class="gt">Adjustable ball mount</span>
+        <span class="gd">Gets the trailer towing dead level — a nose-high trailer sways and starves the tongue of weight.</span>
+      </a>
+    </div>
+    <p class="affiliate-disclosure">As an Amazon Associate, S'more's Outdoors earns from qualifying purchases.</p>
+  </section>
+
+  <section aria-label="Frequently asked questions">
+    <p class="eyebrow">FAQ</p>
+
+    <details>
+      <summary>Why is payload almost always the limit before tow rating?</summary>
+      <p class="faq-a">Because tongue weight lands <b>in the truck</b>, not behind it. A properly loaded travel trailer carries 10&ndash;15% of its weight on the tongue, and every pound of that counts against the payload number on the yellow door-jamb sticker. Add a family of four (400&ndash;600 lb), a bed full of camping gear (150&ndash;300 lb), and roughly 100 lb of weight-distribution hitch hardware, and a typical half-ton's 1,500&ndash;1,900 lb of payload is spent long before the trailer approaches an 11,000-lb brochure tow rating. An 8,000-lb trailer at 12.5% puts 1,000 lb on the tongue all by itself. That's why this calculator so often shows payload hitting red while the tow-rating bar still looks comfortable.</p>
+    </details>
+
+    <details>
+      <summary>What's the difference between GVWR, GAWR, GCWR, and payload?</summary>
+      <p class="faq-a"><b>GVWR</b> (Gross Vehicle Weight Rating) is the most your truck itself may weigh fully loaded &mdash; truck, people, cargo, and tongue weight combined. <b>GAWR</b> (Gross Axle Weight Rating) is the same idea per axle: separate front and rear limits that each axle must stay under on its own. <b>GCWR</b> (Gross Combined Weight Rating) is the ceiling for truck and trailer together, everything rolling down the road as one unit. <b>Payload</b> is simply GVWR minus your truck's actual curb weight &mdash; the budget left over for occupants, cargo, and tongue weight. You can be under GVWR overall and still exceed the rear GAWR, which is why weighing each axle separately at a truck scale is worth the few dollars.</p>
+    </details>
+
+    <details>
+      <summary>Where do I find my truck's real payload?</summary>
+      <p class="faq-a">Open the driver's door and look for the yellow <b>&ldquo;Tire and Loading Information&rdquo;</b> sticker on the door jamb or pillar. The line reading &ldquo;the combined weight of occupants and cargo should never exceed XXX lbs&rdquo; is your payload &mdash; measured for <b>your</b> specific truck as it left the factory, with every option package, trim upgrade, and factory accessory already subtracted. It's routinely hundreds of pounds lower than the brochure or website figure for the same model, because published numbers describe a stripped-down configuration. Anything added after the factory &mdash; a toolbox, bed cap, lift kit, heavy bumper &mdash; reduces the real number further. Use the sticker, not the brochure.</p>
+    </details>
+
+    <details>
+      <summary>How do I measure actual tongue weight?</summary>
+      <p class="faq-a">The simplest tool is a dedicated <b>tongue weight scale</b>: set it under the coupler at normal ride height and read the number directly. No scale? Use a <b>CAT scale</b> at a truck stop &mdash; weigh the truck alone, then weigh it again hitched to the trailer with the trailer's own axles off the platform and any weight-distribution bars unhooked; the increase in the truck's weight is your tongue weight. For small trailers, a bathroom scale works up to its limit, or you can extend it with the classic lever trick: rest the coupler partway along a beam that spans between the scale and a fixed pivot, so the scale reads a known fraction of the true load. Whatever method you use, measure with the trailer loaded the way you actually camp &mdash; tongue weight shifts with how you pack.</p>
+    </details>
+
+    <details>
+      <summary>Does a weight-distribution hitch increase what I can tow?</summary>
+      <p class="faq-a"><b>No.</b> A weight-distribution hitch doesn't raise your payload, tow rating, GVWR, or GCWR by a single pound. What it does is use spring bars to lever part of the tongue load off the truck's rear axle and back onto the front axle and the trailer's axles, restoring steering grip, braking balance, and headlight aim. It actually <b>consumes</b> payload &mdash; the hardware itself weighs roughly 100 lb and rides on the receiver, which is why this calculator has a checkbox for it. Many trucks <b>require</b> one above a threshold, commonly around 5,000&ndash;6,000 lb of trailer or 500&ndash;600 lb of tongue weight, and some receivers only publish their higher rating when used with weight distribution. Check your owner's manual and the receiver's sticker.</p>
+    </details>
+
+    <details>
+      <summary>What happens if I tow over my ratings?</summary>
+      <p class="faq-a">The truck will usually still pull it, which is exactly the trap. Overloading stretches braking distances, dulls steering response, and invites sway &mdash; the margins that decide whether an emergency lane change or a downhill grade ends well. It also accelerates wear on the transmission, brakes, rear axle, suspension, and tires; overloaded tires run hot and can fail outright. After an accident, operating over the manufacturer's ratings can be used to establish negligence, and insurers may scrutinize or contest a claim on that basis. Overweight-axle citations are also possible at inspections in some states. If a combination only works above a rating, the fix is a lighter trailer or a more capable truck &mdash; not optimism.</p>
+    </details>
+  </section>
+</main>
+
+<footer>
+  <div>Can I Tow It? is a free tool from <a href="../">S'more's Outdoors</a>. Ratings math is best-effort — the scale at the truck stop is the referee.</div>
+  <div class="flinks">
+    <a href="./legal/terms.html">Terms</a>
+    <a href="./legal/privacy.html">Privacy</a>
+    <a href="./legal/disclaimer.html">Disclaimer</a>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var WDH_LB = 100;
+  var NUM_IDS = ["payload","towRating","gvwr","gcwr","hitchTongue","hitchTow","occupants","cargo","trailer","tongueLbs"];
+
+  function $(id) { return document.getElementById(id); }
+  function num(id) {
+    var v = parseFloat($(id).value);
+    return (isFinite(v) && v >= 0) ? v : null;
+  }
+  function fmt(n) { return Math.round(n).toLocaleString("en-US"); }
+  function esc(s) {
+    return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  }
+
+  // ---------- restore ----------
+  try {
+    var saved = JSON.parse(localStorage.getItem("canITowIt") || "{}");
+    NUM_IDS.forEach(function (k) {
+      if (saved[k] !== undefined && saved[k] !== null && saved[k] !== "") $(k).value = saved[k];
+    });
+    if (saved.tonguePct !== undefined && saved.tonguePct !== null && saved.tonguePct !== "") $("tonguePct").value = saved.tonguePct;
+    if (typeof saved.wdh === "boolean") $("wdh").checked = saved.wdh;
+  } catch (e) {}
+
+  function save() {
+    try {
+      var s = {};
+      NUM_IDS.forEach(function (k) { s[k] = $(k).value; });
+      s.tonguePct = $("tonguePct").value;
+      s.wdh = $("wdh").checked;
+      localStorage.setItem("canITowIt", JSON.stringify(s));
+    } catch (e) {}
+  }
+
+  function statusFor(ratio) {
+    if (ratio > 1) return { cls: "bad", bar: "g-bad", label: "Over" };
+    if (ratio >= 0.9) return { cls: "warn", bar: "g-warn", label: "Tight" };
+    return { cls: "ok", bar: "g-ok", label: "OK" };
+  }
+
+  function limitRow(lim) {
+    var ratio = lim.used / lim.avail;
+    var st = statusFor(ratio);
+    var width = Math.max(0, Math.min(100, ratio * 100));
+    var html = '<div class="limit">' +
+      '<div class="lhead">' +
+        '<span class="lname">' + esc(lim.name) + '</span>' +
+        '<span class="lnums"><b>' + fmt(lim.used) + '</b> lb used of ' + fmt(lim.avail) + ' lb &mdash; ' + Math.round(ratio * 100) + '%</span>' +
+        '<span class="lstat ' + st.cls + '">' + st.label + '</span>' +
+      '</div>' +
+      '<div class="gauge" role="img" aria-label="' + esc(lim.name) + ': ' + Math.round(ratio * 100) + '% used">' +
+        '<i class="' + st.bar + '" style="width:' + width.toFixed(1) + '%"></i>' +
+      '</div>' +
+      (lim.sub ? '<div class="lsub">' + lim.sub + '</div>' : '') +
+      '</div>';
+    return html;
+  }
+
+  function compute() {
+    var payload = num("payload"), tow = num("towRating"), gvwr = num("gvwr"), gcwr = num("gcwr");
+    var hTongue = num("hitchTongue"), hTow = num("hitchTow");
+    var occ = num("occupants") || 0, cargo = num("cargo") || 0;
+    var wdhLb = $("wdh").checked ? WDH_LB : 0;
+    var trailer = num("trailer");
+    var pct = parseFloat($("tonguePct").value) || 12.5;
+    var measured = num("tongueLbs");
+    var usingMeasured = measured !== null && measured > 0;
+
+    // Tongue slider readout
+    var out = $("tongueOut");
+    if (usingMeasured) {
+      out.innerHTML = pct.toFixed(1) + "%<small>overridden: " + fmt(measured) + " lb</small>";
+    } else if (trailer) {
+      out.innerHTML = pct.toFixed(1) + "%<small>&approx; " + fmt(trailer * pct / 100) + " lb</small>";
+    } else {
+      out.innerHTML = pct.toFixed(1) + "%<small>&approx; &mdash; lb</small>";
+    }
+
+    var tongue = usingMeasured ? measured : (trailer ? trailer * pct / 100 : 0);
+    var truckLoad = occ + cargo + wdhLb;
+    var canGcwr = (gcwr !== null && gvwr !== null && payload !== null);
+    var estCurb = canGcwr ? Math.max(0, gvwr - payload) : 0;
+
+    // ---------- limit rows ----------
+    var limits = [];
+    if (trailer && trailer > 0) {
+      if (payload !== null && payload > 0) {
+        limits.push({
+          key: "payload", name: "Payload", used: tongue + truckLoad, avail: payload,
+          sub: "Tongue " + fmt(tongue) + " + occupants " + fmt(occ) + " + cargo " + fmt(cargo) +
+               (wdhLb ? " + WDH " + fmt(wdhLb) : "") + " = " + fmt(tongue + truckLoad) + " lb"
+        });
+      }
+      if (tow !== null && tow > 0) {
+        limits.push({ key: "tow", name: "Tow rating", used: trailer, avail: tow });
+      }
+      if (hTongue !== null && hTongue > 0) {
+        limits.push({ key: "hitchTongue", name: "Hitch tongue rating", used: tongue, avail: hTongue });
+      }
+      if (hTow !== null && hTow > 0) {
+        limits.push({ key: "hitchTow", name: "Hitch tow rating", used: trailer, avail: hTow });
+      }
+      if (canGcwr && gcwr > 0) {
+        limits.push({
+          key: "gcwr", name: "GCWR (truck + trailer)", used: estCurb + truckLoad + trailer, avail: gcwr,
+          sub: "Est. truck curb " + fmt(estCurb) + " (GVWR &minus; payload) + people &amp; cargo " + fmt(truckLoad) +
+               " + trailer " + fmt(trailer) + " = " + fmt(estCurb + truckLoad + trailer) + " lb"
+        });
+      }
+    }
+
+    var limitsEl = $("limits");
+    var verdictEl = $("verdict");
+
+    if (!limits.length) {
+      limitsEl.innerHTML = '<p class="results-empty">' +
+        (trailer && trailer > 0
+          ? "Enter at least your truck's payload or tow rating in step 1 to check this trailer."
+          : "Enter a loaded trailer weight in step 3 to check it against your limits.") + "</p>";
+      verdictEl.className = "verdict";
+      verdictEl.innerHTML = "Enter your truck's payload and tow rating, what's riding in it, and a trailer weight &mdash; the verdict updates live.";
+    } else {
+      limitsEl.innerHTML = limits.map(limitRow).join("");
+
+      // ---------- verdict ----------
+      var binding = limits[0];
+      limits.forEach(function (l) { if (l.used / l.avail > binding.used / binding.avail) binding = l; });
+      var overs = limits.filter(function (l) { return l.used / l.avail > 1; });
+      var tights = limits.filter(function (l) { var r = l.used / l.avail; return r >= 0.9 && r <= 1; });
+
+      if (overs.length) {
+        verdictEl.className = "verdict bad";
+        verdictEl.innerHTML = "<b>Over on: " + overs.map(function (l) { return esc(l.name.toLowerCase()); }).join(", ") + ".</b> " +
+          "Your binding limit is <b>" + esc(binding.name.toLowerCase()) + "</b> &mdash; over by <b>" +
+          fmt(binding.used - binding.avail) + " lb</b> (" + Math.round(binding.used / binding.avail * 100) + "% of the rating). " +
+          "This combo isn't safe as entered: lighten the trailer, shed truck cargo, or shop lighter.";
+      } else if (tights.length) {
+        verdictEl.className = "verdict blocks";
+        verdictEl.innerHTML = "<b>Within every rating you entered &mdash; but it's tight.</b> " +
+          tights.map(function (l) {
+            return esc(l.name) + " is at <b>" + Math.round(l.used / l.avail * 100) + "%</b> (" + fmt(l.avail - l.used) + " lb of headroom)";
+          }).join("; ") + ". That's before the extra firewood, full water, and souvenirs. Weigh it at a CAT scale before a long trip.";
+      } else {
+        verdictEl.className = "verdict";
+        verdictEl.innerHTML = "<b>You're within every rating you entered</b> &mdash; with <b>" +
+          fmt(binding.avail - binding.used) + " lb</b> of headroom on your tightest limit (" +
+          esc(binding.name.toLowerCase()) + "). Happy trails &mdash; verify at a scale once you're loaded.";
+      }
+    }
+
+    // ---------- reverse mode ----------
+    var revEl = $("reverse");
+    var p = pct / 100;
+    var caps = [];
+    if (payload !== null && payload > 0) caps.push({ name: "payload", max: (payload - truckLoad) / p });
+    if (tow !== null && tow > 0) caps.push({ name: "tow rating", max: tow });
+    if (hTongue !== null && hTongue > 0) caps.push({ name: "hitch tongue rating", max: hTongue / p });
+    if (hTow !== null && hTow > 0) caps.push({ name: "hitch tow rating", max: hTow });
+    if (canGcwr && gcwr > 0) caps.push({ name: "GCWR", max: gcwr - estCurb - truckLoad });
+
+    if (caps.length) {
+      var cap = caps[0];
+      caps.forEach(function (c) { if (c.max < cap.max) cap = c; });
+      var maxT = Math.max(0, Math.floor(cap.max / 50) * 50);
+      revEl.className = "reverse show";
+      revEl.innerHTML = "Reverse mode: the heaviest trailer that fits <b>all</b> your numbers is <b>" +
+        fmt(maxT) + " lb</b> &mdash; " + esc(cap.name) + " is what caps you (at " + pct.toFixed(1) +
+        "% tongue weight, with your truck loaded as entered).";
+    } else {
+      revEl.className = "reverse";
+      revEl.innerHTML = "";
+    }
+
+    save();
+  }
+
+  NUM_IDS.forEach(function (id) { $(id).addEventListener("input", compute); });
+  $("tonguePct").addEventListener("input", compute);
+  $("wdh").addEventListener("change", compute);
+
+  compute();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RV Boondocking Water &amp; Tank Calculator | S'more's Outdoors</title>
+<meta name="description" content="See how many days your fresh, grey, and black tanks really last while boondocking — and which tank fills first. Free RV water calculator, no signup.">
+<meta name="author" content="S'more's Outdoors">
+<meta name="keywords" content="boondocking calculator, RV water calculator, holding tank calculator, grey water tank, black water tank, fresh water tank duration, dry camping water, how long can I boondock, RV tank capacity days">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="googlebot" content="index, follow">
+<link rel="canonical" href="https://smoreoutdoors.com/boondocking-calculator/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="S'more's Outdoors">
+<meta property="og:title" content="How Long Can We Boondock? — RV Water &amp; Tank Calculator">
+<meta property="og:description" content="See which tank really ends your boondocking trip — fresh, grey, or black. Hint: it's usually the grey tank. Free calculator, no signup.">
+<meta property="og:url" content="https://smoreoutdoors.com/boondocking-calculator/">
+<meta property="og:image" content="https://smoreoutdoors.com/images/og-image.png">
+<meta property="og:image:secure_url" content="https://smoreoutdoors.com/images/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The S'more's Outdoors mascot — a cheerful toasted marshmallow s'more by a campfire — with the S'more's Outdoors brand name.">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How Long Can We Boondock? — RV Water &amp; Tank Calculator">
+<meta name="twitter:description" content="See which tank really ends your boondocking trip — fresh, grey, or black. Hint: it's usually the grey tank. Free calculator, no signup.">
+<meta name="twitter:image" content="https://smoreoutdoors.com/images/og-image.png">
+<meta name="twitter:image:alt" content="The S'more's Outdoors mascot — a cheerful toasted marshmallow s'more by a campfire — with the S'more's Outdoors brand name.">
+
+<!-- WebApplication schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "How Long Can We Boondock?",
+  "url": "https://smoreoutdoors.com/boondocking-calculator/",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any (web browser)",
+  "description": "Free RV boondocking calculator that models your fresh, grey, and black water tanks against your crew's habits to estimate how many days you can dry camp.",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "S'more's Outdoors",
+    "url": "https://smoreoutdoors.com/"
+  }
+}
+</script>
+
+<!-- BreadcrumbList schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://smoreoutdoors.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "How Long Can We Boondock?",
+      "item": "https://smoreoutdoors.com/boondocking-calculator/"
+    }
+  ]
+}
+</script>
+
+<!-- FAQPage schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why does the grey tank fill up before the fresh tank runs empty?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Two things gang up on you. First, on most rigs the grey tank is simply smaller than the fresh tank — a 40-gallon fresh / 35-gallon grey split is typical. Second, nearly every gallon you draw from fresh ends up in grey: showers, dishwashing, and every sink all drain there, and the only fresh water that escapes it is what you drink or cook with and what the toilet sends to the black tank. So grey fills at close to the rate fresh drains, but with less room to work with. Add a few jugs of extra fresh water and the gap widens even further — which is why experienced boondockers watch the grey tank, not the fresh one."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's a navy shower and how much water does it actually save?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A navy shower is the classic water-rationing routine borrowed from ships: wet down, water off, soap up, rinse off. Even so, a typical RV navy shower runs about 4–6 gallons of actual flow — three minutes at 2.0 gpm, the defaults this calculator uses. Getting down to 2–3 gallons takes a shut-off-valve showerhead at 1.5 gpm with under two minutes of water actually running. Either way it beats the 15–30 gallons of a typical home shower, and in an RV every drop counts twice — once out of the fresh tank and once into the grey tank."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I dump grey water on the ground?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No — in nearly all jurisdictions dumping grey water on the ground is illegal, and it can carry substantial fines. Grey water isn't just water: the soap, grease, and food particles in it damage soil and waterways and attract wildlife to campsites. Many public lands, including plenty of national forest and BLM areas, explicitly prohibit it even where enforcement is rare. Always take grey and black water to a proper dump station — most campgrounds, many truck stops, and some rest areas have one, and apps and websites list thousands of free options."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I make my fresh water last longer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Carry extra water in jugs — one 6- or 7-gallon jug is roughly an extra day for two careful people. Switch to paper plates and one-pot meals so there's almost nothing to wash, and use the two-basin method (one wash tub, one rinse tub) when you do wash up. Body wipes handle quick cleanups between real showers, and a jug in the shower catches the cold warm-up water so it can be reused for dishes or flushing. Small habits stack: most crews can cut their daily draw in half without feeling deprived."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How accurate are RV tank sensors?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Notoriously bad — they're the punchline of RV ownership. Most factory sensors are simple probes inside the tank, and a scrap of toilet paper or a film of grease across a probe will make a tank read full when it's half empty, or empty when it's nearly full. That's exactly why this calculator exists: a water budget based on your real habits is usually more trustworthy than the sender lights. Use the calculator for planning, then verify physically — look into the fresh tank with a flashlight, listen for gurgling drains, and note how the rig behaves as tanks fill. Tank treatments and a thorough flush can improve sensor readings, but never bet the last day of a trip on them."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do composting toilets really eliminate black water?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. A composting toilet uses no flush water at all: liquids go to a separate bottle you empty in any regular toilet or vault toilet, and solids go into a bin of peat moss or coconut coir that composts down and only needs emptying every few weeks. That removes the black tank from the math entirely and also eliminates roughly a gallon and a half per person per day that flushing draws from the fresh tank. The effect on boondocking range is dramatic — many rigs nearly double their trip length. Once black water is gone, the grey tank almost always becomes the tank that ends the trip, so pair the composting toilet with navy showers and basin dishwashing."
+      }
+    }
+  ]
+}
+</script>
+
+<meta name="theme-color" content="#1f5c37">
+<link rel="icon" type="image/png" sizes="512x512" href="../images/favicon-512.png">
+<link rel="icon" type="image/png" sizes="180x180" href="../images/favicon-180.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16.png">
+<link rel="apple-touch-icon" href="../images/apple-touch-icon.png">
+<style>
+  :root {
+    --ground:#f5f1e2; --card:#fffdf8; --ink:#1c2318; --ink-soft:#5a6152; --line:#1c2318;
+    --vial:#1f5c37; --vial-soft:#dcefdf; --block:#e8620f; --block-soft:#fbe0cc;
+    --warn:#c23b22; --warn-soft:#f7ddd6; --brand:#2f80a3; --brand-soft:#dbeef5;
+    --readout:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --ground:#12160f; --card:#1b2117; --ink:#eef1e6; --ink-soft:#a9b09c; --line:#eef1e6;
+            --vial:#5cbf7e; --vial-soft:#1e3324; --block:#ff9a52; --block-soft:#3d2413; --warn:#ef7a63; --warn-soft:#45231c;
+            --brand:#6fc0e0; --brand-soft:#173038; }
+  }
+  :root[data-theme="light"]{--ground:#f5f1e2;--card:#fffdf8;--ink:#1c2318;--ink-soft:#5a6152;--line:#1c2318;--vial:#1f5c37;--vial-soft:#dcefdf;--block:#e8620f;--block-soft:#fbe0cc;--warn:#c23b22;--warn-soft:#f7ddd6;--brand:#2f80a3;--brand-soft:#dbeef5;}
+  :root[data-theme="dark"]{--ground:#12160f;--card:#1b2117;--ink:#eef1e6;--ink-soft:#a9b09c;--line:#eef1e6;--vial:#5cbf7e;--vial-soft:#1e3324;--block:#ff9a52;--block-soft:#3d2413;--warn:#ef7a63;--warn-soft:#45231c;--brand:#6fc0e0;--brand-soft:#173038;}
+  * { box-sizing:border-box; }
+  html { background:var(--ground); }
+  body { margin:0; padding:0 0 40px; background:var(--ground); color:var(--ink);
+    font:16px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif; }
+  a { color:var(--brand); }
+  main { width:100%; max-width:820px; margin:0 auto; padding:14px 14px 0; display:flex; flex-direction:column; gap:12px; }
+
+  .brandbar { background:var(--card); border-bottom:3px solid var(--line); }
+  .brandbar-inner { max-width:820px; margin:0 auto; padding:10px 14px; display:flex; align-items:center; justify-content:space-between; gap:10px; }
+  .wordmark { font-weight:800; font-size:15px; letter-spacing:-0.01em; color:var(--ink); text-decoration:none; display:flex; align-items:center; gap:7px; }
+  .wordmark .mark { width:26px; height:26px; display:inline-block; }
+  .wordmark .mark img { width:100%; height:100%; object-fit:contain; display:block; }
+  .brandbar .more { font-size:12.5px; color:var(--ink-soft); }
+
+  h1 { font-size:28px; font-weight:800; margin:0; letter-spacing:-0.01em; text-wrap:balance; }
+  .sub { color:var(--ink-soft); font-size:15px; margin:3px 0 0; }
+  section { background:var(--card); border:3px solid var(--line); border-radius:12px; padding:12px 12px 14px; box-shadow:4px 4px 0 var(--vial-soft); }
+  .eyebrow { font-size:11px; font-weight:700; letter-spacing:0.09em; text-transform:uppercase; color:var(--ink-soft); margin:0 0 5px; }
+  .note { font-size:14.5px; line-height:1.4; color:var(--ink-soft); margin:0 0 10px;
+    background:var(--vial-soft); border-radius:8px; padding:9px 11px; }
+  .note b { color:var(--ink); }
+  .note:last-child { margin-bottom:0; }
+
+  input:focus-visible, select:focus-visible, button:focus-visible, summary:focus-visible { outline:2px solid var(--vial); outline-offset:1px; }
+
+  /* --- step 1: tank inputs --- */
+  .tank-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:10px 12px; }
+  .tank-grid label { display:block; font-size:13px; font-weight:700; color:var(--ink-soft); margin-bottom:4px; }
+  .tank-grid label small { display:block; font-weight:400; font-size:11.5px; }
+  .tank-grid input { width:100%; padding:10px 11px; border:1.5px solid var(--line); border-radius:8px;
+    background:var(--card); color:var(--ink); font:600 16px/1.2 var(--readout); }
+
+  /* --- step 2: habit rows --- */
+  .hrow { display:grid; grid-template-columns:1fr auto; gap:6px 12px; align-items:center; padding:10px 0; }
+  .hrow + .hrow { border-top:1px dashed var(--line); }
+  .hrow.stack { grid-template-columns:1fr; }
+  .hrow > label, .hrow > .hlabel { font-size:13.5px; font-weight:600; }
+  .hrow > label small, .hrow > .hlabel small { display:block; font-weight:400; color:var(--ink-soft); }
+  .hrow input[type="number"] { width:88px; padding:8px 9px; border:1.5px solid var(--line); border-radius:8px;
+    background:var(--card); color:var(--ink); font:600 15px/1.2 var(--readout); text-align:right; }
+  .hrow select { width:100%; padding:9px 10px; border:1.5px solid var(--line); border-radius:8px;
+    background:var(--card); color:var(--ink); font:600 14px/1.2 system-ui; }
+  .hrow:not(.stack) select { width:auto; max-width:52vw; }
+
+  .rorow { display:flex; align-items:center; justify-content:flex-end; gap:7px; }
+  .step { flex:none; width:38px; height:38px; border:1.5px solid var(--line); border-radius:11px;
+    background:var(--card); color:var(--ink); font:700 20px/1 system-ui; cursor:pointer;
+    -webkit-tap-highlight-color:transparent; touch-action:manipulation; }
+  .step:active { background:var(--vial-soft); border-color:var(--vial); }
+  .rov { font:800 20px/1.2 var(--readout); color:var(--ink); min-width:44px; text-align:center; font-variant-numeric:tabular-nums; }
+
+  /* --- results: tank cards --- */
+  .tanks-row { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin:4px 0 2px; }
+  .tankcard { border:2px solid var(--line); border-radius:14px; background:var(--card); text-align:center; padding:11px 6px 12px; }
+  .tankcard .tk { font-size:11.5px; font-weight:800; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink-soft); }
+  .tankcard .dn { font:800 clamp(26px,8vw,38px)/1.15 var(--readout); font-variant-numeric:tabular-nums; color:var(--vial); }
+  .tankcard .du { font-size:12px; color:var(--ink-soft); margin-top:-1px; }
+  .tankcard .rate { font-size:12.5px; color:var(--ink-soft); margin-top:6px; font-variant-numeric:tabular-nums; }
+  .tankcard.limit { border-color:var(--warn); background:var(--warn-soft); }
+  .tankcard.limit .dn { color:var(--warn); }
+
+  .verdict { margin-top:12px; border-radius:8px; padding:10px 12px; font-size:14px; background:var(--vial-soft); }
+  .verdict.blocks { background:var(--block-soft); } .verdict.bad { background:var(--warn-soft); }
+  .verdict b { font-variant-numeric:tabular-nums; }
+  .verdict i { color:var(--ink-soft); }
+
+  .tips-title { font-size:13px; font-weight:700; margin:14px 0 0; }
+  ul.tips { margin:6px 0 0; padding-left:20px; font-size:13.5px; color:var(--ink-soft); }
+  ul.tips li { margin:5px 0; } ul.tips b { color:var(--ink); }
+
+  .target { margin-top:14px; border:1.5px solid var(--line); border-radius:10px; padding:10px 12px; background:var(--brand-soft); }
+  .target label { font-size:14px; font-weight:700; display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+  .target input { width:72px; padding:7px 8px; border:1.5px solid var(--line); border-radius:8px;
+    background:var(--card); color:var(--ink); font:700 15px/1.2 var(--readout); text-align:center; }
+  .target p { font-size:13.5px; margin:8px 0 0; color:var(--ink); }
+
+  details { border-top:1px solid var(--line); margin-top:12px; padding-top:10px; }
+  summary { cursor:pointer; font-size:13px; font-weight:600; color:var(--ink-soft); }
+  ol.how { margin:8px 0 0; padding-left:20px; font-size:13.5px; color:var(--ink-soft); }
+  ol.how li { margin:5px 0; } ol.how b { color:var(--ink); }
+
+  /* --- FAQ --- */
+  .faq details p { margin:8px 0 0; font-size:13.5px; line-height:1.5; color:var(--ink-soft); }
+  .faq details p b { color:var(--ink); }
+
+  /* --- ad slots ---
+     Placeholders only. Once you have a Google AdSense publisher ID:
+       1. Add the loader script to <head>:
+          <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+       2. Replace each .ad-slot div's contents with an <ins class="adsbygoogle"> unit
+          for that slot ID, then call (adsbygoogle = window.adsbygoogle || []).push({});
+       3. Add a real ads.txt at the site root (see /ads.txt).
+  */
+  .ad-slot { border:1px dashed var(--line); border-radius:8px; background:var(--ground);
+    display:flex; align-items:center; justify-content:center; color:var(--ink-soft);
+    font-size:12px; letter-spacing:0.04em; text-transform:uppercase; min-height:90px; }
+  .ad-slot.leaderboard { min-height:90px; }
+  .ad-slot.rectangle { min-height:250px; max-width:336px; margin:0 auto; }
+
+  /* --- affiliate section --- */
+  .gear-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:10px; margin-top:10px; }
+  .gear-card { border:1px solid var(--line); border-radius:8px; padding:11px; text-decoration:none; color:var(--ink); display:flex; flex-direction:column; gap:4px; }
+  .gear-card:hover { border-color:var(--brand); }
+  .gear-card .gt { font-size:14px; font-weight:700; }
+  .gear-card .gd { font-size:12.5px; color:var(--ink-soft); }
+  .affiliate-disclosure { font-size:12px; color:var(--ink-soft); margin-top:10px; }
+
+  footer { max-width:820px; margin:8px auto 0; padding:14px; font-size:12.5px; color:var(--ink-soft); text-align:center; }
+  footer a { color:var(--ink-soft); text-decoration:underline; }
+  footer .flinks { margin-top:6px; display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
+
+  @media (max-width:420px) {
+    .tank-grid { gap:8px; }
+    .tank-grid input { padding:9px 8px; font-size:15px; }
+    .hrow:not(.stack) select { max-width:46vw; }
+  }
+</style>
+</head>
+<body>
+
+<div class="brandbar"><div class="brandbar-inner">
+  <a class="wordmark" href="../"><span class="mark" aria-hidden="true"><img src="../images/favicon-180.png" alt="" width="26" height="26"></span>S'more's Outdoors</a>
+  <a class="more" href="../">More free RV tools</a>
+</div></div>
+
+<main>
+  <header>
+    <h1>How Long Can We Boondock?</h1>
+    <p class="sub">Everyone watches the fresh tank — but pack a jug or two and it's usually the <b>grey tank</b> that ends the trip. Model all three tanks and find your real limit.</p>
+  </header>
+
+  <!-- AdSense slot — un-comment once the account is approved:
+  <div class="ad-slot leaderboard" role="complementary" aria-label="Advertisement">Advertisement</div>
+  -->
+
+  <section aria-label="Your tanks">
+    <p class="eyebrow">1 &middot; Your tanks</p>
+    <p class="note">Enter each tank's capacity in <b>gallons</b>. You'll find them in your <b>owner's manual or spec sheet</b> — often on a sticker inside a cabinet or the water bay, too. Leave a box blank and we'll assume a typical mid-size rig.</p>
+    <div class="tank-grid">
+      <div>
+        <label for="fresh">Fresh water <small>gallons</small></label>
+        <input id="fresh" type="number" min="0" max="300" step="1" placeholder="40" inputmode="decimal">
+      </div>
+      <div>
+        <label for="grey">Grey tank <small>gallons</small></label>
+        <input id="grey" type="number" min="0" max="300" step="1" placeholder="35" inputmode="decimal">
+      </div>
+      <div>
+        <label for="black">Black tank <small>gallons (or cassette)</small></label>
+        <input id="black" type="number" min="0" max="300" step="1" placeholder="30" inputmode="decimal">
+      </div>
+    </div>
+  </section>
+
+  <section aria-label="Your crew and habits">
+    <p class="eyebrow">2 &middot; Your crew &amp; habits</p>
+
+    <div class="hrow">
+      <span class="hlabel" id="peopleLabel">People on board <small>everyone who showers, eats, and flushes</small></span>
+      <div class="rorow" role="group" aria-labelledby="peopleLabel">
+        <button class="step" type="button" data-target="people" data-d="-1" aria-label="Fewer people">&minus;</button>
+        <span class="rov" id="peopleOut" aria-live="polite">2</span>
+        <button class="step" type="button" data-target="people" data-d="1" aria-label="More people">+</button>
+      </div>
+    </div>
+
+    <div class="hrow">
+      <span class="hlabel" id="showersLabel">Showers per person, per week <small>0 = wipes and bravery</small></span>
+      <div class="rorow" role="group" aria-labelledby="showersLabel">
+        <button class="step" type="button" data-target="showersWk" data-d="-1" aria-label="Fewer showers per week">&minus;</button>
+        <span class="rov" id="showersOut" aria-live="polite">3</span>
+        <button class="step" type="button" data-target="showersWk" data-d="1" aria-label="More showers per week">+</button>
+      </div>
+    </div>
+
+    <div class="hrow">
+      <label for="showerMin">Minutes per shower <small>3 minutes = the classic &ldquo;navy shower&rdquo;: water off while you lather</small></label>
+      <input id="showerMin" type="number" min="0" max="30" step="0.5" value="3" inputmode="decimal">
+    </div>
+
+    <div class="hrow">
+      <label for="flow">Showerhead flow</label>
+      <select id="flow">
+        <option value="1.5">1.5 gpm — RV low-flow</option>
+        <option value="2.0" selected>2.0 gpm — typical</option>
+        <option value="2.5">2.5 gpm — full-flow</option>
+      </select>
+    </div>
+
+    <div class="hrow stack">
+      <label for="dish">Dishwashing style</label>
+      <select id="dish">
+        <option value="2" selected>Basin method — wash tub + rinse tub (~2 gal/day)</option>
+        <option value="4">Careful running water (~4 gal/day)</option>
+        <option value="8">Let it run (~8 gal/day)</option>
+      </select>
+    </div>
+
+    <div class="hrow stack">
+      <label for="toilet">Toilet <small>Standard &amp; cassette figure ~0.4 gal a flush, ~4 flushes per person a day. Cassette? Enter its capacity (often 4&ndash;5 gal) as your black tank in step&nbsp;1.</small></label>
+      <select id="toilet">
+        <option value="standard" selected>Standard flush RV toilet</option>
+        <option value="composting">Composting toilet — no water, no black tank</option>
+        <option value="cassette">Cassette toilet</option>
+      </select>
+    </div>
+
+    <div class="hrow">
+      <label for="drink">Drinking + cooking <small>gallons per person, per day</small></label>
+      <input id="drink" type="number" min="0" max="5" step="0.25" value="1" inputmode="decimal">
+    </div>
+
+    <div class="hrow">
+      <label for="jugs">We carry extra jugs <small>total extra fresh gallons on board</small></label>
+      <input id="jugs" type="number" min="0" max="100" step="1" value="0" inputmode="decimal">
+    </div>
+  </section>
+
+  <section aria-label="Results">
+    <p class="eyebrow">3 &middot; How long you can stay</p>
+
+    <div class="tanks-row">
+      <div class="tankcard" id="cardFresh">
+        <div class="tk">Fresh</div>
+        <div class="dn">&mdash;</div>
+        <div class="du">days</div>
+        <div class="rate">&mdash;</div>
+      </div>
+      <div class="tankcard" id="cardGrey">
+        <div class="tk">Grey</div>
+        <div class="dn">&mdash;</div>
+        <div class="du">days</div>
+        <div class="rate">&mdash;</div>
+      </div>
+      <div class="tankcard" id="cardBlack">
+        <div class="tk">Black</div>
+        <div class="dn">&mdash;</div>
+        <div class="du">days</div>
+        <div class="rate">&mdash;</div>
+      </div>
+    </div>
+
+    <div class="verdict" id="verdict" role="status" aria-live="polite">Crunching the numbers&hellip;</div>
+
+    <div id="tipsWrap">
+      <p class="tips-title" id="tipsTitle">Stretch it</p>
+      <ul class="tips" id="tips"></ul>
+    </div>
+
+    <div class="target">
+      <label for="targetDays">Want to stay <input id="targetDays" type="number" min="1" max="60" step="1" placeholder="7" inputmode="numeric"> days?</label>
+      <p id="targetOut" role="status" aria-live="polite"></p>
+    </div>
+
+    <p class="note" style="margin-top:14px"><b>Estimates, not gospel.</b> These numbers assume typical usage — your crew's habits will vary, so treat day one as a calibration day and watch your tank gauges. And whatever the math says: <b>never dump grey or black water anywhere but a proper dump station.</b></p>
+
+    <details>
+      <summary>How the math works (every assumption, no hand-waving)</summary>
+      <ol class="how">
+        <li><b>Showers:</b> people &times; showers/week &divide; 7 &times; minutes &times; flow (gpm). Every drop lands in the <b>grey</b> tank.</li>
+        <li><b>Dishes:</b> the flat daily figure for the method you picked (~2, ~4, or ~8 gal/day). All grey.</li>
+        <li><b>Hand-washing &amp; bathroom sink:</b> a fixed <b>1 gal per person per day</b> — our one baked-in assumption you can't edit. All grey.</li>
+        <li><b>Toilet:</b> standard and cassette figure <b>~0.4 gal per flush &times; ~4 flushes per person per day</b> — RV toilets use short, user-controlled flushes, unlike residential toilets that dump a fixed 1.3+ gallons every time. That water is drawn from your fresh tank and lands in the <b>black</b> tank (or cassette). A composting toilet uses no water and makes no black water at all.</li>
+        <li><b>Drinking + cooking:</b> your gal/person/day figure. Most of it leaves via people; we count <b>25%</b> to grey (pasta water, coffee dregs, rinse-outs).</li>
+        <li><b>Fresh draw = all of the above added together.</b> Every gallon of grey and black water started life in your fresh tank (plus any jugs) — that's why fresh drains faster than grey fills.</li>
+        <li>Tanks start the trip <b>fresh-full, grey/black-empty</b>. No rain capture, no mid-trip refills beyond the jugs you entered.</li>
+        <li><b>Days for each tank = capacity &divide; daily rate.</b> The smallest number is your limiting tank and your trip length.</li>
+      </ol>
+    </details>
+  </section>
+
+  <!-- AdSense slot — un-comment once the account is approved:
+  <div class="ad-slot rectangle" role="complementary" aria-label="Advertisement">Advertisement</div>
+  -->
+
+  <section aria-label="Recommended boondocking gear">
+    <p class="eyebrow">Gear that pairs with this calculator</p>
+    <div class="gear-grid">
+      <!-- Amazon links: once the Associates account is live, append the tracking
+           tag (e.g. &tag=yourtag-20) to each URL below. -->
+      <a class="gear-card" href="https://www.amazon.com/s?k=collapsible+water+jug+camping" rel="sponsored noopener" target="_blank">
+        <span class="gt">Collapsible water jugs</span>
+        <span class="gd">Stackable 5&ndash;7 gallon jugs — the cheapest way to turn &ldquo;fresh-limited&rdquo; into a longer weekend.</span>
+      </a>
+      <a class="gear-card" href="https://www.amazon.com/s?k=rv+low+flow+shower+head" rel="sponsored noopener" target="_blank">
+        <span class="gt">Low-flow RV showerhead</span>
+        <span class="gd">1.5 gpm with a shut-off valve — the navy shower's best friend and the grey tank's too.</span>
+      </a>
+      <a class="gear-card" href="https://www.amazon.com/s?k=rv+holding+tank+treatment" rel="sponsored noopener" target="_blank">
+        <span class="gt">Holding tank treatment</span>
+        <span class="gd">Keeps the black tank civil on longer stays and helps sensors read true.</span>
+      </a>
+      <a class="gear-card" href="https://www.amazon.com/s?k=portable+rv+waste+tote" rel="sponsored noopener" target="_blank">
+        <span class="gt">Portable waste tote</span>
+        <span class="gd">Wheel your waste to the dump station without breaking camp — a boondocker's cheat code.</span>
+      </a>
+    </div>
+    <p class="affiliate-disclosure">As an Amazon Associate, S'more's Outdoors earns from qualifying purchases.</p>
+  </section>
+
+  <section aria-label="Frequently asked questions" class="faq">
+    <p class="eyebrow">FAQ</p>
+
+    <details>
+      <summary>Why does the grey tank fill up before the fresh tank runs empty?</summary>
+      <p>Two things gang up on you. First, on most rigs the grey tank is simply <b>smaller than the fresh tank</b> — a 40-gallon fresh / 35-gallon grey split is typical. Second, nearly every gallon you draw from fresh ends up in grey: showers, dishwashing, and every sink all drain there, and the only fresh water that escapes it is what you drink or cook with and what the toilet sends to the black tank. So grey fills at close to the rate fresh drains, but with less room to work with. Add a few jugs of extra fresh water and the gap widens even further — which is why experienced boondockers watch the <b>grey tank</b>, not the fresh one.</p>
+    </details>
+
+    <details>
+      <summary>What's a navy shower and how much water does it actually save?</summary>
+      <p>A navy shower is the classic water-rationing routine borrowed from ships: <b>wet down, water off, soap up, rinse off</b>. Even so, a typical RV navy shower runs about <b>4&ndash;6 gallons</b> of actual flow — three minutes at 2.0 gpm, the defaults this calculator uses. Getting down to 2&ndash;3 gallons takes a shut-off-valve showerhead at 1.5 gpm with under two minutes of water actually running. Either way it beats the 15&ndash;30 gallons of a typical home shower, and in an RV every drop counts twice — once out of the fresh tank and once into the grey tank.</p>
+    </details>
+
+    <details>
+      <summary>Can I dump grey water on the ground?</summary>
+      <p><b>No</b> — in nearly all jurisdictions dumping grey water on the ground is illegal, and it can carry substantial fines. Grey water isn't just water: the soap, grease, and food particles in it damage soil and waterways and attract wildlife to campsites. Many public lands, including plenty of national forest and BLM areas, explicitly prohibit it even where enforcement is rare. Always take grey and black water to a proper <b>dump station</b> — most campgrounds, many truck stops, and some rest areas have one, and apps and websites list thousands of free options.</p>
+    </details>
+
+    <details>
+      <summary>How do I make my fresh water last longer?</summary>
+      <p>Carry <b>extra water in jugs</b> — one 6- or 7-gallon jug is roughly an extra day for two careful people. Switch to <b>paper plates and one-pot meals</b> so there's almost nothing to wash, and use the two-basin method (one wash tub, one rinse tub) when you do wash up. <b>Body wipes</b> handle quick cleanups between real showers, and a jug in the shower catches the cold warm-up water so it can be reused for dishes or flushing. Small habits stack: most crews can cut their daily draw in half without feeling deprived.</p>
+    </details>
+
+    <details>
+      <summary>How accurate are RV tank sensors?</summary>
+      <p><b>Notoriously bad</b> — they're the punchline of RV ownership. Most factory sensors are simple probes inside the tank, and a scrap of toilet paper or a film of grease across a probe will make a tank read full when it's half empty, or empty when it's nearly full. That's exactly why this calculator exists: a <b>water budget based on your real habits</b> is usually more trustworthy than the sender lights. Use the calculator for planning, then verify physically — look into the fresh tank with a flashlight, listen for gurgling drains, and note how the rig behaves as tanks fill. Tank treatments and a thorough flush can improve sensor readings, but never bet the last day of a trip on them.</p>
+    </details>
+
+    <details>
+      <summary>Do composting toilets really eliminate black water?</summary>
+      <p><b>Yes.</b> A composting toilet uses no flush water at all: liquids go to a separate bottle you empty in any regular toilet or vault toilet, and solids go into a bin of peat moss or coconut coir that composts down and only needs emptying every few weeks. That removes the black tank from the math entirely and also eliminates roughly a gallon and a half per person per day that flushing draws from the fresh tank. The effect on boondocking range is dramatic — many rigs nearly <b>double their trip length</b>. Once black water is gone, the grey tank almost always becomes the tank that ends the trip, so pair the composting toilet with navy showers and basin dishwashing.</p>
+    </details>
+  </section>
+</main>
+
+<footer>
+  <div>How Long Can We Boondock? is a free tool from <a href="../">S'more's Outdoors</a>. Estimates only — your habits, rig, and thirst will vary.</div>
+  <div class="flinks">
+    <a href="./legal/terms.html">Terms</a>
+    <a href="./legal/privacy.html">Privacy</a>
+    <a href="./legal/disclaimer.html">Disclaimer</a>
+  </div>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+  function $(id) { return document.getElementById(id); }
+  function clamp(v, lo, hi) { return Math.max(lo, Math.min(hi, v)); }
+
+  // ---- model constants (documented in "How the math works") ----
+  var DEFAULT_TANKS = { fresh: 40, grey: 35, black: 30 };
+  var HAND_WASH_PER_PERSON = 1;   // gal/person/day, sinks -> grey
+  var FLUSH_GAL = 0.4;            // gal per flush (standard & cassette — short, user-controlled RV flushes)
+  var FLUSHES_PER_PERSON = 4;     // flushes/person/day
+  var DRINK_TO_GREY = 0.25;       // share of drinking/cooking water that reaches grey
+
+  var state = { people: 2, showersWk: 3 };
+  var FIELD_IDS = ["fresh", "grey", "black", "showerMin", "flow", "dish", "toilet", "drink", "jugs", "targetDays"];
+
+  // ---- restore ----
+  try {
+    var saved = JSON.parse(localStorage.getItem("boondockCalc") || "{}");
+    FIELD_IDS.forEach(function (k) {
+      if (saved[k] !== undefined && saved[k] !== null && saved[k] !== "" && $(k)) $(k).value = saved[k];
+    });
+    if (typeof saved.people === "number" && isFinite(saved.people)) state.people = clamp(Math.round(saved.people), 1, 8);
+    if (typeof saved.showersWk === "number" && isFinite(saved.showersWk)) state.showersWk = clamp(Math.round(saved.showersWk), 0, 7);
+  } catch (e) {}
+
+  function num(id, fallback) {
+    var v = parseFloat($(id).value);
+    return isFinite(v) && v >= 0 ? v : fallback;
+  }
+  function fmtDays(d) {
+    if (!isFinite(d)) return "∞";
+    if (d >= 99) return "99+";
+    return (Math.round(d * 10) / 10).toFixed(1);
+  }
+  function fmt1(x) { return (Math.round(x * 10) / 10).toFixed(1); }
+
+  // ---- the water model ----
+  function readModel() {
+    var m = {};
+    m.people = state.people;
+    m.showersWk = state.showersWk;
+
+    var fRaw = num("fresh", NaN), gRaw = num("grey", NaN), bRaw = num("black", NaN);
+    m.usingDefaults = !isFinite(fRaw) || !isFinite(gRaw) || !isFinite(bRaw);
+    m.fresh = isFinite(fRaw) ? fRaw : DEFAULT_TANKS.fresh;
+    m.grey  = isFinite(gRaw) ? gRaw : DEFAULT_TANKS.grey;
+    m.black = isFinite(bRaw) ? bRaw : DEFAULT_TANKS.black;
+
+    m.showerMin = num("showerMin", 3);
+    m.flow = parseFloat($("flow").value) || 2;
+    m.dish = parseFloat($("dish").value) || 2;
+    m.toilet = $("toilet").value;
+    m.drink = num("drink", 1);
+    m.jugs = num("jugs", 0);
+
+    var P = m.people;
+    m.showerRate = P * (m.showersWk / 7) * m.showerMin * m.flow; // -> grey
+    m.handRate = P * HAND_WASH_PER_PERSON;                        // -> grey
+    m.drinkRate = P * m.drink;                                    // mostly leaves via people
+    m.flushRate = m.toilet === "composting" ? 0 : P * FLUSHES_PER_PERSON * FLUSH_GAL; // -> black
+
+    m.greyRate = m.showerRate + m.dish + m.handRate + DRINK_TO_GREY * m.drinkRate;
+    m.blackRate = m.flushRate;
+    m.freshRate = m.showerRate + m.dish + m.handRate + m.drinkRate + m.flushRate;
+
+    m.freshDays = m.freshRate > 0 ? (m.fresh + m.jugs) / m.freshRate : Infinity;
+    m.greyDays  = m.greyRate  > 0 ? m.grey / m.greyRate : Infinity;
+    m.blackDays = m.blackRate > 0 ? m.black / m.blackRate : Infinity;
+
+    m.tripDays = Math.min(m.freshDays, m.greyDays, m.blackDays);
+    if (!isFinite(m.tripDays)) m.limit = null;
+    else if (m.tripDays === m.freshDays) m.limit = "fresh";
+    else if (m.tripDays === m.greyDays) m.limit = "grey";
+    else m.limit = "black";
+    return m;
+  }
+
+  // ---- rendering ----
+  function setCard(id, name, days, rateText, isLimit) {
+    var card = $(id);
+    card.className = "tankcard" + (isLimit ? " limit" : "");
+    card.querySelector(".tk").textContent = name;
+    card.querySelector(".dn").textContent = fmtDays(days);
+    card.querySelector(".rate").textContent = rateText;
+  }
+
+  var TIPS = {
+    grey: [
+      "<b>Shorter showers.</b> Every minute at 2 gpm is 2 gallons into the grey tank — the navy shower (water off while you lather) is the single biggest lever on this page.",
+      "<b>Basin dishes.</b> Wash in one tub, rinse in a second — about 2 gal/day instead of 4–8 straight down the drain.",
+      "<b>Catch the warm-up water.</b> Run the shower into a jug until it's hot, then reuse it for dishes or flushing.",
+      "<b>Shower in town.</b> Campground, gym, or truck-stop showers keep whole gallons out of the tank."
+    ],
+    fresh: [
+      "<b>Bring jugs.</b> One 7-gallon jug is roughly an extra day for two careful people — add it to “extra jugs” above and watch the cards move.",
+      "<b>Refill without breaking camp.</b> A collapsible jug plus a “water thief” adapter fills from most campground spigots.",
+      "<b>Paper plates and one-pot meals</b> cut the dishwashing draw to almost nothing.",
+      "<b>Fewer, shorter showers</b> save fresh and grey water at the same time."
+    ],
+    black: [
+      "<b>Flush less.</b> “If it's yellow…” — liquids-only flushes with a quick rinse stretch the black tank dramatically.",
+      "<b>Use vault toilets</b> or campground restrooms whenever they're an option.",
+      "<b>A composting toilet</b> takes black water out of the math entirely — pick it in the toilet menu above and see.",
+      "<b>A portable waste tote</b> lets you dump the black tank without breaking camp (at a dump station only, always)."
+    ]
+  };
+  var LIMIT_WORD = { fresh: "fresh-water", grey: "grey-tank", black: "black-tank" };
+
+  function renderTips(m) {
+    var wrap = $("tipsWrap");
+    if (!m.limit) { wrap.style.display = "none"; return; }
+    wrap.style.display = "";
+    var word = m.limit === "black" && m.toilet === "cassette" ? "cassette" : LIMIT_WORD[m.limit];
+    $("tipsTitle").textContent = "Stretch it — this plan is " + word + "-limited";
+    $("tips").innerHTML = TIPS[m.limit].map(function (t) { return "<li>" + t + "</li>"; }).join("");
+  }
+
+  function renderTarget(m) {
+    var out = $("targetOut");
+    var N = num("targetDays", NaN);
+    if (!isFinite(N) || N < 1) {
+      out.textContent = "Type a number of days to see the water budget it takes.";
+      return;
+    }
+    if (m.tripDays >= N) {
+      out.innerHTML = "Good news — this plan already lasts about <b>" + fmtDays(m.tripDays) + " days</b>, so " + N + " is covered. Go pick a spot.";
+      return;
+    }
+    var P = m.people;
+    var freshBudget = (m.fresh + m.jugs) / (N * P);
+    var msg = "To stay <b>" + N + " days</b>, your crew of " + P + " has <b>" + fmt1(freshBudget) +
+      " gal/person/day</b> of fresh water to work with — this plan currently uses <b>" + fmt1(m.freshRate / P) + "</b>. ";
+    if (freshBudget >= 4) msg += "That's a comfortable budget: trim the habits above until the fresh card reads " + N + "+ days.";
+    else if (freshBudget >= 2) msg += "Doable with discipline — seasoned boondockers live on about 2 gal/person/day (navy showers, basin dishes).";
+    else if (freshBudget >= 1) msg += "That's hardcore territory — drinking, cooking, and a washcloth. Extra jugs would help a lot.";
+    else msg += "Not realistic on the water you're carrying — add jugs or plan a mid-trip refill.";
+
+    var greyBudget = m.grey / N;
+    if (m.greyRate > greyBudget) {
+      msg += " Grey is a limit too: over " + N + " days it can absorb <b>" + fmt1(greyBudget) +
+        " gal/day</b> and this plan sends it " + fmt1(m.greyRate) + ".";
+    }
+    if (isFinite(m.blackDays) && m.blackDays < N) {
+      msg += " And the " + (m.toilet === "cassette" ? "cassette" : "black tank") + " would be full around day " +
+        Math.max(1, Math.floor(m.blackDays)) + " — fewer flushes, vault toilets, or a composting setup gets you there.";
+    }
+    out.innerHTML = msg;
+  }
+
+  function render() {
+    var m = readModel();
+
+    setCard("cardFresh", "Fresh", m.freshDays, fmt1(m.freshRate) + " gal/day out", m.limit === "fresh");
+    setCard("cardGrey", "Grey", m.greyDays, fmt1(m.greyRate) + " gal/day in", m.limit === "grey");
+    setCard("cardBlack", m.toilet === "cassette" ? "Cassette" : "Black", m.blackDays,
+      m.blackRate > 0 ? fmt1(m.blackRate) + " gal/day in" : "no black water", m.limit === "black");
+
+    var v = $("verdict");
+    if (!m.limit) {
+      v.className = "verdict";
+      v.textContent = "No water use modeled yet — set your crew and habits above.";
+    } else {
+      var d = fmtDays(m.tripDays);
+      var html;
+      if (m.limit === "grey") {
+        html = "Your <b>grey tank</b> ends this trip — it fills in about <b>" + d + " days</b>, with fresh water still on board. Classic.";
+      } else if (m.limit === "fresh") {
+        html = "Your <b>fresh water</b> ends this trip — the tank" + (m.jugs > 0 ? " and jugs run" : " runs") + " dry in about <b>" + d + " days</b>.";
+      } else {
+        html = "Your <b>" + (m.toilet === "cassette" ? "cassette" : "black tank") + "</b> ends this trip — full in about <b>" + d + " days</b>.";
+      }
+      if (m.usingDefaults) html += " <i>(Using typical 40 / 35 / 30-gallon tanks until you enter yours in step 1.)</i>";
+      v.className = "verdict" + (m.tripDays < 3 ? " bad" : (m.tripDays < 7 ? " blocks" : ""));
+      v.innerHTML = html;
+    }
+
+    renderTips(m);
+    renderTarget(m);
+
+    try {
+      var data = { people: state.people, showersWk: state.showersWk };
+      FIELD_IDS.forEach(function (k) { data[k] = $(k).value; });
+      localStorage.setItem("boondockCalc", JSON.stringify(data));
+    } catch (e) {}
+  }
+
+  // ---- wiring ----
+  function syncSteppers() {
+    $("peopleOut").textContent = state.people;
+    $("showersOut").textContent = state.showersWk;
+  }
+
+  document.querySelectorAll(".step").forEach(function (b) {
+    b.addEventListener("click", function () {
+      var d = parseInt(b.dataset.d, 10);
+      if (b.dataset.target === "people") state.people = clamp(state.people + d, 1, 8);
+      else state.showersWk = clamp(state.showersWk + d, 0, 7);
+      syncSteppers();
+      render();
+    });
+  });
+
+  FIELD_IDS.forEach(function (id) {
+    $(id).addEventListener("input", render);
+    $(id).addEventListener("change", render);
+  });
+
+  syncSteppers();
+  render();
+})();
+</script>
+</body>
+</html>
