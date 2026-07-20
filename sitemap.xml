@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   S'more's Outdoors — brand portfolio sitemap
-  Canonical domain: https://smoreoutdoors.com
+  Canonical domain: https://smoresoutdoors.life
 
   Per sitemaps.org, a sitemap may only list URLs from the same host as this
   file. This one lists everything under the apex: the brand home, each tool,
@@ -14,7 +14,7 @@
 
   <!-- Brand home -->
   <url>
-    <loc>https://smoreoutdoors.com/</loc>
+    <loc>https://smoresoutdoors.life/</loc>
     <lastmod>2026-07-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
@@ -22,14 +22,14 @@
 
   <!-- About & Contact -->
   <url>
-    <loc>https://smoreoutdoors.com/about.html</loc>
+    <loc>https://smoresoutdoors.life/about.html</loc>
     <lastmod>2026-07-20</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://smoreoutdoors.com/contact.html</loc>
+    <loc>https://smoresoutdoors.life/contact.html</loc>
     <lastmod>2026-07-20</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
@@ -37,28 +37,28 @@
 
   <!-- Camper Power & Climate Planner -->
   <url>
-    <loc>https://smoreoutdoors.com/camper-power-planner/</loc>
+    <loc>https://smoresoutdoors.life/camper-power-planner/</loc>
     <lastmod>2026-07-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://smoreoutdoors.com/camper-power-planner/legal/terms.html</loc>
+    <loc>https://smoresoutdoors.life/camper-power-planner/legal/terms.html</loc>
     <lastmod>2026-07-20</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://smoreoutdoors.com/camper-power-planner/legal/privacy.html</loc>
+    <loc>https://smoresoutdoors.life/camper-power-planner/legal/privacy.html</loc>
     <lastmod>2026-07-20</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://smoreoutdoors.com/camper-power-planner/legal/disclaimer.html</loc>
+    <loc>https://smoresoutdoors.life/camper-power-planner/legal/disclaimer.html</loc>
     <lastmod>2026-07-20</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
@@ -66,21 +66,21 @@
 
   <!-- Site-wide legal -->
   <url>
-    <loc>https://smoreoutdoors.com/legal/terms.html</loc>
+    <loc>https://smoresoutdoors.life/legal/terms.html</loc>
     <lastmod>2026-07-20</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://smoreoutdoors.com/legal/privacy.html</loc>
+    <loc>https://smoresoutdoors.life/legal/privacy.html</loc>
     <lastmod>2026-07-20</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://smoreoutdoors.com/legal/disclaimer.html</loc>
+    <loc>https://smoresoutdoors.life/legal/disclaimer.html</loc>
     <lastmod>2026-07-20</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
@@ -88,35 +88,35 @@
 
   <!-- Tools -->
   <url>
-    <loc>https://smoreoutdoors.com/leveling-block-calculator/</loc>
+    <loc>https://smoresoutdoors.life/leveling-block-calculator/</loc>
     <lastmod>2026-07-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://smoreoutdoors.com/can-i-tow-it/</loc>
+    <loc>https://smoresoutdoors.life/can-i-tow-it/</loc>
     <lastmod>2026-07-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://smoreoutdoors.com/boondocking-calculator/</loc>
+    <loc>https://smoresoutdoors.life/boondocking-calculator/</loc>
     <lastmod>2026-07-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://smoreoutdoors.com/propane-calculator/</loc>
+    <loc>https://smoresoutdoors.life/propane-calculator/</loc>
     <lastmod>2026-07-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://smoreoutdoors.com/rv-power-budget/</loc>
+    <loc>https://smoresoutdoors.life/rv-power-budget/</loc>
     <lastmod>2026-07-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -124,21 +124,21 @@
 
   <!-- RV Leveling Block Calculator legal -->
   <url>
-    <loc>https://smoreoutdoors.com/leveling-block-calculator/legal/terms.html</loc>
+    <loc>https://smoresoutdoors.life/leveling-block-calculator/legal/terms.html</loc>
     <lastmod>2026-07-20</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://smoreoutdoors.com/leveling-block-calculator/legal/privacy.html</loc>
+    <loc>https://smoresoutdoors.life/leveling-block-calculator/legal/privacy.html</loc>
     <lastmod>2026-07-20</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://smoreoutdoors.com/leveling-block-calculator/legal/disclaimer.html</loc>
+    <loc>https://smoresoutdoors.life/leveling-block-calculator/legal/disclaimer.html</loc>
     <lastmod>2026-07-20</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
@@ -146,21 +146,21 @@
 
   <!-- Can I Tow It? legal -->
   <url>
-    <loc>https://smoreoutdoors.com/can-i-tow-it/legal/terms.html</loc>
+    <loc>https://smoresoutdoors.life/can-i-tow-it/legal/terms.html</loc>
     <lastmod>2026-07-20</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://smoreoutdoors.com/can-i-tow-it/legal/privacy.html</loc>
+    <loc>https://smoresoutdoors.life/can-i-tow-it/legal/privacy.html</loc>
     <lastmod>2026-07-20</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://smoreoutdoors.com/can-i-tow-it/legal/disclaimer.html</loc>
+    <loc>https://smoresoutdoors.life/can-i-tow-it/legal/disclaimer.html</loc>
     <lastmod>2026-07-20</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
@@ -168,21 +168,21 @@
 
   <!-- Boondocking calculator legal -->
   <url>
-    <loc>https://smoreoutdoors.com/boondocking-calculator/legal/terms.html</loc>
+    <loc>https://smoresoutdoors.life/boondocking-calculator/legal/terms.html</loc>
     <lastmod>2026-07-20</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://smoreoutdoors.com/boondocking-calculator/legal/privacy.html</loc>
+    <loc>https://smoresoutdoors.life/boondocking-calculator/legal/privacy.html</loc>
     <lastmod>2026-07-20</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://smoreoutdoors.com/boondocking-calculator/legal/disclaimer.html</loc>
+    <loc>https://smoresoutdoors.life/boondocking-calculator/legal/disclaimer.html</loc>
     <lastmod>2026-07-20</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
@@ -190,21 +190,21 @@
 
   <!-- Propane calculator legal -->
   <url>
-    <loc>https://smoreoutdoors.com/propane-calculator/legal/terms.html</loc>
+    <loc>https://smoresoutdoors.life/propane-calculator/legal/terms.html</loc>
     <lastmod>2026-07-20</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://smoreoutdoors.com/propane-calculator/legal/privacy.html</loc>
+    <loc>https://smoresoutdoors.life/propane-calculator/legal/privacy.html</loc>
     <lastmod>2026-07-20</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://smoreoutdoors.com/propane-calculator/legal/disclaimer.html</loc>
+    <loc>https://smoresoutdoors.life/propane-calculator/legal/disclaimer.html</loc>
     <lastmod>2026-07-20</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
@@ -212,21 +212,21 @@
 
   <!-- RV power budget legal -->
   <url>
-    <loc>https://smoreoutdoors.com/rv-power-budget/legal/terms.html</loc>
+    <loc>https://smoresoutdoors.life/rv-power-budget/legal/terms.html</loc>
     <lastmod>2026-07-20</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://smoreoutdoors.com/rv-power-budget/legal/privacy.html</loc>
+    <loc>https://smoresoutdoors.life/rv-power-budget/legal/privacy.html</loc>
     <lastmod>2026-07-20</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://smoreoutdoors.com/rv-power-budget/legal/disclaimer.html</loc>
+    <loc>https://smoresoutdoors.life/rv-power-budget/legal/disclaimer.html</loc>
     <lastmod>2026-07-20</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>

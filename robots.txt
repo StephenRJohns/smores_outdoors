@@ -1,5 +1,5 @@
 # S'more's Outdoors — robots.txt
-# Canonical domain: smoreoutdoors.com
+# Canonical domain: smoresoutdoors.life
 
 User-agent: *
 Allow: /
@@ -19,4 +19,4 @@ Allow: /
 # User-agent: CCBot
 # Disallow: /
 
-Sitemap: https://smoreoutdoors.com/sitemap.xml
+Sitemap: https://smoresoutdoors.life/sitemap.xml
