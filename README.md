@@ -1,6 +1,8 @@
-# smore_outdoors
+# smores_outdoors
 
-Public marketing/product site for **S'more Outdoors** — free browser-based tools for RVers, van lifers, and overlanders.
+Public marketing/product site for **S'more's Outdoors** — free browser-based tools for RVers, van lifers, and overlanders.
+
+**© 2026 Stephen Johns / S'more's Outdoors. All Rights Reserved.** This repository is source-available for transparency, not open source — see [LICENSE](LICENSE) before reusing anything in it. No license to copy, modify, or redistribute is granted.
 
 This is a zero-build static site. Every HTML page is self-contained (inline CSS, no CDN dependencies). Deploy as-is to any static host.
 
