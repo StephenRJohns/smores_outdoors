@@ -1,0 +1,9 @@
+# ads.txt — Authorized Digital Sellers
+# https://iabtechlab.com/ads-txt/
+#
+# PLACEHOLDER — replace with your real Google AdSense publisher ID once the
+# account is approved, in the form:
+#   google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
+#
+# Until this file lists your real pub- ID, AdSense will not fully serve ads
+# on this domain. This file must live at the domain root (smoreoutdoors.com/ads.txt).
