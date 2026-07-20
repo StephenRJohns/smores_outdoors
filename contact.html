@@ -34,7 +34,6 @@ nav.site-nav{padding:14px 0;background:var(--card);border-bottom:3px solid var(-
 .nav-inner{max-width:820px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;}
 .nav-brand{font-size:1rem;font-weight:800;color:var(--ink);text-decoration:none;display:flex;align-items:center;gap:7px;}
 .nav-brand img{width:22px;height:22px;display:block;}
-.nav-back{font-size:.85rem;color:var(--ink-soft);text-decoration:none;}
 main.wrapper{max-width:820px;margin:0 auto;padding:32px 20px 70px;}
 header.page-head{padding-bottom:24px;margin-bottom:30px;border-bottom:1px solid var(--line);}
 .page-tag{font-size:.72rem;color:var(--brand);letter-spacing:.12em;text-transform:uppercase;font-weight:700;margin-bottom:10px;}
@@ -51,6 +50,24 @@ header.page-head h1{font-family:var(--serif);font-size:clamp(1.8rem,4vw,2.4rem);
 footer{padding:24px 20px;border-top:1px solid var(--line);background:var(--card);margin-top:50px;text-align:center;font-size:.8rem;color:var(--ink-soft);}
 footer a{color:var(--ink-soft);}
 footer .flinks{margin-top:8px;display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+.nav-actions { display:flex; align-items:center; gap:8px; margin-left:auto; }
+.tools-menu, .help-pop { position:relative; }
+.tools-menu-btn, .help-btn { cursor:pointer; list-style:none; display:inline-flex; align-items:center; gap:6px;
+  font:600 13px system-ui; color:var(--ink); background:var(--card); border:1.5px solid var(--line);
+  border-radius:999px; padding:7px 14px; user-select:none; white-space:nowrap; }
+.tools-menu-btn::-webkit-details-marker, .help-btn::-webkit-details-marker { display:none; }
+.help-btn { padding:0; width:32px; height:32px; justify-content:center; border-radius:50%; font-size:15px; font-weight:800; }
+.tools-menu-list, .help-pop-panel { position:absolute; top:calc(100% + 8px); right:0; z-index:30;
+  background:var(--card); border:1.5px solid var(--line); border-radius:10px; box-shadow:0 8px 24px rgba(0,0,0,.18);
+  min-width:230px; padding:8px; }
+.tools-menu-list a { display:block; padding:8px 10px; border-radius:6px; color:var(--ink); text-decoration:none; font-size:13.5px; }
+.tools-menu-list a:hover, .tools-menu-list a:focus-visible { background:var(--bg); }
+.tools-menu-list a.current { font-weight:800; color:var(--brand); }
+.help-pop-panel { min-width:240px; max-width:290px; font-size:13px; line-height:1.5; color:var(--ink-soft); }
+.help-pop-panel p { margin:0; }
+@media (max-width:480px) {
+  .tools-menu-list, .help-pop-panel { right:-10px; min-width:210px; }
+}
 </style>
 </head>
 <body>
@@ -58,7 +75,26 @@ footer .flinks{margin-top:8px;display:flex;gap:16px;justify-content:center;flex-
 <nav class="site-nav" aria-label="Primary">
   <div class="nav-inner">
     <a href="./" class="nav-brand"><img src="images/favicon-180.png" alt="" width="22" height="22">S'more's Outdoors</a>
-    <a href="./" class="nav-back">&larr; Back to the tools</a>
+    <div class="nav-actions">
+      <details class="tools-menu">
+        <summary class="tools-menu-btn" aria-label="Back to tools menu"><span aria-hidden="true">&#9776;</span> Back to tools</summary>
+        <div class="tools-menu-list">
+          <a href="./">Home</a>
+          <a href="leveling-block-calculator/">RV Leveling Block Calculator</a>
+          <a href="can-i-tow-it/">Can I Tow It?</a>
+          <a href="boondocking-calculator/">How Long Can We Boondock?</a>
+          <a href="propane-calculator/">Propane Tank Duration Calculator</a>
+          <a href="rv-power-budget/">Will It Trip the Breaker?</a>
+          <a href="camper-power-planner/">Camper Power &amp; Climate Planner</a>
+        </div>
+      </details>
+      <details class="help-pop">
+        <summary class="help-btn" aria-label="Help for this page">?</summary>
+        <div class="help-pop-panel">
+          <p>Use the email addresses below for support, tool suggestions, or legal questions. For a specific vehicle data fix, include the year, make, model, configuration, and your source.</p>
+        </div>
+      </details>
+    </div>
   </div>
 </nav>
 
@@ -98,5 +134,19 @@ footer .flinks{margin-top:8px;display:flex;gap:16px;justify-content:center;flex-
   </div>
 </footer>
 
+<script>
+document.querySelectorAll('.nav-actions details').forEach(function (d) {
+  d.addEventListener('toggle', function () {
+    if (d.open) {
+      document.querySelectorAll('.nav-actions details').forEach(function (o) { if (o !== d) o.open = false; });
+    }
+  });
+});
+document.addEventListener('click', function (e) {
+  document.querySelectorAll('.nav-actions details[open]').forEach(function (d) {
+    if (!d.contains(e.target)) d.open = false;
+  });
+});
+</script>
 </body>
 </html>

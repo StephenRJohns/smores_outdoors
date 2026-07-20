@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>S'more's Outdoors — Free Tools for RV, Van &amp; Overland Life</title>
+<title>S'more's Outdoors — Free Tools for RV, Van, &amp; Overland Life</title>
 <meta name="author" content="S'more's Outdoors">
 <meta name="description" content="Free browser-based tools for RVers and van lifers: leveling blocks, towing safety, boondocking water, propane, and shore power. No signup.">
 <meta name="keywords" content="RV calculators, RV tools, leveling block calculator, towing capacity calculator, boondocking calculator, propane calculator, 30 amp calculator, camper van tools, vanlife calculators, free RV tools">
@@ -15,7 +15,7 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="S'more's Outdoors">
-<meta property="og:title" content="S'more's Outdoors — Free Tools for RV, Van &amp; Overland Life">
+<meta property="og:title" content="S'more's Outdoors — Free Tools for RV, Van, &amp; Overland Life">
 <meta property="og:description" content="Free browser-based calculators for RVers, van lifers, and overlanders — leveling, towing safety, boondocking water, propane, and shore power. No accounts, no signup.">
 <meta property="og:url" content="https://smoresoutdoors.life/">
 <meta property="og:image" content="https://smoresoutdoors.life/images/og-image.png">
@@ -27,7 +27,7 @@
 
 <!-- Twitter / X -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="S'more's Outdoors — Free Tools for RV, Van &amp; Overland Life">
+<meta name="twitter:title" content="S'more's Outdoors — Free Tools for RV, Van, &amp; Overland Life">
 <meta name="twitter:description" content="Free browser-based calculators for RVers, van lifers, and overlanders. No accounts, no signup.">
 <meta name="twitter:image" content="https://smoresoutdoors.life/images/og-image.png">
 <meta name="twitter:image:alt" content="The S'more's Outdoors mascot beside the site name.">
@@ -113,6 +113,26 @@
   .wordmark .mark { width:30px; height:30px; display:inline-block; }
   .wordmark .mark img { width:100%; height:100%; object-fit:contain; display:block; }
 
+  .top-row { display:flex; align-items:center; justify-content:space-between; gap:10px; flex-wrap:wrap; }
+  .nav-actions { display:flex; align-items:center; gap:8px; margin-left:auto; }
+  .tools-menu, .help-pop { position:relative; }
+  .tools-menu-btn, .help-btn { cursor:pointer; list-style:none; display:inline-flex; align-items:center; gap:6px;
+    font:600 13px system-ui; color:var(--ink); background:var(--card); border:1.5px solid var(--line);
+    border-radius:999px; padding:7px 14px; user-select:none; white-space:nowrap; }
+  .tools-menu-btn::-webkit-details-marker, .help-btn::-webkit-details-marker { display:none; }
+  .help-btn { padding:0; width:32px; height:32px; justify-content:center; border-radius:50%; font-size:15px; font-weight:800; }
+  .tools-menu-list, .help-pop-panel { position:absolute; top:calc(100% + 8px); right:0; z-index:30;
+    background:var(--card); border:1.5px solid var(--line); border-radius:10px; box-shadow:0 8px 24px rgba(0,0,0,.18);
+    min-width:230px; padding:8px; }
+  .tools-menu-list a { display:block; padding:8px 10px; border-radius:6px; color:var(--ink); text-decoration:none; font-size:13.5px; }
+  .tools-menu-list a:hover, .tools-menu-list a:focus-visible { background:var(--forest-soft); }
+  .tools-menu-list a.current { font-weight:800; color:var(--forest); }
+  .help-pop-panel { min-width:240px; max-width:290px; font-size:13px; line-height:1.5; color:var(--ink-soft); }
+  .help-pop-panel p { margin:0; }
+  @media (max-width:480px) {
+    .tools-menu-list, .help-pop-panel { right:-10px; min-width:210px; }
+  }
+
   /* --- scenic banner: forest hills, gray peaks, lake --- */
   .scene { position:relative; margin:14px 0 0; border:3px solid var(--line); border-radius:16px; overflow:hidden;
     box-shadow:5px 5px 0 var(--trunk-dark); }
@@ -157,7 +177,29 @@
 </head>
 <body>
 <div class="wrap">
-  <a class="wordmark" href="./"><span class="mark" aria-hidden="true"><img src="images/favicon-180.png" alt="" width="30" height="30"></span>S'more's Outdoors</a>
+  <div class="top-row">
+    <a class="wordmark" href="./"><span class="mark" aria-hidden="true"><img src="images/favicon-180.png" alt="" width="30" height="30"></span>S'more's Outdoors</a>
+    <div class="nav-actions">
+      <details class="tools-menu">
+        <summary class="tools-menu-btn" aria-label="Back to tools menu"><span aria-hidden="true">&#9776;</span> Back to tools</summary>
+        <div class="tools-menu-list">
+          <a href="./" class="current">Home</a>
+          <a href="leveling-block-calculator/">RV Leveling Block Calculator</a>
+          <a href="can-i-tow-it/">Can I Tow It?</a>
+          <a href="boondocking-calculator/">How Long Can We Boondock?</a>
+          <a href="propane-calculator/">Propane Tank Duration Calculator</a>
+          <a href="rv-power-budget/">Will It Trip the Breaker?</a>
+          <a href="camper-power-planner/">Camper Power &amp; Climate Planner</a>
+        </div>
+      </details>
+      <details class="help-pop">
+        <summary class="help-btn" aria-label="Help for this page">?</summary>
+        <div class="help-pop-panel">
+          <p>Pick a tool below — each one runs entirely in your browser, no signup required. Not sure where to start? The Leveling Block Calculator helps you park level, Can I Tow It? checks towing safety, and the others cover water, propane, power, and gear planning.</p>
+        </div>
+      </details>
+    </div>
+  </div>
 
   <div class="scene">
     <svg viewBox="0 0 880 300" preserveAspectRatio="none" role="img" aria-label="Cartoon scene of gray snow-capped mountains, forest green hills, and a blue lake">
@@ -190,8 +232,8 @@
       <div class="hero">
         <img class="mascot" src="images/mascot-hero.png" width="640" height="494" alt="The S'more's Outdoors mascot: a happy s'more character wearing a tiny explorer backpack and compass">
         <div class="badge-row"><span class="spark-badge">100% free &middot; no signup</span></div>
-        <h1>Free tools for RV, van &amp; overland life</h1>
-        <p>Practical, no-signup calculators and helpers built by people who actually camp out of their rigs.</p>
+        <h1>Free tools for RV, van, &amp; overland life</h1>
+        <p>Practical, no-signup calculators, and helpers built by people who actually camp out of their rigs.</p>
       </div>
     </div>
   </div>
@@ -261,5 +303,19 @@
   <a href="legal/privacy.html">Privacy</a> &middot;
   <a href="legal/disclaimer.html">Disclaimer</a>
 </footer>
+<script>
+document.querySelectorAll('.nav-actions details').forEach(function (d) {
+  d.addEventListener('toggle', function () {
+    if (d.open) {
+      document.querySelectorAll('.nav-actions details').forEach(function (o) { if (o !== d) o.open = false; });
+    }
+  });
+});
+document.addEventListener('click', function (e) {
+  document.querySelectorAll('.nav-actions details[open]').forEach(function (d) {
+    if (!d.contains(e.target)) d.open = false;
+  });
+});
+</script>
 </body>
 </html>
