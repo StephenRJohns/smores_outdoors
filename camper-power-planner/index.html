@@ -1,0 +1,1660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EcoFlow Camper Power &amp; Climate Planner | S'more's Outdoors</title>
+<meta name="author" content="S'more's Outdoors">
+<meta name="description" content="Size an EcoFlow DELTA battery, charging, and WAVE 3 AC kit to how you camp — or find the vehicle with the best camping power. Free, no signup.">
+<meta name="keywords" content="camper power planner, EcoFlow DELTA sizing, EcoFlow WAVE 3, car camping air conditioner, power station calculator, van battery sizing, alternator charger, solar recharge camping, hybrid minivan camping, F-150 PowerBoost camping">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="googlebot" content="index, follow">
+<link rel="canonical" href="https://smoreoutdoors.com/camper-power-planner/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="S'more's Outdoors">
+<meta property="og:title" content="Camper Power &amp; Climate Planner — Free EcoFlow Kit Builder">
+<meta property="og:description" content="Size an EcoFlow DELTA battery, charging, and WAVE 3 AC kit to how you camp — or find the vehicle with the best camping power. Free, no signup.">
+<meta property="og:url" content="https://smoreoutdoors.com/camper-power-planner/">
+<meta property="og:image" content="https://smoreoutdoors.com/images/og-image.png">
+<meta property="og:image:secure_url" content="https://smoreoutdoors.com/images/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The S'more's Outdoors mascot — a happy s'more character with an explorer backpack — beside the site name.">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Camper Power &amp; Climate Planner — Free EcoFlow Kit Builder">
+<meta name="twitter:description" content="Size an EcoFlow DELTA battery, charging, and WAVE 3 AC kit to how you camp — or find the vehicle with the best camping power. Free, no signup.">
+<meta name="twitter:image" content="https://smoreoutdoors.com/images/og-image.png">
+<meta name="twitter:image:alt" content="The S'more's Outdoors mascot beside the site name.">
+
+<meta name="theme-color" content="#1f5c37">
+
+<!-- WebApplication schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Camper Power & Climate Planner",
+  "url": "https://smoreoutdoors.com/camper-power-planner/",
+  "description": "Free camper power and climate planner: sizes an EcoFlow-based battery, charging, and air-conditioning kit to how you camp, or ranks the best vehicles for camping power.",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any (web browser)",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "publisher": { "@type": "Organization", "name": "S'more's Outdoors", "url": "https://smoreoutdoors.com/" }
+}
+</script>
+
+<!-- Breadcrumb schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://smoreoutdoors.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Camper Power & Climate Planner", "item": "https://smoreoutdoors.com/camper-power-planner/" }
+  ]
+}
+</script>
+
+<!-- FAQ schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can a power station really run an air conditioner overnight?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, if you size for it. A WAVE 3-class portable unit holding a minivan 6°F below the outside air draws a few hundred watts on average, not its 690W maximum — on a mild night that works out to roughly 1 to 1.6 kWh over 8 hours. A 2 kWh DELTA-class stack covers that with margin for the fridge and phones. The trap is the hot, humid night in an uninsulated metal van: heat leaks in three times faster, the compressor rarely cycles off, and the same 8 hours can swallow 4 kWh or more. That is why this planner asks where you sleep and what the overnight low is instead of quoting one runtime number."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need the WAVE 3's add-on battery or a DELTA power station?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The WAVE 3 has no built-in battery, so it must run from something. If you already need a DELTA-class station for your fridge and devices, running the WAVE from that stack over its XT150 DC port is usually the better buy — one pool of energy, one thing to charge, and DC operation skips inverter losses. The add-on battery makes sense as a dedicated bank when your air-conditioning need alone pushes past what the station stack can spare — roughly the 4 to 5 kWh territory — or when you want the AC to be a self-contained unit you can leave in the vehicle."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will my car's 12V socket recharge a big power station?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Barely. A standard 12V accessory socket is fused around 10-15A, which works out to roughly 105W of real charging — about 10 hours of driving per kilowatt-hour. That is fine for topping up a small RIVER-class unit and nearly useless for a 2 kWh-plus stack. The fix is an alternator charger: it wires to the starter battery with a fused cable and pulls up to 800W while the engine runs, so a normal travel day genuinely refills the bank. Between those extremes, a factory 120V outlet of 400W or more is worth using whenever the engine is on."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does a hybrid minivan or truck change?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Two big things. First, hybrids like the Sienna or the F-150 PowerBoost can hold cabin climate all night by cycling the engine a few minutes each hour off the traction battery — that can replace a portable air conditioner and its battery bank entirely, which is the single largest line item this planner recommends. Second, their factory inverters (1,500W on the Sienna, 2,400 to 7,200W on the PowerBoost) recharge a power station at wall speed while you drive or idle, so the battery capacity you carry can be much smaller for the same trip."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much battery do I need for a weekend without air conditioning?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For two people, two nights, and no driving between camps: a 12V fridge (about 400 Wh a day), phones, a laptop, and lights land near 550 Wh a day, or about 1.3 kWh for the weekend after inverter losses. A 1 kWh station covers it if you drive a little or bring a panel; a 2 kWh stack covers it with no recharging at all, plus margin for a hot-weather fridge surprise. Add a CPAP with humidifier or an electric blanket and you should treat 2 kWh as the floor."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is EcoFlow the only option?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No — the sizing math in this planner transfers directly to Jackery, Bluetti, Anker SOLIX, Goal Zero, and DIY LiFePO4 builds; watt-hours are watt-hours. We model EcoFlow specifically because we could verify current specs and prices against the manufacturer's own listings, and because its expansion-battery and alternator-charger ecosystem maps cleanly onto the recharge strategies the tool recommends. If you already own another brand, take the battery watt-hour target and charge-rate numbers from your results and shop the equivalent pieces."
+      }
+    }
+  ]
+}
+</script>
+<link rel="icon" type="image/png" sizes="512x512" href="../images/favicon-512.png">
+<link rel="icon" type="image/png" sizes="180x180" href="../images/favicon-180.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16.png">
+<link rel="apple-touch-icon" href="../images/apple-touch-icon.png">
+<style>
+  :root {
+    --ground:#f5f1e2; --card:#fffdf8; --ink:#1c2318; --ink-soft:#5a6152; --line:#1c2318;
+    --vial:#1f5c37; --vial-soft:#dcefdf; --block:#e8620f; --block-soft:#fbe0cc;
+    --warn:#c23b22; --warn-soft:#f7ddd6; --brand:#2f80a3; --brand-soft:#dbeef5;
+    --readout:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --ground:#12160f; --card:#1b2117; --ink:#eef1e6; --ink-soft:#a9b09c; --line:#eef1e6;
+            --vial:#5cbf7e; --vial-soft:#1e3324; --block:#ff9a52; --block-soft:#3d2413; --warn:#ef7a63; --warn-soft:#45231c;
+            --brand:#6fc0e0; --brand-soft:#173038; }
+  }
+  :root[data-theme="light"]{--ground:#f5f1e2;--card:#fffdf8;--ink:#1c2318;--ink-soft:#5a6152;--line:#1c2318;--vial:#1f5c37;--vial-soft:#dcefdf;--block:#e8620f;--block-soft:#fbe0cc;--warn:#c23b22;--warn-soft:#f7ddd6;--brand:#2f80a3;--brand-soft:#dbeef5;}
+  :root[data-theme="dark"]{--ground:#12160f;--card:#1b2117;--ink:#eef1e6;--ink-soft:#a9b09c;--line:#eef1e6;--vial:#5cbf7e;--vial-soft:#1e3324;--block:#ff9a52;--block-soft:#3d2413;--warn:#ef7a63;--warn-soft:#45231c;--brand:#6fc0e0;--brand-soft:#173038;}
+  * { box-sizing:border-box; }
+  html { background:var(--ground); }
+  body { margin:0; padding:0 0 40px; background:var(--ground); color:var(--ink);
+    font:16px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif; }
+  a { color:var(--brand); }
+  main { width:100%; max-width:860px; margin:0 auto; padding:14px 14px 0; display:flex; flex-direction:column; gap:12px; }
+
+  .brandbar { background:var(--card); border-bottom:3px solid var(--line); }
+  .brandbar-inner { max-width:860px; margin:0 auto; padding:10px 14px; display:flex; align-items:center; justify-content:space-between; gap:10px; }
+  .wordmark { font-weight:800; font-size:15px; letter-spacing:-0.01em; color:var(--ink); text-decoration:none; display:flex; align-items:center; gap:7px; }
+  .wordmark .mark { width:26px; height:26px; display:inline-block; }
+  .wordmark .mark img { width:100%; height:100%; object-fit:contain; display:block; }
+  .brandbar .more { font-size:12.5px; color:var(--ink-soft); }
+
+  h1 { font-size:28px; font-weight:800; margin:0; letter-spacing:-0.01em; text-wrap:balance; }
+  .sub { color:var(--ink-soft); font-size:15px; margin:3px 0 0; }
+  section { background:var(--card); border:3px solid var(--line); border-radius:12px; padding:12px 12px 14px; box-shadow:4px 4px 0 var(--vial-soft); }
+  .eyebrow { font-size:11px; font-weight:700; letter-spacing:0.09em; text-transform:uppercase; color:var(--ink-soft); margin:0 0 5px; }
+  .note { font-size:14.5px; line-height:1.4; color:var(--ink-soft); margin:0 0 10px;
+    background:var(--vial-soft); border-radius:8px; padding:9px 11px; }
+  .note b { color:var(--ink); font-weight:700; }
+  .note.warn { background:var(--warn-soft); }
+  .note.plain { background:var(--ground); }
+
+  /* --- mode toggle --- */
+  .mode-grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+  .mode-card input { position:absolute; opacity:0; pointer-events:none; }
+  .mode-card { position:relative; display:block; border:2px solid var(--line); border-radius:10px; padding:12px 12px 13px; cursor:pointer; background:var(--card); }
+  .mode-card .mt { font-size:15px; font-weight:800; display:block; }
+  .mode-card .md { font-size:13px; color:var(--ink-soft); display:block; margin-top:3px; }
+  .mode-card.checked { border-color:var(--vial); background:var(--vial-soft); box-shadow:2px 2px 0 var(--vial); }
+  .mode-card:focus-within { outline:2px solid var(--vial); outline-offset:2px; }
+  @media (max-width:480px){ .mode-grid { grid-template-columns:1fr; } }
+
+  /* --- pickers & inputs --- */
+  .picker-grid { display:grid; grid-template-columns:1fr 1fr; gap:10px 12px; }
+  @media (max-width:480px){ .picker-grid { grid-template-columns:1fr; } }
+  .picker-row { margin-bottom:10px; }
+  .picker-row label { display:block; font-size:13px; font-weight:700; color:var(--ink-soft); margin-bottom:4px; }
+  .picker-row select, .picker-row input[type="number"], .picker-row input[type="text"] {
+    width:100%; padding:10px 11px; border:1.5px solid var(--line); border-radius:8px;
+    background:var(--card); color:var(--ink); font:600 15px/1.2 system-ui; }
+  .picker-row select:disabled { opacity:0.5; }
+  .picker-row select:focus-visible, .picker-row input:focus-visible { outline:2px solid var(--vial); outline-offset:1px; }
+  .loaded-vehicle { margin-top:4px; border-radius:8px; padding:9px 12px; font-size:13.5px; background:var(--brand-soft); color:var(--ink); display:none; }
+  .loaded-vehicle.show { display:block; }
+  .loaded-vehicle b { display:block; font-size:14.5px; margin-bottom:2px; }
+  .badge { display:inline-block; font-size:11px; font-weight:800; letter-spacing:0.04em; text-transform:uppercase; border-radius:20px; padding:2px 9px; margin:2px 4px 2px 0; background:var(--vial-soft); color:var(--ink); border:1.5px solid var(--vial); }
+  .badge.hold { background:var(--vial-soft); border-color:var(--vial); }
+  .badge.verify { background:var(--block-soft); border-color:var(--block); }
+  .badge.plain { background:var(--ground); border-color:var(--line); }
+
+  /* --- steppers / sliders --- */
+  .stepper { display:flex; align-items:center; gap:8px; }
+  .step { flex:none; width:40px; height:40px; border:1.5px solid var(--line); border-radius:11px;
+    background:var(--card); color:var(--ink); font:700 20px/1 system-ui; cursor:pointer;
+    -webkit-tap-highlight-color:transparent; touch-action:manipulation; }
+  .step:active { background:var(--vial-soft); border-color:var(--vial); }
+  .step:focus-visible { outline:2px solid var(--vial); outline-offset:2px; }
+  .stepper .val { font:800 20px/1.2 var(--readout); min-width:34px; text-align:center; font-variant-numeric:tabular-nums; }
+  .stepper .unit { font-size:13px; color:var(--ink-soft); }
+  .stepper-row { display:flex; flex-wrap:wrap; gap:14px 26px; align-items:flex-end; margin-bottom:10px; }
+  .stepper-row > div > label { display:block; font-size:13px; font-weight:700; color:var(--ink-soft); margin-bottom:5px; }
+  input[type="range"] { width:100%; accent-color:var(--vial); height:28px; }
+  input[type="range"]:focus-visible { outline:2px solid var(--vial); outline-offset:2px; }
+  .slider-row { display:flex; align-items:center; gap:12px; }
+  .slider-row output { font:800 17px/1 var(--readout); min-width:58px; text-align:right; font-variant-numeric:tabular-nums; }
+
+  /* --- dynamic load list --- */
+  .add-row { display:flex; flex-wrap:wrap; align-items:center; gap:8px 12px; margin-bottom:10px; }
+  .add-row select { flex:1 1 220px; min-width:180px; padding:9px 10px; border:1.5px solid var(--line); border-radius:8px;
+    background:var(--card); color:var(--ink); font:600 14px/1.2 system-ui; }
+  .add-row select:focus-visible { outline:2px solid var(--vial); outline-offset:1px; }
+  .addbtn { flex:none; padding:9px 16px; border:1.5px solid var(--line); border-radius:8px; background:var(--vial-soft);
+    color:var(--ink); font:700 14px/1 system-ui; cursor:pointer; touch-action:manipulation; }
+  .addbtn:active { border-color:var(--vial); }
+  .addbtn:focus-visible { outline:2px solid var(--vial); outline-offset:2px; }
+  .pickbtn { background:none; border:none; color:var(--brand); font:600 13px system-ui; cursor:pointer; padding:0; text-decoration:underline; }
+  .pickbtn:focus-visible { outline:2px solid var(--vial); outline-offset:2px; }
+  .load-list { display:flex; flex-direction:column; gap:8px; }
+  .load-row { display:flex; flex-wrap:wrap; align-items:center; gap:8px 10px; border:1.5px solid var(--line); border-radius:9px; padding:8px 10px; background:var(--card); }
+  .load-row .ln { flex:1 1 150px; min-width:130px; font-size:14px; font-weight:700; }
+  .load-row .ln small { display:block; font-weight:400; font-size:11.5px; color:var(--ink-soft); }
+  .load-row input[type="text"] { flex:1 1 150px; min-width:130px; padding:6px 8px; border:1.5px solid var(--line); border-radius:7px;
+    background:var(--card); color:var(--ink); font:600 13.5px/1.2 system-ui; }
+  .load-row input[type="number"] { width:76px; padding:6px 8px; border:1.5px solid var(--line); border-radius:7px;
+    background:var(--card); color:var(--ink); font:600 13.5px/1.2 var(--readout); text-align:right; }
+  .load-row input:focus-visible { outline:2px solid var(--vial); outline-offset:1px; }
+  .load-row .lu { font-size:12px; color:var(--ink-soft); white-space:nowrap; }
+  .load-row .qty { display:flex; align-items:center; gap:5px; }
+  .load-row .qty button { width:28px; height:28px; border:1.5px solid var(--line); border-radius:8px; background:var(--card);
+    color:var(--ink); font:700 15px/1 system-ui; cursor:pointer; touch-action:manipulation; }
+  .load-row .qty button:active { background:var(--vial-soft); border-color:var(--vial); }
+  .load-row .qty button:focus-visible { outline:2px solid var(--vial); outline-offset:2px; }
+  .load-row .qty .qv { font:800 15px/1 var(--readout); min-width:22px; text-align:center; font-variant-numeric:tabular-nums; }
+  .load-row .rm { margin-left:auto; width:28px; height:28px; border:1.5px solid var(--line); border-radius:50%; background:var(--card);
+    color:var(--warn); font:700 14px/1 system-ui; cursor:pointer; touch-action:manipulation; }
+  .load-row .rm:active { background:var(--warn-soft); border-color:var(--warn); }
+  .load-row .rm:focus-visible { outline:2px solid var(--vial); outline-offset:2px; }
+  .empty-hint { font-size:13.5px; color:var(--ink-soft); border:1.5px dashed var(--line); border-radius:9px; padding:12px; text-align:center; }
+
+  /* --- radio pills --- */
+  .pills { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:10px; }
+  .pill { position:relative; border:1.5px solid var(--line); border-radius:20px; padding:7px 14px; font-size:13.5px; font-weight:700; cursor:pointer; background:var(--card); }
+  .pill input { position:absolute; opacity:0; pointer-events:none; }
+  .pill.checked { background:var(--vial-soft); border-color:var(--vial); }
+  .pill:focus-within { outline:2px solid var(--vial); outline-offset:2px; }
+
+  /* --- results --- */
+  .verdict { margin-top:12px; border-radius:8px; padding:10px 12px; font-size:14px; background:var(--vial-soft); }
+  .verdict.blocks { background:var(--block-soft); } .verdict.bad { background:var(--warn-soft); }
+  .verdict b { font-variant-numeric:tabular-nums; }
+  .kit-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:10px; margin-top:10px; }
+  .kit-card { border:1.5px solid var(--line); border-radius:9px; padding:10px 11px; display:flex; flex-direction:column; gap:3px; text-decoration:none; color:var(--ink); background:var(--card); }
+  .kit-card:hover { border-color:var(--brand); }
+  .kit-card .kr { font-size:11px; font-weight:800; letter-spacing:0.06em; text-transform:uppercase; color:var(--brand); }
+  .kit-card .kn { font-size:14px; font-weight:700; }
+  .kit-card .kp { font:700 15px/1.2 var(--readout); }
+  .kit-card .kd { font-size:12px; color:var(--ink-soft); }
+  .kit-totals { display:flex; flex-wrap:wrap; gap:8px 22px; margin-top:10px; font-size:14px; }
+  .kit-totals b { font-family:var(--readout); font-size:16px; }
+  .stat { background:var(--ground); border-radius:8px; padding:8px 12px; }
+  table.budget { width:100%; border-collapse:collapse; margin-top:10px; font-size:13.5px; }
+  table.budget th, table.budget td { text-align:left; padding:5px 8px; border-bottom:1px solid var(--vial-soft); }
+  table.budget td.num, table.budget th.num { text-align:right; font-family:var(--readout); font-variant-numeric:tabular-nums; white-space:nowrap; }
+  table.budget tr.total td { font-weight:800; border-top:2px solid var(--line); border-bottom:none; }
+  .table-scroll { overflow-x:auto; }
+  .plan-lines { margin:10px 0 0; padding-left:20px; font-size:13.5px; }
+  .plan-lines li { margin:5px 0; }
+  .alt-grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:12px; }
+  .alt-card { border:1.5px dashed var(--line); border-radius:9px; padding:10px 11px; font-size:13px; }
+  .alt-card .at { font-size:12px; font-weight:800; letter-spacing:0.05em; text-transform:uppercase; color:var(--ink-soft); }
+  .alt-card .an { font-weight:700; font-size:13.5px; margin:3px 0 2px; }
+  .alt-card .ap { font-family:var(--readout); font-weight:700; }
+  .alt-card .ad { color:var(--ink-soft); margin-top:3px; }
+  @media (max-width:520px){ .alt-grid { grid-template-columns:1fr; } }
+
+  /* --- safety gear panel --- */
+  .safety-lead { font-size:13.5px; color:var(--ink-soft); margin:0 0 10px; }
+  .safety-list { display:flex; flex-direction:column; gap:8px; }
+  .safety-item { display:flex; gap:10px; align-items:flex-start; border:1.5px solid var(--line); border-radius:9px; padding:9px 11px; background:var(--card); font-size:13.5px; }
+  .safety-item.crit { border-color:var(--warn); background:var(--warn-soft); }
+  .safety-item.note-item { border-style:dashed; background:var(--vial-soft); }
+  .safety-count { flex:none; min-width:26px; height:26px; padding:0 6px; border-radius:20px; background:var(--vial); color:var(--card);
+    font:800 14px/26px var(--readout); text-align:center; }
+  .safety-item.crit .safety-count { background:var(--warn); }
+  .safety-item .si-body { min-width:0; }
+  .safety-item .si-body b { display:block; font-size:14px; }
+  .safety-item .si-body span { color:var(--ink-soft); }
+  .safety-item .si-ico { flex:none; font-size:16px; line-height:1.3; }
+
+  /* --- Mode B rank list --- */
+  .rank-list { display:flex; flex-direction:column; gap:10px; margin-top:10px; }
+  .rank-card { border:1.5px solid var(--line); border-radius:9px; padding:10px 12px; display:flex; gap:12px; align-items:flex-start; }
+  .rank-card .pos { flex:none; width:30px; height:30px; border-radius:50%; border:2px solid var(--line); display:flex; align-items:center; justify-content:center; font:800 14px var(--readout); }
+  .rank-card .rbody { min-width:0; flex:1; }
+  .rank-card .rv { font-size:15px; font-weight:800; }
+  .rank-card .rtrim { font-size:12px; color:var(--ink-soft); }
+  .rank-card .rstory { font-size:13px; margin-top:4px; }
+  .rank-card .rkit { font-size:12.5px; color:var(--ink-soft); margin-top:5px; border-top:1px dashed var(--vial-soft); padding-top:5px; }
+  .rank-card .rkit b { color:var(--ink); }
+
+  details { border-top:1px solid var(--line); margin-top:12px; padding-top:10px; }
+  summary { cursor:pointer; font-size:13px; font-weight:600; color:var(--ink-soft); }
+  summary:focus-visible { outline:2px solid var(--vial); outline-offset:1px; }
+  .how-math { font-size:13.5px; color:var(--ink-soft); }
+  .how-math h3 { font-size:13px; color:var(--ink); margin:12px 0 4px; text-transform:uppercase; letter-spacing:0.05em; }
+  .how-math table { border-collapse:collapse; font-size:13px; margin:6px 0; }
+  .how-math th, .how-math td { border:1px solid var(--vial-soft); padding:4px 8px; text-align:left; }
+  .how-math td.num { text-align:right; font-family:var(--readout); }
+  .how-math code { font-family:var(--readout); font-size:12px; background:var(--ground); padding:1px 5px; border-radius:4px; }
+  .caveat { margin-top:12px; border-radius:8px; padding:9px 11px; background:var(--warn-soft); font-size:13px; color:var(--ink); }
+
+  /* --- ad slots ---
+     Placeholders only. Once you have a Google AdSense publisher ID:
+       1. Add the loader script to <head>:
+          <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+       2. Replace each .ad-slot div's contents with an <ins class="adsbygoogle"> unit
+          for that slot ID, then call (adsbygoogle = window.adsbygoogle || []).push({});
+       3. Add a real ads.txt at the site root (see /ads.txt).
+  */
+  .ad-slot { border:1px dashed var(--line); border-radius:8px; background:var(--ground);
+    display:flex; align-items:center; justify-content:center; color:var(--ink-soft);
+    font-size:12px; letter-spacing:0.04em; text-transform:uppercase; min-height:90px; }
+  .ad-slot.leaderboard { min-height:90px; }
+  .ad-slot.rectangle { min-height:250px; max-width:336px; margin:0 auto; }
+
+  /* --- affiliate section --- */
+  .gear-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:10px; margin-top:10px; }
+  .gear-card { border:1px solid var(--line); border-radius:8px; padding:11px; text-decoration:none; color:var(--ink); display:flex; flex-direction:column; gap:4px; }
+  .gear-card:hover { border-color:var(--brand); }
+  .gear-card .gt { font-size:14px; font-weight:700; }
+  .gear-card .gd { font-size:12.5px; color:var(--ink-soft); }
+  .affiliate-disclosure { font-size:12px; color:var(--ink-soft); margin-top:10px; }
+
+  footer { max-width:860px; margin:8px auto 0; padding:14px; font-size:12.5px; color:var(--ink-soft); text-align:center; }
+  footer a { color:var(--ink-soft); text-decoration:underline; }
+  footer .flinks { margin-top:6px; display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
+</style>
+</head>
+<body>
+
+<div class="brandbar"><div class="brandbar-inner">
+  <a class="wordmark" href="../"><span class="mark" aria-hidden="true"><img src="../images/favicon-180.png" alt="" width="26" height="26"></span>S'more's Outdoors</a>
+  <a class="more" href="../" style="color:var(--brand)">More free RV tools</a>
+</div></div>
+
+<main>
+  <header>
+    <h1>Camper Power &amp; Climate Planner</h1>
+    <p class="sub">Plan an EcoFlow-based battery, charging, and air-conditioning kit sized to how you actually camp — from a weekend fridge-and-phones setup to running AC all night in a van.</p>
+  </header>
+
+  <!-- AdSense slot — un-comment once the account is approved:
+  <div class="ad-slot leaderboard" role="complementary" aria-label="Advertisement">Advertisement</div>
+  -->
+
+  <section aria-label="Start: pick a mode">
+    <p class="eyebrow">1 &middot; Start here</p>
+    <div class="mode-grid" role="radiogroup" aria-label="Planning mode">
+      <label class="mode-card checked" id="modeCardA">
+        <input type="radio" name="mode" value="A" id="modeA" checked>
+        <span class="mt">I have a vehicle</span>
+        <span class="md">Tell us what you drive — we'll use its factory outlets and body type to size the kit.</span>
+      </label>
+      <label class="mode-card" id="modeCardB">
+        <input type="radio" name="mode" value="B" id="modeB">
+        <span class="mt">Help me pick a vehicle</span>
+        <span class="md">Describe your trips — we'll rank the best camping-power vehicles and the kit each one pairs with.</span>
+      </label>
+    </div>
+
+    <div id="vehiclePickBlock">
+      <p class="note" style="margin-top:12px">Pick your <b>make and model</b> — we'll load its factory outlet wattage and camping-power quirks. Not listed? Use a <b>generic fallback</b> at the bottom of the make list.</p>
+      <div class="picker-grid">
+        <div class="picker-row">
+          <label for="pwMake">Make</label>
+          <select id="pwMake"><option value="">Select make&hellip;</option></select>
+        </div>
+        <div class="picker-row">
+          <label for="pwModel">Model</label>
+          <select id="pwModel" disabled><option value="">Select a make first</option></select>
+        </div>
+      </div>
+      <div class="picker-row" id="pwCfgRow" style="display:none">
+        <label for="pwCfg">Configuration</label>
+        <select id="pwCfg"><option value="">Select one&hellip;</option></select>
+      </div>
+      <div class="loaded-vehicle" id="pwLoaded" aria-live="polite"></div>
+    </div>
+    <div id="modeBIntro" style="display:none">
+      <p class="note" style="margin-top:12px">No vehicle needed — fill in <b>how you camp</b> below and we'll rank the vehicles whose factory power (outlets, hybrid climate-hold, body thermals) best fits your trips, each with the EcoFlow kit that pairs with it.</p>
+    </div>
+  </section>
+
+  <section aria-label="How you camp">
+    <p class="eyebrow">2 &middot; How you camp</p>
+    <div class="stepper-row">
+      <div>
+        <label id="nightsLabel">Nights between chances to recharge</label>
+        <div class="stepper" role="group" aria-labelledby="nightsLabel">
+          <button class="step" type="button" id="nightsMinus" aria-label="Fewer nights">&minus;</button>
+          <span class="val" id="nightsVal" aria-live="polite">2</span>
+          <button class="step" type="button" id="nightsPlus" aria-label="More nights">+</button>
+          <span class="unit">nights</span>
+        </div>
+      </div>
+      <div>
+        <label id="peopleLabel">People</label>
+        <div class="stepper" role="group" aria-labelledby="peopleLabel">
+          <button class="step" type="button" id="peopleMinus" aria-label="Fewer people">&minus;</button>
+          <span class="val" id="peopleVal" aria-live="polite">2</span>
+          <button class="step" type="button" id="peoplePlus" aria-label="More people">+</button>
+          <span class="unit">people</span>
+        </div>
+      </div>
+    </div>
+    <p class="note">Build the list of what you'll actually run — add the same item more than once if you need to, set quantities, and every preset's <b>watt-hours are editable</b>: if you've measured your gear, trust your meter over our defaults.</p>
+    <div class="add-row">
+      <label for="addItemSelect" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Add an item</label>
+      <select id="addItemSelect"><option value="">Add an item&hellip;</option></select>
+      <button type="button" class="addbtn" id="addItemBtn">+ Add</button>
+      <button type="button" class="pickbtn" id="removeAllBtn">Remove all</button>
+    </div>
+    <div class="load-list" id="loadList"></div>
+    <p class="empty-hint" id="emptyHint" style="display:none">Add what you'll actually run — start with the fridge.</p>
+  </section>
+
+  <section aria-label="Climate">
+    <p class="eyebrow">3 &middot; Climate</p>
+    <div class="pills" role="radiogroup" aria-label="Air conditioning">
+      <label class="pill checked"><input type="radio" name="climateMode" value="none" checked>No AC — fans &amp; airflow</label>
+      <label class="pill"><input type="radio" name="climateMode" value="cool">Cooling</label>
+      <label class="pill"><input type="radio" name="climateMode" value="both">Cooling + heating</label>
+    </div>
+    <div class="picker-grid">
+      <div class="picker-row">
+        <label for="setupSelect">Where you sleep</label>
+        <select id="setupSelect">
+          <option value="minivan">Minivan</option>
+          <option value="vanUninsulated">Full-size van — uninsulated</option>
+          <option value="vanInsulated">Full-size van — insulated</option>
+          <option value="suv">SUV / crossover</option>
+          <option value="truckCab">Truck cab</option>
+          <option value="rooftopTent">Rooftop tent</option>
+          <option value="groundTent">Ground tent</option>
+        </select>
+      </div>
+      <div class="picker-row">
+        <label for="acNights">Nights of AC per trip</label>
+        <input type="number" id="acNights" min="0" max="7" step="1" value="2" inputmode="numeric">
+      </div>
+      <div class="picker-row">
+        <label for="lowF">Typical overnight low (&deg;F) <span style="font-weight:400">— also sets fridge duty cycle</span></label>
+        <input type="number" id="lowF" min="-20" max="110" step="1" value="65" inputmode="numeric">
+      </div>
+      <div class="picker-row">
+        <label for="targetF">Target sleep temperature (&deg;F)</label>
+        <input type="number" id="targetF" min="50" max="85" step="1" value="68" inputmode="numeric">
+      </div>
+    </div>
+    <p class="note plain" id="climateHint" role="status" aria-live="polite" style="display:none"></p>
+  </section>
+
+  <section aria-label="Recharging">
+    <p class="eyebrow">4 &middot; Recharging between camps</p>
+    <div class="picker-row">
+      <label for="driveHours">Hours of driving per day between camps</label>
+      <div class="slider-row">
+        <input type="range" id="driveHours" min="0" max="8" step="0.5" value="1">
+        <output for="driveHours" id="driveHoursOut">1 h</output>
+      </div>
+    </div>
+    <div class="pills" role="radiogroup" aria-label="Alternator charger">
+      <span style="font-size:13px;font-weight:700;color:var(--ink-soft);align-self:center">Willing to install an alternator charger?</span>
+      <label class="pill"><input type="radio" name="alt" value="yes">Yes</label>
+      <label class="pill checked"><input type="radio" name="alt" value="no" checked>No</label>
+    </div>
+    <div class="picker-grid">
+      <div class="picker-row">
+        <label for="solarSelect">Bring solar?</label>
+        <select id="solarSelect">
+          <option value="0" selected>No panels</option>
+          <option value="1">1 panel</option>
+          <option value="2">2 panels</option>
+        </select>
+      </div>
+      <div class="picker-row">
+        <label for="seasonSelect">Season (sets usable sun hours)</label>
+        <select id="seasonSelect">
+          <option value="summer" selected>Summer (~5.5 sun-hours)</option>
+          <option value="shoulder">Spring / fall (~4 sun-hours)</option>
+          <option value="winter">Winter (~2.5 sun-hours)</option>
+        </select>
+      </div>
+    </div>
+  </section>
+
+  <section aria-label="Your recommended kit" id="resultsSection">
+    <p class="eyebrow" id="resultsEyebrow">5 &middot; Your kit</p>
+    <div class="verdict" id="verdict" aria-live="polite">Loading&hellip;</div>
+
+    <div id="modeAResults">
+      <div class="kit-grid" id="kitCards"></div>
+      <div class="kit-totals" id="kitTotals"></div>
+      <div class="table-scroll">
+        <table class="budget" id="budgetTable" style="display:none">
+          <caption style="text-align:left;font-size:12px;font-weight:800;letter-spacing:0.06em;text-transform:uppercase;color:var(--ink-soft);padding:10px 0 4px">Energy budget</caption>
+          <thead><tr><th>Load</th><th class="num">Wh</th></tr></thead>
+          <tbody id="budgetBody"></tbody>
+        </table>
+      </div>
+      <ul class="plan-lines" id="planLines"></ul>
+      <div class="alt-grid" id="altGrid"></div>
+
+      <div class="safety-panel" id="safetyPanel">
+        <p class="eyebrow" style="margin-top:14px">Safety gear for this setup</p>
+        <p class="safety-lead" id="safetyLead"></p>
+        <div class="safety-list" id="safetyList"></div>
+      </div>
+    </div>
+
+    <div id="modeBResults" style="display:none">
+      <div class="rank-list" id="rankList"></div>
+    </div>
+
+    <p class="note warn" style="margin:14px 0 0"><b>Safety, non-negotiable:</b> never sleep with a combustion heater (diesel, propane, wood) that isn't vented outside and paired with a working CO alarm. And strap heavy batteries down before you drive — a 60 lb battery loose in the cabin is a projectile in a crash.</p>
+
+    <details id="howMath">
+      <summary>How the math works</summary>
+      <div class="how-math">
+        <h3>Appliance presets (Wh per day or per night)</h3>
+        <p>12V fridge: 320 / 400 / 480 Wh for ~30 / 40 / 55 L, multiplied by an ambient factor tied to your overnight low — 0.8 below 60&deg;F, 1.0 at 60&ndash;75&deg;F, and 1.9 above 75&deg;F (compressor fridges nearly double their duty cycle in real heat). CPAP: 60 Wh dry, 350 Wh with heated humidifier. Starlink: 100 Wh (Mini, evenings), 550 Wh (Mini, all day), or 65 W &times; hours for the Standard dish. Laptop 80 Wh, phone 15 Wh each. Diesel heater fan+pump 175 Wh/night, roof fan 80, clip fan 50, LED lights 40/evening. Electric blanket 200 (low) / 425 (high) Wh/night. Induction cooking 350 Wh/meal, kettle 120 Wh/boil. In step 2 you add each item to your list from the picker (the same preset can be added more than once), set a quantity, and edit any watt-hour figure; custom items let you enter anything we don't list. Total daily energy is simply the sum of each item's watt-hours times its quantity.</p>
+        <h3>Overnight AC / heat model</h3>
+        <p><code>AC_Wh = k &times; &Delta;T &times; 8 h + 30 &times; 8 h + pulldown</code>, where &Delta;T is how far the overnight air sits from your target (outdoor &minus; target for cooling), the 30 W term is fan and controls overhead, and pulldown <code>= 450 &times; (initial&Delta;T / 15) &times; 0.5</code> covers knocking the evening heat (&asymp; &Delta;T + 5&deg;F) out of the space at bedtime. Heating uses the same shape with <code>k &times; 0.9</code> (the WAVE 3 heats at a similar coefficient of performance). Implied average draw is clamped to the WAVE 3's real envelope of 70&ndash;690 W.</p>
+        <h3>The k-table (W per &deg;F of hold, window covers assumed)</h3>
+        <table>
+          <tr><th>Sleeping space</th><td class="num">k</td><th>Sleeping space</th><td class="num">k</td></tr>
+          <tr><th>Truck cab</th><td class="num">9</td><th>Insulated full-size van</th><td class="num">9</td></tr>
+          <tr><th>SUV / crossover</th><td class="num">13</td><th>Rooftop tent</th><td class="num">20</td></tr>
+          <tr><th>Minivan</th><td class="num">16</td><th>Uninsulated full-size van</th><td class="num">26</td></tr>
+          <tr><th>Ground tent</th><td class="num">32</td><td colspan="2" style="border:none"></td></tr>
+        </table>
+        <p><b>Honesty about the k-table:</b> only two of those points are anchored to measured overnight data (a minivan and an uninsulated van); the rest are scaled from relative surface area, glass, and insulation using the BuildItSolar heat-loss method. Treat them as &plusmn;30% planning numbers, not lab results.</p>
+        <h3>Recharge &amp; efficiency derates</h3>
+        <p>Total need is divided by 0.85 for inverter and conversion losses. Driving credit: a factory outlet of 1,000 W+ is capped at 1,200 W sustained (thermal reality of these inverters); 300&ndash;999 W outlets are derated to 80%; anything smaller falls back to the 12V socket's ~105 W. An installed alternator charger counts as at least 700 W effective. Solar counts panel watts &times; sun hours (5.5 summer / 4 shoulder / 2.5 winter) &times; 0.70 for angle, heat, and cable losses. Battery capacity must cover the worst cumulative deficit across your nights between recharges, floored at one full night's use.</p>
+        <div class="caveat"><b>Caveats:</b> the thermal constants above are anchored to limited measured data — calibrated against owner-reported WAVE runtime logs and the BuildItSolar van heat-loss model in July 2026 — so treat climate results as planning estimates. Prices and specs were verified against us.ecoflow.com on 2026-07-20 and <b>will</b> drift. EcoFlow, DELTA, RIVER, and WAVE are trademarks of EcoFlow Inc.; S'more's Outdoors is not affiliated with or endorsed by EcoFlow. Always verify current specs, prices, and compatibility before you purchase.</div>
+      </div>
+    </details>
+  </section>
+
+  <!-- AdSense slot — un-comment once the account is approved:
+  <div class="ad-slot rectangle" role="complementary" aria-label="Advertisement">Advertisement</div>
+  -->
+
+  <section aria-label="Gear this planner recommends">
+    <p class="eyebrow">The core kit pieces</p>
+    <div class="gear-grid">
+      <a class="gear-card" href="https://us.ecoflow.com/search?q=DELTA+3+Plus" rel="sponsored noopener" target="_blank">
+        <span class="gt">EcoFlow DELTA 3 Plus</span>
+        <span class="gd">The 1 kWh hub most kits start from — 1,800W output, expandable to ~5 kWh.</span>
+      </a>
+      <a class="gear-card" href="https://us.ecoflow.com/search?q=WAVE+3" rel="sponsored noopener" target="_blank">
+        <span class="gt">EcoFlow WAVE 3</span>
+        <span class="gd">6,100 BTU portable AC + 6,800 BTU heater; runs from a DELTA stack over DC.</span>
+      </a>
+      <a class="gear-card" href="https://us.ecoflow.com/search?q=800W+Alternator+Charger" rel="sponsored noopener" target="_blank">
+        <span class="gt">800W Alternator Charger</span>
+        <span class="gd">~1 kWh back per 1.3 h of driving — the fix for 12V-only vehicles.</span>
+      </a>
+      <a class="gear-card" href="https://us.ecoflow.com/search?q=220W+Bifacial+Solar+Panel" rel="sponsored noopener" target="_blank">
+        <span class="gt">220W Bifacial Solar Panel</span>
+        <span class="gd">The default DELTA-series folding panel for camp-day recharging.</span>
+      </a>
+      <a class="gear-card" href="https://www.amazon.com/s?k=ecoflow+delta+3" rel="sponsored noopener" target="_blank">
+        <span class="gt">EcoFlow deals on Amazon</span>
+        <span class="gd">Same hardware, sometimes discounted — compare before you buy.</span>
+      </a>
+      <a class="gear-card" href="https://www.amazon.com/s?k=rv+carbon+monoxide+detector" rel="sponsored noopener" target="_blank">
+        <span class="gt">RV carbon monoxide detector</span>
+        <span class="gd">Battery-powered, RV-rated CO alarm for the sleeping area — the panel above tells you how many.</span>
+      </a>
+      <a class="gear-card" href="https://www.amazon.com/s?k=2.5+lb+abc+fire+extinguisher" rel="sponsored noopener" target="_blank">
+        <span class="gt">2.5 lb ABC fire extinguisher</span>
+        <span class="gd">1-A:10-B:C rated — mount within arm's reach of your bed, not in a drawer.</span>
+      </a>
+    </div>
+    <p class="affiliate-disclosure">As an Amazon Associate, S'more's Outdoors earns from qualifying purchases. EcoFlow links above may become affiliate links in the future; that never changes what this planner recommends. S'more's Outdoors is an independent publisher and is not affiliated with, sponsored by, or endorsed by EcoFlow Inc. or any other manufacturer, vehicle maker, brand, or retailer whose products or trademarks appear on this page; all product names and trademarks are the property of their respective owners.</p>
+  </section>
+
+  <section aria-label="Frequently asked questions">
+    <p class="eyebrow">FAQ</p>
+    <details>
+      <summary>Can a power station really run an air conditioner overnight?</summary>
+      <p class="note" style="margin-top:10px">Yes, if you size for it. A WAVE 3-class portable unit holding a minivan 6°F below the outside air draws a few hundred watts on average, not its 690W maximum — on a mild night that works out to roughly 1 to 1.6 kWh over 8 hours. A 2 kWh DELTA-class stack covers that with margin for the fridge and phones. The trap is the hot, humid night in an uninsulated metal van: heat leaks in three times faster, the compressor rarely cycles off, and the same 8 hours can swallow 4 kWh or more. That is why this planner asks where you sleep and what the overnight low is instead of quoting one runtime number.</p>
+    </details>
+    <details>
+      <summary>Do I need the WAVE 3's add-on battery or a DELTA power station?</summary>
+      <p class="note" style="margin-top:10px">The WAVE 3 has no built-in battery, so it must run from something. If you already need a DELTA-class station for your fridge and devices, running the WAVE from that stack over its XT150 DC port is usually the better buy — one pool of energy, one thing to charge, and DC operation skips inverter losses. The add-on battery makes sense as a dedicated bank when your air-conditioning need alone pushes past what the station stack can spare — roughly the 4 to 5 kWh territory — or when you want the AC to be a self-contained unit you can leave in the vehicle.</p>
+    </details>
+    <details>
+      <summary>Will my car's 12V socket recharge a big power station?</summary>
+      <p class="note" style="margin-top:10px">Barely. A standard 12V accessory socket is fused around 10-15A, which works out to roughly 105W of real charging — about 10 hours of driving per kilowatt-hour. That is fine for topping up a small RIVER-class unit and nearly useless for a 2 kWh-plus stack. The fix is an alternator charger: it wires to the starter battery with a fused cable and pulls up to 800W while the engine runs, so a normal travel day genuinely refills the bank. Between those extremes, a factory 120V outlet of 400W or more is worth using whenever the engine is on.</p>
+    </details>
+    <details>
+      <summary>What does a hybrid minivan or truck change?</summary>
+      <p class="note" style="margin-top:10px">Two big things. First, hybrids like the Sienna or the F-150 PowerBoost can hold cabin climate all night by cycling the engine a few minutes each hour off the traction battery — that can replace a portable air conditioner and its battery bank entirely, which is the single largest line item this planner recommends. Second, their factory inverters (1,500W on the Sienna, 2,400 to 7,200W on the PowerBoost) recharge a power station at wall speed while you drive or idle, so the battery capacity you carry can be much smaller for the same trip.</p>
+    </details>
+    <details>
+      <summary>How much battery do I need for a weekend without air conditioning?</summary>
+      <p class="note" style="margin-top:10px">For two people, two nights, and no driving between camps: a 12V fridge (about 400 Wh a day), phones, a laptop, and lights land near 550 Wh a day, or about 1.3 kWh for the weekend after inverter losses. A 1 kWh station covers it if you drive a little or bring a panel; a 2 kWh stack covers it with no recharging at all, plus margin for a hot-weather fridge surprise. Add a CPAP with humidifier or an electric blanket and you should treat 2 kWh as the floor.</p>
+    </details>
+    <details>
+      <summary>Is EcoFlow the only option?</summary>
+      <p class="note" style="margin-top:10px">No — the sizing math in this planner transfers directly to Jackery, Bluetti, Anker SOLIX, Goal Zero, and DIY LiFePO4 builds; watt-hours are watt-hours. We model EcoFlow specifically because we could verify current specs and prices against the manufacturer's own listings, and because its expansion-battery and alternator-charger ecosystem maps cleanly onto the recharge strategies the tool recommends. If you already own another brand, take the battery watt-hour target and charge-rate numbers from your results and shop the equivalent pieces.</p>
+    </details>
+  </section>
+</main>
+
+<footer>
+  <div>The Camper Power &amp; Climate Planner is a free tool from <a href="../">S'more's Outdoors</a>. Specs and prices verified July 2026 — always confirm before you buy.</div>
+  <div class="flinks">
+    <a href="legal/terms.html">Terms</a>
+    <a href="legal/privacy.html">Privacy</a>
+    <a href="legal/disclaimer.html">Disclaimer</a>
+  </div>
+</footer>
+
+<script src="ecoflow-data.js"></script>
+<script src="vehicle-power-data.js"></script>
+<script>
+(function () {
+  "use strict";
+
+  /*
+   * CONSTANTS — calibrated against owner-reported WAVE runtime data and the
+   * BuildItSolar van heat-loss model, 2026-07. Only two k-table points are
+   * directly measured (minivan, uninsulated van); the rest are scaled by
+   * surface area / glass / insulation. Treat climate outputs as ±30%.
+   */
+  var CONSTANTS = {
+    EFF: 0.85,                      // inverter + conversion losses on everything
+    AC_HOURS: 8,                    // modeled sleep window
+    FAN_W: 30,                      // WAVE fan + controls overhead
+    PULLDOWN_BASE: 450, PULLDOWN_REF_DT: 15, PULLDOWN_FACTOR: 0.5,
+    HEAT_K_FACTOR: 0.9,             // WAVE 3 heats at a similar COP
+    DRAW_MIN_W: 70, DRAW_MAX_W: 690, // WAVE 3 real draw envelope
+    K_BY_SETUP: { truckCab: 9, suv: 13, minivan: 16, vanUninsulated: 26, vanInsulated: 9, rooftopTent: 20, groundTent: 32 },
+    K_BY_BODY: { minivan: 16, van: 26, suv: 13, truck: 9 },
+    SETUP_BY_BODY: { minivan: "minivan", van: "vanUninsulated", suv: "suv", truck: "truckCab" },
+    AMBIENT: { mild: 0.8, warm: 1.0, hot: 1.9 }, // fridge duty-cycle factor
+    SUN_HOURS: { summer: 5.5, shoulder: 4, winter: 2.5 },
+    SOLAR_DERATE: 0.70,
+    OUTLET_SUSTAIN_CAP: 1200,       // big factory inverters, sustained into a charger
+    OUTLET_DERATE: 0.8,             // 300-999W outlets: usable fraction
+    SOCKET_12V_W: 105,              // 12V accessory socket reality
+    ALT_EFFECTIVE_W: 700,           // 800W Alternator Charger, real-world average
+    WAVE_DC_W: 640,                 // WAVE 3 rated DC input, cooling
+    WAVE_BANK_THRESHOLD_WH: 4200,   // above this, offer wave3battery as dedicated AC bank
+    LOADS: {
+      fridge30: 320, fridge40: 400, fridge55: 480,
+      cpapDry: 60, cpapHumid: 350,
+      starlinkMiniEvening: 100, starlinkMiniAllDay: 550, starlinkStdPerHour: 65,
+      laptop: 80, phone: 15,
+      dieselHeater: 175, roofFan: 80, clipFan: 50, led: 40,
+      blanketLow: 200, blanketHigh: 425,
+      inductionMeal: 350, kettleBoil: 120
+    },
+    SCORE: { OUTLET_W: 2.2, HOLD_BONUS: 4, THERMAL_W: 1.5 }
+  };
+
+  var PRODUCTS = window.ECOFLOW_PRODUCTS || [];
+  var VEHICLES = window.VEHICLE_POWER || [];
+  var BY_ID = {};
+  PRODUCTS.forEach(function (p) { BY_ID[p.id] = p; });
+
+  function num(v, d) { var n = parseFloat(v); return isFinite(n) ? n : d; }
+  function clamp(v, lo, hi) { return Math.max(lo, Math.min(hi, v)); }
+  function round1(v) { return Math.round(v * 10) / 10; }
+  function fmtKwh(wh) { return (wh / 1000).toFixed(wh >= 9950 ? 0 : 1); }
+  function fmtUsd(n) { return "$" + Math.round(n).toLocaleString("en-US"); }
+
+  function ambientBand(lowF) { return lowF < 60 ? "mild" : (lowF > 75 ? "hot" : "warm"); }
+
+  function chargePower(vehicle, altCharger) {
+    var C = CONSTANTS, w = (vehicle && vehicle.acOutletW) || 0, watts, source;
+    if (w >= 1000) { watts = Math.min(w, C.OUTLET_SUSTAIN_CAP); source = "outlet"; }
+    else if (w >= 300) { watts = Math.round(w * C.OUTLET_DERATE); source = "outlet"; }
+    else { watts = C.SOCKET_12V_W; source = "12v"; }
+    if (altCharger && C.ALT_EFFECTIVE_W > watts) { watts = C.ALT_EFFECTIVE_W; source = "alt"; }
+    return { watts: watts, source: source, outletW: w };
+  }
+
+  function acEnergy(climate) {
+    var C = CONSTANTS;
+    var mode = climate.mode || "none";
+    var out = { whPerNight: 0, avgW: 0, mode: "none", notNeeded: false, clamped: false, deltaT: 0 };
+    if (mode !== "cool" && mode !== "both") return out;
+    var lowF = num(climate.lowF, 65), targetF = num(climate.targetF, 68);
+    var k = C.K_BY_SETUP[climate.setup] || C.K_BY_SETUP.minivan;
+    var coolDT = lowF - targetF;      // cooling delta: outdoor - target (when outdoor > target)
+    var heatDT = targetF - lowF;
+    var useDT = null;
+    if (coolDT > 0) { useDT = coolDT; out.mode = "cool"; }
+    else if (mode === "both" && heatDT > 0) { useDT = heatDT; k = k * C.HEAT_K_FACTOR; out.mode = "heat"; }
+    if (useDT === null) { out.notNeeded = true; return out; }
+    out.deltaT = useDT;
+    var initialDT = useDT + 5; // evening temp ≈ overnight low + 5°F
+    var pulldown = C.PULLDOWN_BASE * (initialDT / C.PULLDOWN_REF_DT) * C.PULLDOWN_FACTOR;
+    var wh = k * useDT * C.AC_HOURS + C.FAN_W * C.AC_HOURS + pulldown;
+    var avg = wh / C.AC_HOURS;
+    var clampedAvg = clamp(avg, C.DRAW_MIN_W, C.DRAW_MAX_W);
+    out.clamped = clampedAvg !== avg;
+    out.maxedOut = avg > C.DRAW_MAX_W;
+    out.whPerNight = Math.round(clampedAvg * C.AC_HOURS);
+    out.avgW = Math.round(clampedAvg);
+    return out;
+  }
+
+  // Portable panels considered for kits (400W skipped: ~35 lb, awkward for car camping)
+  function pickPanel(station, nPanels) {
+    if (!nPanels) return null;
+    var cap = station.solarInW || 500;
+    var order = ["pv220", "pv160", "pv110"];
+    for (var i = 0; i < order.length; i++) {
+      var p = BY_ID[order[i]];
+      if (p && nPanels * p.ratedW <= cap) return p;
+    }
+    return BY_ID.pv110 || null;
+  }
+
+  function solarCredit(station, nPanels, season) {
+    var C = CONSTANTS;
+    var p = pickPanel(station, nPanels);
+    if (!p) return { whPerDay: 0, panel: null, effW: 0 };
+    var effW = Math.min(nPanels * p.ratedW, station.solarInW || nPanels * p.ratedW);
+    var wh = effW * (C.SUN_HOURS[season] || C.SUN_HOURS.summer) * C.SOLAR_DERATE;
+    return { whPerDay: Math.round(wh), panel: p, effW: effW };
+  }
+
+  // batteryWh must cover the worst cumulative deficit over the nights between recharges
+  function batteryNeed(grossDaily, nights, rechargeWhPerDay) {
+    var worst = grossDaily * nights - rechargeWhPerDay * (nights - 1);
+    return Math.max(grossDaily, worst); // floor at one night's use
+  }
+
+  function nightsCovered(capacityWh, grossDaily, rechargeWhPerDay, maxN) {
+    var n = 0, deficit = 0;
+    while (n < maxN) {
+      deficit += grossDaily;
+      if (deficit > capacityWh) break;
+      n++;
+      deficit -= rechargeWhPerDay;
+      if (deficit < 0) deficit = 0;
+    }
+    return n;
+  }
+
+  // Enumerate station (+ expansion battery) combos, cheapest first.
+  function buildCombos(opts) {
+    var needAC = !!opts.needAC, minAcW = opts.minAcW || 0, allowWaveBank = !!opts.allowWaveBank;
+    var combos = [];
+    PRODUCTS.filter(function (p) { return p.type === "station"; }).forEach(function (st) {
+      // The WAVE 3 runs from a DELTA stack (XT150 / 1800W+ AC); RIVER class can't carry it.
+      if (needAC && st.id.indexOf("delta") !== 0) return;
+      if ((st.acOutW || 0) < minAcW) return;
+      var ebOptions = [[]];
+      (st.expandsWith || []).forEach(function (bid) {
+        var b = BY_ID[bid];
+        if (!b || b.type !== "battery" || !b.priceUsd) return;
+        for (var n = 1; n <= 4; n++) {
+          if (st.wh + n * b.wh > (st.maxExpandedWh || st.wh)) break;
+          ebOptions.push([{ p: b, qty: n }]);
+        }
+      });
+      ebOptions.forEach(function (ebs) {
+        [false, true].forEach(function (withWaveBank) {
+          if (withWaveBank && !(needAC && allowWaveBank)) return;
+          var cap = st.wh, price = st.priceUsd, weight = st.weightLb, wUnknown = st.weightLb == null;
+          var items = [{ p: st, qty: 1, role: "hub" }];
+          ebs.forEach(function (e) {
+            cap += e.p.wh * e.qty; price += e.p.priceUsd * e.qty;
+            if (e.p.weightLb != null && weight != null) weight += e.p.weightLb * e.qty; else wUnknown = true;
+            items.push({ p: e.p, qty: e.qty, role: "expansion" });
+          });
+          if (withWaveBank) {
+            var wb = BY_ID.wave3battery;
+            cap += wb.wh; price += wb.priceUsd;
+            if (wb.weightLb != null && weight != null) weight += wb.weightLb; else wUnknown = true;
+            items.push({ p: wb, qty: 1, role: "ac-bank" });
+          }
+          combos.push({ station: st, items: items, capacityWh: cap, price: price, weightLb: wUnknown ? null : weight });
+        });
+      });
+    });
+    combos.sort(function (a, b) { return a.price - b.price || a.capacityWh - b.capacityWh; });
+    return combos;
+  }
+
+  function computePlan(inp) {
+    var C = CONSTANTS;
+    var nights = clamp(Math.round(num(inp.nights, 2)), 1, 7);
+    var climate = inp.climate || {};
+    var lowF = num(climate.lowF, 65);
+    var amb = ambientBand(lowF);
+    var ambF = C.AMBIENT[amb];
+
+    var loads = [], dailyLoadWh = 0, maxAcW = 0;
+    (inp.loads || []).forEach(function (L) {
+      var wh = Math.max(0, num(L.whPerDay, 0));
+      if (L.ambientScaled) wh = wh * ambF;
+      wh = Math.round(wh);
+      if (wh <= 0) return;
+      loads.push({ key: L.key, label: L.label, wh: wh, ambientScaled: !!L.ambientScaled });
+      dailyLoadWh += wh;
+      if (L.acW) maxAcW = Math.max(maxAcW, L.acW);
+    });
+
+    var wantsAC = climate.mode === "cool" || climate.mode === "both";
+    var ac = acEnergy(climate);
+    var acNights = wantsAC ? clamp(Math.round(num(climate.acNights, nights)), 0, nights) : 0;
+    var acAvgPerDay = ac.whPerNight * acNights / nights;
+    var grossDaily = (dailyLoadWh + acAvgPerDay) / C.EFF;
+
+    var vehicle = inp.vehicle || { acOutletW: 0 };
+    var recharge = inp.recharge || {};
+    var cp = chargePower(vehicle, recharge.alt);
+    var driveHours = clamp(num(recharge.driveHours, 0), 0, 8);
+    var driveWh = Math.round(driveHours * cp.watts);
+    var nPanels = clamp(Math.round(num(recharge.panels, 0)), 0, 2);
+    var season = recharge.season || "summer";
+
+    // AC kit still recommended when requested (even on nights AC isn't strictly needed)
+    var needACgear = wantsAC && !(vehicle.hybridClimateHold === true && inp.holdReplacesAC);
+    var probeNeed = batteryNeed(grossDaily, nights, driveWh); // rough, for wave-bank gate
+    var combos = buildCombos({
+      needAC: needACgear, minAcW: maxAcW,
+      allowWaveBank: probeNeed > C.WAVE_BANK_THRESHOLD_WH
+    });
+
+    // Per-combo self-consistent recharge (panel choice depends on the station)
+    var evald = combos.map(function (c) {
+      var sol = solarCredit(c.station, nPanels, season);
+      var rWh = driveWh + sol.whPerDay;
+      return { combo: c, solar: sol, rechargeWh: rWh, needWh: Math.round(batteryNeed(grossDaily, nights, rWh)) };
+    });
+
+    var rec = null, budget = null, comfort = null;
+    for (var i = 0; i < evald.length; i++) {
+      if (evald[i].combo.capacityWh >= evald[i].needWh) { rec = evald[i]; break; }
+    }
+    if (!rec && evald.length) { // nothing big enough — take the biggest-capacity ceiling option
+      rec = evald.slice().sort(function (a, b) { return b.combo.capacityWh - a.combo.capacityWh || a.combo.price - b.combo.price; })[0];
+    }
+    if (rec) {
+      var under = evald.filter(function (e) { return e.combo.capacityWh < e.needWh && e.combo.price < rec.combo.price; });
+      under.sort(function (a, b) { return b.combo.capacityWh - a.combo.capacityWh || a.combo.price - b.combo.price; });
+      budget = under[0] || null;
+      var over = evald.filter(function (e) { return e.combo.capacityWh > rec.combo.capacityWh; });
+      over.sort(function (a, b) { return a.combo.price - b.combo.price; });
+      comfort = over[0] || null;
+    }
+
+    // Assemble the full kit around the recommended combo
+    var kit = null;
+    if (rec) {
+      var items = rec.combo.items.slice();
+      if (needACgear) {
+        items.push({ p: BY_ID.wave3, qty: 1, role: "climate" });
+        items.push({ p: BY_ID.ventkit, qty: 1, role: "vent" });
+      }
+      if (recharge.alt) items.push({ p: BY_ID.alt800, qty: 1, role: "charger" });
+      if (nPanels > 0 && rec.solar.panel) items.push({ p: rec.solar.panel, qty: nPanels, role: "solar" });
+      var price = 0, weight = 0, wUnknown = false;
+      items.forEach(function (it) {
+        price += (it.p.priceUsd || 0) * it.qty;
+        if (it.p.weightLb != null) weight += it.p.weightLb * it.qty; else wUnknown = true;
+      });
+      kit = {
+        items: items, totalPrice: price,
+        totalWeightLb: Math.round(weight), weightIncomplete: wUnknown,
+        capacityWh: rec.combo.capacityWh, station: rec.combo.station
+      };
+    }
+
+    var autonomyDays = kit && grossDaily > 0 ? round1(kit.capacityWh / grossDaily) : null;
+    var refillHours = kit ? round1(kit.capacityWh / cp.watts) : 0;
+
+    var suggestions = [];
+    var suggestAlt = cp.source === "12v" && !recharge.alt;
+    if (suggestAlt) suggestions.push("Your best upgrade: the 800W Alternator Charger ($269 install-it-yourself). It turns ~105W of 12V-socket trickle into ~700W real — about 1.4 kWh back per 2 h of driving.");
+    if (vehicle.hybridClimateHold === true && wantsAC) suggestions.push("Your vehicle is a hybrid with climate-hold: it can keep the cabin at temperature all night by cycling the engine off its traction battery. Many owners skip the portable AC entirely — try a night on climate-hold before buying the WAVE 3.");
+
+    return {
+      nights: nights, loads: loads, dailyLoadWh: dailyLoadWh, ambient: amb,
+      ac: ac, acNights: acNights, wantsAC: wantsAC, needACgear: needACgear,
+      grossDaily: Math.round(grossDaily),
+      chargePower: cp, driveWh: driveWh,
+      solar: rec ? rec.solar : { whPerDay: 0, panel: null },
+      rechargeWhPerDay: rec ? rec.rechargeWh : driveWh,
+      batteryNeedWh: rec ? rec.needWh : Math.round(probeNeed),
+      kit: kit, budget: budget, comfort: comfort,
+      autonomyDays: autonomyDays, refillHours: refillHours,
+      suggestions: suggestions, suggestAlt: suggestAlt,
+      grossDailyExact: grossDaily
+    };
+  }
+
+  // ---------- Mode B: rank vehicles ----------
+  function vehicleScore(row) {
+    var C = CONSTANTS.SCORE;
+    var k = CONSTANTS.K_BY_BODY[row.bodyClass] || 16;
+    return C.OUTLET_W * Math.log10(1 + (row.acOutletW || 0)) +
+      (row.hybridClimateHold === true ? C.HOLD_BONUS : 0) +
+      ((32 - k) / 32) * C.THERMAL_W;
+  }
+
+  function powerStory(row) {
+    var w = row.acOutletW || 0;
+    if (w >= 2000) return w.toLocaleString("en-US") + "W of factory outlets — recharges any power station at wall speed while parked.";
+    if (w >= 1000) return w.toLocaleString("en-US") + "W factory inverter — refills a 2 kWh stack in under 2 h of engine-on time.";
+    if (w >= 300) return w + "W outlet — meaningful recharge whenever the engine is running.";
+    if (w > 0) return w + "W console outlet — electronics only; plan recharging around the 12V socket or an alternator charger.";
+    return "No factory 120V outlet — 12V only. Budget for the 800W Alternator Charger.";
+  }
+
+  function scoreVehicles(inp) {
+    var wantsAC = inp.climate && (inp.climate.mode === "cool" || inp.climate.mode === "both");
+    var userSetup = inp.climate && inp.climate.setup;
+    var keepTent = userSetup === "rooftopTent" || userSetup === "groundTent";
+    var rows = VEHICLES.filter(function (r) { return r.make !== "ANY"; });
+    var ranked = rows.map(function (r) { return { row: r, score: vehicleScore(r) }; })
+      .sort(function (a, b) { return b.score - a.score; })
+      .slice(0, 8);
+    ranked.forEach(function (e) {
+      var r = e.row;
+      var holdReplacesAC = wantsAC && r.hybridClimateHold === true;
+      var sub = JSON.parse(JSON.stringify(inp));
+      sub.vehicle = r;
+      sub.holdReplacesAC = holdReplacesAC;
+      if (!keepTent) sub.climate.setup = CONSTANTS.SETUP_BY_BODY[r.bodyClass] || "suv";
+      if (holdReplacesAC) sub.climate.mode = "none";
+      e.plan = computePlan(sub);
+      e.story = powerStory(r);
+      e.holdReplacesAC = holdReplacesAC;
+      e.verify = /verify/i.test(r.note || "");
+    });
+    return ranked;
+  }
+
+  window.PLANNER = {
+    CONSTANTS: CONSTANTS,
+    computePlan: computePlan,
+    scoreVehicles: scoreVehicles,
+    buildCombos: buildCombos,
+    acEnergy: acEnergy,
+    chargePower: chargePower,
+    batteryNeed: batteryNeed
+  };
+
+  // ================= UI =================
+  if (typeof document === "undefined" || !document.getElementById || !document.getElementById("loadList")) return;
+
+  var LOADS = CONSTANTS.LOADS;
+  // Preset catalog for the dynamic "your loads" list. qty = number of devices
+  // or occurrences per day (meals, boils) — the same meaning each preset always had.
+  var PRESETS = [
+    { id: "fridge30", name: "12V fridge — ~30 L", wh: LOADS.fridge30, unit: "Wh/day", ambient: true },
+    { id: "fridge40", name: "12V fridge — ~40 L", wh: LOADS.fridge40, unit: "Wh/day", ambient: true },
+    { id: "fridge55", name: "12V fridge — ~55 L", wh: LOADS.fridge55, unit: "Wh/day", ambient: true },
+    { id: "cpapDry", name: "CPAP — no humidifier", wh: LOADS.cpapDry, unit: "Wh/night" },
+    { id: "cpapHumid", name: "CPAP — heated humidifier", wh: LOADS.cpapHumid, unit: "Wh/night" },
+    { id: "starlinkMiniEvening", name: "Starlink Mini — evenings", wh: LOADS.starlinkMiniEvening, unit: "Wh/day" },
+    { id: "starlinkMiniAllDay", name: "Starlink Mini — all day", wh: LOADS.starlinkMiniAllDay, unit: "Wh/day" },
+    { id: "starlinkStd", name: "Starlink Standard — 8 h", wh: LOADS.starlinkStdPerHour * 8, unit: "Wh/day" },
+    { id: "laptop", name: "Laptop", wh: LOADS.laptop, unit: "Wh/day each" },
+    { id: "phone", name: "Phone", wh: LOADS.phone, unit: "Wh/day each" },
+    { id: "dieselHeater", name: "Diesel heater (fan + pump)", wh: LOADS.dieselHeater, unit: "Wh/night" },
+    { id: "roofFan", name: "Roof vent fan", wh: LOADS.roofFan, unit: "Wh/night" },
+    { id: "clipFan", name: "Clip fan", wh: LOADS.clipFan, unit: "Wh/night" },
+    { id: "led", name: "LED lights", wh: LOADS.led, unit: "Wh/evening" },
+    { id: "blanketLow", name: "Electric blanket — low", wh: LOADS.blanketLow, unit: "Wh/night" },
+    { id: "blanketHigh", name: "Electric blanket — high", wh: LOADS.blanketHigh, unit: "Wh/night" },
+    { id: "inductionMeal", name: "Induction cooking", wh: LOADS.inductionMeal, unit: "Wh/meal", acW: 1800, qtyLabel: "meals/day" },
+    { id: "kettleBoil", name: "Electric kettle", wh: LOADS.kettleBoil, unit: "Wh/boil", acW: 1200, qtyLabel: "boils/day" }
+  ];
+  var PRESET_BY_ID = {};
+  PRESETS.forEach(function (p) { PRESET_BY_ID[p.id] = p; });
+
+  var $ = function (id) { return document.getElementById(id); };
+  var state = {
+    mode: "A",
+    vehicleSel: { make: "", model: "", cfg: -1 },
+    nights: 2, people: 2,
+    items: [], // dynamic load list: [{presetId, custom, name, wh, qty, auto}]
+    climate: { mode: "none", setup: "minivan", lowF: 65, targetF: 68, acNights: 2 },
+    recharge: { driveHours: 1, alt: false, panels: 0, season: "summer" },
+    touched: { setup: false, acNights: false }
+  };
+  var currentVehicle = null;
+
+  // Sensible starter list (also used after corrupted-storage recovery)
+  function defaultItems() {
+    return [
+      { presetId: "fridge40", custom: false, name: "", wh: PRESET_BY_ID.fridge40.wh, qty: 1, auto: false },
+      { presetId: "led", custom: false, name: "", wh: PRESET_BY_ID.led.wh, qty: 1, auto: false },
+      { presetId: "phone", custom: false, name: "", wh: PRESET_BY_ID.phone.wh, qty: 2, auto: true }
+    ];
+  }
+  state.items = defaultItems();
+
+  // ---------- persistence ----------
+  var LS_KEY = "camperPowerPlanner";
+  function persist() {
+    try {
+      localStorage.setItem(LS_KEY, JSON.stringify({
+        mode: state.mode, vehicleSel: state.vehicleSel, nights: state.nights, people: state.people,
+        items: state.items, climate: state.climate, recharge: state.recharge, touched: state.touched
+      }));
+    } catch (e) {}
+  }
+  function restore() {
+    var s = null;
+    try { s = JSON.parse(localStorage.getItem(LS_KEY) || "null"); } catch (e) { s = null; }
+    if (!s || typeof s !== "object") return;
+    try {
+      if (s.mode === "A" || s.mode === "B") state.mode = s.mode;
+      if (s.vehicleSel && typeof s.vehicleSel === "object") {
+        state.vehicleSel.make = typeof s.vehicleSel.make === "string" ? s.vehicleSel.make : "";
+        state.vehicleSel.model = typeof s.vehicleSel.model === "string" ? s.vehicleSel.model : "";
+        state.vehicleSel.cfg = isFinite(s.vehicleSel.cfg) ? s.vehicleSel.cfg : -1;
+      }
+      state.nights = clamp(Math.round(num(s.nights, 2)), 1, 7);
+      state.people = clamp(Math.round(num(s.people, 2)), 1, 4);
+      if (Array.isArray(s.items)) {
+        var items = [];
+        s.items.forEach(function (v) {
+          if (!v || typeof v !== "object") return;
+          var qty = clamp(Math.round(num(v.qty, 1)), 1, 9);
+          var wh = clamp(num(v.wh, 0), 0, 20000);
+          if (v.custom === true) {
+            items.push({ presetId: null, custom: true, name: typeof v.name === "string" ? v.name.slice(0, 40) : "", wh: wh, qty: qty, auto: false });
+          } else if (typeof v.presetId === "string" && PRESET_BY_ID[v.presetId]) {
+            items.push({ presetId: v.presetId, custom: false, name: "", wh: wh, qty: qty, auto: !!v.auto });
+          }
+        });
+        state.items = items; // a deliberately emptied list restores empty
+      }
+      if (s.climate && typeof s.climate === "object") {
+        var cm = s.climate.mode;
+        if (cm === "none" || cm === "cool" || cm === "both") state.climate.mode = cm;
+        if (CONSTANTS.K_BY_SETUP[s.climate.setup] != null) state.climate.setup = s.climate.setup;
+        state.climate.lowF = clamp(num(s.climate.lowF, 65), -20, 110);
+        state.climate.targetF = clamp(num(s.climate.targetF, 68), 50, 85);
+        state.climate.acNights = clamp(Math.round(num(s.climate.acNights, state.nights)), 0, 7);
+      }
+      if (s.recharge && typeof s.recharge === "object") {
+        state.recharge.driveHours = clamp(num(s.recharge.driveHours, 1), 0, 8);
+        state.recharge.alt = !!s.recharge.alt;
+        state.recharge.panels = clamp(Math.round(num(s.recharge.panels, 0)), 0, 2);
+        if (CONSTANTS.SUN_HOURS[s.recharge.season] != null) state.recharge.season = s.recharge.season;
+      }
+      if (s.touched && typeof s.touched === "object") {
+        state.touched.setup = !!s.touched.setup;
+        state.touched.acNights = !!s.touched.acNights;
+      }
+    } catch (e) {}
+  }
+  restore();
+
+  // ---------- dynamic load list ----------
+  function populateAddSelect() {
+    $("addItemSelect").innerHTML = "<option value=\"\">Add an item…</option>" +
+      PRESETS.map(function (p) {
+        return "<option value=\"" + p.id + "\">" + esc(p.name) + " — " + p.wh + " " + p.unit + "</option>";
+      }).join("") +
+      "<option value=\"__custom\">Custom item…</option>";
+  }
+  populateAddSelect();
+
+  function renderList() {
+    var wrap = $("loadList");
+    wrap.innerHTML = "";
+    state.items.forEach(function (it) {
+      var preset = it.custom ? null : PRESET_BY_ID[it.presetId];
+      if (!it.custom && !preset) return;
+      var displayName = it.custom ? (it.name || "custom item") : preset.name;
+      var row = document.createElement("div");
+      row.className = "load-row";
+      var rm = document.createElement("button");
+      if (it.custom) {
+        var nameIn = document.createElement("input");
+        nameIn.type = "text"; nameIn.maxLength = 40;
+        nameIn.placeholder = "Name it (e.g. drone batteries)";
+        nameIn.value = it.name;
+        nameIn.setAttribute("aria-label", "Custom item name");
+        nameIn.addEventListener("input", function () {
+          it.name = nameIn.value;
+          rm.setAttribute("aria-label", "Remove " + (it.name || "custom item"));
+          recalc();
+        });
+        row.appendChild(nameIn);
+      } else {
+        var ln = document.createElement("span");
+        ln.className = "ln";
+        ln.appendChild(document.createTextNode(preset.name));
+        if (preset.qtyLabel) {
+          var sm = document.createElement("small");
+          sm.textContent = "qty = " + preset.qtyLabel;
+          ln.appendChild(sm);
+        }
+        row.appendChild(ln);
+      }
+      var qwrap = document.createElement("span");
+      qwrap.className = "qty";
+      qwrap.setAttribute("role", "group");
+      qwrap.setAttribute("aria-label", "Quantity of " + displayName);
+      var minus = document.createElement("button");
+      minus.type = "button"; minus.textContent = "\u2212";
+      minus.setAttribute("aria-label", "Fewer of " + displayName);
+      var qv = document.createElement("span");
+      qv.className = "qv"; qv.textContent = it.qty;
+      var plus = document.createElement("button");
+      plus.type = "button"; plus.textContent = "+";
+      plus.setAttribute("aria-label", "More of " + displayName);
+      minus.addEventListener("click", function () { it.qty = clamp(it.qty - 1, 1, 9); it.auto = false; qv.textContent = it.qty; recalc(); });
+      plus.addEventListener("click", function () { it.qty = clamp(it.qty + 1, 1, 9); it.auto = false; qv.textContent = it.qty; recalc(); });
+      qwrap.appendChild(minus); qwrap.appendChild(qv); qwrap.appendChild(plus);
+      row.appendChild(qwrap);
+      var whIn = document.createElement("input");
+      whIn.type = "number"; whIn.min = 0; whIn.max = 20000; whIn.step = 5; whIn.inputMode = "numeric";
+      whIn.value = it.wh;
+      whIn.setAttribute("aria-label", displayName + " watt-hours");
+      whIn.addEventListener("input", function () { it.wh = clamp(num(whIn.value, 0), 0, 20000); recalc(); });
+      row.appendChild(whIn);
+      var un = document.createElement("span");
+      un.className = "lu";
+      un.textContent = preset ? preset.unit : "Wh/day";
+      row.appendChild(un);
+      rm.type = "button"; rm.className = "rm"; rm.textContent = "\u00d7";
+      rm.setAttribute("aria-label", "Remove " + displayName);
+      rm.addEventListener("click", function () {
+        var i = state.items.indexOf(it);
+        if (i >= 0) state.items.splice(i, 1);
+        renderList(); recalc();
+      });
+      row.appendChild(rm);
+      wrap.appendChild(row);
+    });
+    $("emptyHint").style.display = state.items.length ? "none" : "";
+  }
+
+  $("addItemBtn").addEventListener("click", function () {
+    var v = $("addItemSelect").value;
+    if (!v) return;
+    if (v === "__custom") {
+      state.items.push({ presetId: null, custom: true, name: "", wh: 100, qty: 1, auto: false });
+    } else {
+      var p = PRESET_BY_ID[v];
+      if (!p) return;
+      state.items.push({ presetId: v, custom: false, name: "", wh: p.wh, qty: 1, auto: false });
+    }
+    $("addItemSelect").value = "";
+    renderList(); recalc();
+  });
+  $("removeAllBtn").addEventListener("click", function () {
+    state.items = [];
+    renderList(); recalc();
+  });
+  renderList();
+
+  // ---------- steppers ----------
+  function wireStepper(minusId, plusId, valId, get, set, lo, hi) {
+    $(minusId).addEventListener("click", function () { set(clamp(get() - 1, lo, hi)); });
+    $(plusId).addEventListener("click", function () { set(clamp(get() + 1, lo, hi)); });
+  }
+  function setNights(n) {
+    state.nights = n; $("nightsVal").textContent = n;
+    if (!state.touched.acNights) { state.climate.acNights = n; $("acNights").value = n; }
+    $("acNights").max = n;
+    if (state.climate.acNights > n) { state.climate.acNights = n; $("acNights").value = n; }
+    recalc();
+  }
+  function setPeople(n) {
+    state.people = n; $("peopleVal").textContent = n;
+    var changed = false;
+    state.items.forEach(function (it) {
+      if (it.presetId === "phone" && it.auto) { it.qty = clamp(n, 1, 9); changed = true; }
+    });
+    if (changed) renderList();
+    recalc();
+  }
+  wireStepper("nightsMinus", "nightsPlus", "nightsVal", function () { return state.nights; }, setNights, 1, 7);
+  wireStepper("peopleMinus", "peoplePlus", "peopleVal", function () { return state.people; }, setPeople, 1, 4);
+
+  // ---------- pills (radio groups) ----------
+  function wirePills(name, onChange) {
+    var inputs = document.querySelectorAll('input[name="' + name + '"]');
+    inputs.forEach(function (inp) {
+      inp.addEventListener("change", function () {
+        inputs.forEach(function (i) { i.closest("label").classList.toggle("checked", i.checked); });
+        onChange(inp.value);
+      });
+    });
+    return function set(value) {
+      inputs.forEach(function (i) {
+        i.checked = i.value === value;
+        i.closest("label").classList.toggle("checked", i.checked);
+      });
+    };
+  }
+  var setClimatePills = wirePills("climateMode", function (v) { state.climate.mode = v; recalc(); });
+  var setAltPills = wirePills("alt", function (v) { state.recharge.alt = v === "yes"; recalc(); });
+  var setModePills = wirePills("mode", function (v) { state.mode = v; applyMode(); recalc(); });
+
+  document.querySelectorAll('input[name="mode"]').forEach(function (inp) {
+    inp.addEventListener("change", function () {
+      $("modeCardA").classList.toggle("checked", inp.value === "A" && inp.checked);
+      $("modeCardB").classList.toggle("checked", inp.value === "B" && inp.checked);
+    });
+  });
+
+  function applyMode() {
+    var A = state.mode === "A";
+    $("vehiclePickBlock").style.display = A ? "" : "none";
+    $("modeBIntro").style.display = A ? "none" : "";
+    $("modeAResults").style.display = A ? "" : "none";
+    $("modeBResults").style.display = A ? "none" : "";
+    $("modeCardA").classList.toggle("checked", A);
+    $("modeCardB").classList.toggle("checked", !A);
+    $("resultsEyebrow").innerHTML = A ? "5 &middot; Your kit" : "5 &middot; Best vehicles for your trips";
+  }
+
+  // ---------- climate & recharge inputs ----------
+  $("setupSelect").addEventListener("change", function () {
+    state.climate.setup = $("setupSelect").value; state.touched.setup = true; recalc();
+  });
+  $("lowF").addEventListener("input", function () { state.climate.lowF = clamp(num($("lowF").value, 65), -20, 110); recalc(); });
+  $("targetF").addEventListener("input", function () { state.climate.targetF = clamp(num($("targetF").value, 68), 50, 85); recalc(); });
+  $("acNights").addEventListener("input", function () {
+    state.climate.acNights = clamp(Math.round(num($("acNights").value, state.nights)), 0, state.nights);
+    state.touched.acNights = true; recalc();
+  });
+  $("driveHours").addEventListener("input", function () {
+    state.recharge.driveHours = clamp(num($("driveHours").value, 0), 0, 8);
+    $("driveHoursOut").textContent = state.recharge.driveHours + " h";
+    recalc();
+  });
+  $("solarSelect").addEventListener("change", function () { state.recharge.panels = parseInt($("solarSelect").value, 10) || 0; recalc(); });
+  $("seasonSelect").addEventListener("change", function () { state.recharge.season = $("seasonSelect").value; recalc(); });
+
+  // ---------- vehicle picker ----------
+  var GENERICS = { GENERIC_MINIVAN: "Just a minivan", GENERIC_SUV: "Just an SUV / crossover", GENERIC_TRUCK: "Just a truck", GENERIC_VAN: "Just a van" };
+  function buildMakeSelect() {
+    var sel = $("pwMake");
+    var makes = [];
+    VEHICLES.forEach(function (r) { if (r.make !== "ANY" && makes.indexOf(r.make) === -1) makes.push(r.make); });
+    makes.sort(function (a, b) { return a.localeCompare(b); });
+    sel.innerHTML = "";
+    var o0 = document.createElement("option"); o0.value = ""; o0.textContent = "Select make…";
+    sel.appendChild(o0);
+    makes.forEach(function (m) {
+      var o = document.createElement("option"); o.value = m; o.textContent = m; sel.appendChild(o);
+    });
+    var og = document.createElement("optgroup"); og.label = "Not listed?";
+    Object.keys(GENERICS).forEach(function (g) {
+      var o = document.createElement("option"); o.value = "GEN:" + g; o.textContent = GENERICS[g]; og.appendChild(o);
+    });
+    sel.appendChild(og);
+  }
+  buildMakeSelect();
+
+  function rowsFor(make, model) {
+    return VEHICLES.filter(function (r) { return r.make === make && r.model === model; });
+  }
+  function cfgLabel(r) {
+    return (r.trim ? r.trim : "all trims") + " · " + r.yearStart + "–" + r.yearEnd;
+  }
+  function populateModels(make) {
+    var sel = $("pwModel");
+    var models = [];
+    VEHICLES.forEach(function (r) { if (r.make === make && models.indexOf(r.model) === -1) models.push(r.model); });
+    models.sort(function (a, b) { return a.localeCompare(b); });
+    sel.innerHTML = "<option value=\"\">Select model…</option>" + models.map(function (m) {
+      return "<option>" + m + "</option>";
+    }).join("");
+    sel.disabled = false;
+  }
+  function showLoadedVehicle(row) {
+    currentVehicle = row;
+    var el = $("pwLoaded");
+    if (!row) { el.classList.remove("show"); recalc(); return; }
+    var name = row.make === "ANY" ? GENERICS[row.model] : (row.make + " " + row.model + " (" + row.yearStart + "–" + row.yearEnd + ")");
+    var outlet = row.acOutletW > 0
+      ? "Factory outlet: <b style='display:inline'>" + row.acOutletW.toLocaleString("en-US") + "W</b> × " + (row.acOutletCount || 1)
+      : "No factory 120V outlet — 12V sockets only";
+    var badges = "";
+    if (row.hybridClimateHold === true) badges += "<span class='badge hold'>Hybrid climate-hold</span>";
+    if (/verify/i.test(row.note || "")) badges += "<span class='badge verify'>Verify trim</span>";
+    el.innerHTML = "<b>" + name + (row.trim ? " — " + row.trim : "") + "</b>" +
+      outlet + (badges ? "<br>" + badges : "") +
+      (row.note ? "<br>" + row.note : "");
+    el.classList.add("show");
+    if (!state.touched.setup) {
+      var setup = CONSTANTS.SETUP_BY_BODY[row.bodyClass] || "suv";
+      state.climate.setup = setup;
+      $("setupSelect").value = setup;
+    }
+    recalc();
+  }
+  $("pwMake").addEventListener("change", function () {
+    var v = $("pwMake").value;
+    state.vehicleSel = { make: v, model: "", cfg: -1 };
+    $("pwCfgRow").style.display = "none";
+    if (v.indexOf("GEN:") === 0) {
+      var gm = v.slice(4);
+      var row = VEHICLES.filter(function (r) { return r.make === "ANY" && r.model === gm; })[0] || null;
+      $("pwModel").innerHTML = "<option value=\"\">—</option>";
+      $("pwModel").disabled = true;
+      showLoadedVehicle(row);
+    } else if (v) {
+      populateModels(v);
+      showLoadedVehicle(null);
+    } else {
+      $("pwModel").innerHTML = "<option value=\"\">Select a make first</option>";
+      $("pwModel").disabled = true;
+      showLoadedVehicle(null);
+    }
+  });
+  $("pwModel").addEventListener("change", function () {
+    var model = $("pwModel").value;
+    state.vehicleSel.model = model; state.vehicleSel.cfg = -1;
+    if (!model) { $("pwCfgRow").style.display = "none"; showLoadedVehicle(null); return; }
+    var rows = rowsFor($("pwMake").value, model);
+    if (rows.length <= 1) {
+      $("pwCfgRow").style.display = "none";
+      showLoadedVehicle(rows[0] || null);
+    } else {
+      $("pwCfgRow").style.display = "";
+      $("pwCfg").innerHTML = "<option value=\"\">Select one…</option>" + rows.map(function (r, i) {
+        return "<option value=\"" + i + "\">" + cfgLabel(r) + "</option>";
+      }).join("");
+      showLoadedVehicle(null);
+    }
+  });
+  $("pwCfg").addEventListener("change", function () {
+    var idx = parseInt($("pwCfg").value, 10);
+    state.vehicleSel.cfg = isFinite(idx) ? idx : -1;
+    var rows = rowsFor($("pwMake").value, $("pwModel").value);
+    showLoadedVehicle(isFinite(idx) ? rows[idx] : null);
+  });
+
+  // ---------- rendering ----------
+  var ROLE_LABELS = { hub: "Power hub", expansion: "Expansion battery", "ac-bank": "Dedicated AC battery", climate: "Climate", vent: "Vent kit", charger: "Drive-time charging", solar: "Solar" };
+  function ecoflowLink(p) {
+    var q = p.name.replace(/\s*\(.*\)$/, "");
+    return "https://us.ecoflow.com/search?q=" + encodeURIComponent(q);
+  }
+  function esc(s) {
+    return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  }
+  function shortNote(p) {
+    var n = (p.note || "").split(". ")[0];
+    return n.length > 110 ? n.slice(0, 107) + "…" : n;
+  }
+  function kitCardHtml(it) {
+    var p = it.p;
+    return "<a class='kit-card' href='" + ecoflowLink(p) + "' rel='sponsored noopener' target='_blank'>" +
+      "<span class='kr'>" + ROLE_LABELS[it.role] + (it.qty > 1 ? " ×" + it.qty : "") + "</span>" +
+      "<span class='kn'>" + esc(p.name) + "</span>" +
+      "<span class='kp'>" + (p.priceUsd != null ? fmtUsd(p.priceUsd * it.qty) : "see listing") + "</span>" +
+      "<span class='kd'>" + esc(shortNote(p)) + "</span></a>";
+  }
+  function comboName(combo) {
+    return combo.items.map(function (it) {
+      return it.p.name.replace(/\s*\(.*\)$/, "") + (it.qty > 1 ? " ×" + it.qty : "");
+    }).join(" + ");
+  }
+
+  function collectLoads() {
+    var out = [];
+    state.items.forEach(function (it) {
+      var preset = it.custom ? null : PRESET_BY_ID[it.presetId];
+      if (!it.custom && !preset) return;
+      var qty = clamp(Math.round(num(it.qty, 1)), 1, 9);
+      var per = Math.max(0, num(it.wh, 0));
+      var total = per * qty;
+      var acW = preset && preset.acW ? preset.acW : 0;
+      if (total <= 0 && !acW) return;
+      var label = it.custom ? (it.name || "Custom item") : preset.name;
+      if (qty > 1) label += " × " + qty;
+      out.push({ key: it.presetId || "custom", label: label, whPerDay: total, acW: acW, ambientScaled: !!(preset && preset.ambient) });
+    });
+    return out;
+  }
+
+  function buildInputs() {
+    return {
+      vehicle: currentVehicle || { acOutletW: 0, hybridClimateHold: null, bodyClass: null },
+      nights: state.nights,
+      loads: collectLoads(),
+      climate: {
+        mode: state.climate.mode, setup: state.climate.setup,
+        lowF: state.climate.lowF, targetF: state.climate.targetF,
+        acNights: state.climate.acNights
+      },
+      recharge: {
+        driveHours: state.recharge.driveHours, alt: state.recharge.alt,
+        panels: state.recharge.panels, season: state.recharge.season
+      }
+    };
+  }
+
+  function climateHints(plan) {
+    var el = $("climateHint");
+    var msgs = [];
+    if (plan.wantsAC && plan.ac.notNeeded) msgs.push("At a " + state.climate.lowF + "°F overnight low and a " + state.climate.targetF + "°F target, you may not need AC that night — a fan covers it. We've still included the WAVE 3 since you asked for it; drop to “No AC” to see the smaller kit.");
+    if (plan.wantsAC && state.climate.setup === "groundTent") msgs.push("Ground-tent honesty: a portable AC moderates a tent, it can't fully condition one. Expect the inside to run warmer than the target on hot nights.");
+    if (plan.wantsAC && plan.ac.maxedOut) msgs.push("That temperature gap pushes the WAVE 3 to its 690W ceiling — it will run flat-out and may lose ground on the hottest nights.");
+    if (msgs.length) { el.style.display = ""; el.innerHTML = msgs.map(esc).join("<br><br>"); }
+    else { el.style.display = "none"; el.innerHTML = ""; }
+  }
+
+  function renderModeA(plan) {
+    var v = $("verdict");
+    var kit = plan.kit;
+    if (!kit) { v.className = "verdict bad"; v.textContent = "No kit fits — reduce loads or nights."; return; }
+    var shortfall = kit.capacityWh < plan.batteryNeedWh;
+    var vclass = shortfall ? "verdict bad" : (plan.batteryNeedWh > 4000 ? "verdict blocks" : "verdict");
+    var vname = currentVehicle && currentVehicle.make !== "ANY" ? currentVehicle.make + " " + currentVehicle.model : "your vehicle";
+    var vt = "<b>" + fmtKwh(kit.capacityWh) + " kWh</b> of battery" +
+      (plan.needACgear ? " + the <b>WAVE 3</b>" : "") +
+      " covers <b>" + plan.nights + " night" + (plan.nights > 1 ? "s" : "") + "</b> between recharges" +
+      (plan.acNights && plan.needACgear ? " with AC on " + plan.acNights + " of them" : "") +
+      " — <b>" + fmtUsd(kit.totalPrice) + "</b> total.";
+    if (shortfall) vt = "Your trip needs ~<b>" + fmtKwh(plan.batteryNeedWh) + " kWh</b> — more than the biggest sane stack. Shorten the gap between recharges, add drive hours or solar, or trim the AC nights. Shown: the ceiling option.";
+    v.className = vclass;
+    v.innerHTML = vt;
+
+    $("kitCards").innerHTML = kit.items.map(kitCardHtml).join("");
+    $("kitTotals").innerHTML =
+      "<span class='stat'>Total <b>" + fmtUsd(kit.totalPrice) + "</b></span>" +
+      "<span class='stat'>Battery <b>" + fmtKwh(kit.capacityWh) + " kWh</b> (need ~" + fmtKwh(plan.batteryNeedWh) + ")</span>" +
+      "<span class='stat'>Weight <b>" + kit.totalWeightLb + " lb</b>" + (kit.weightIncomplete ? " + items w/o published weight" : "") + "</span>" +
+      (plan.autonomyDays != null ? "<span class='stat'>Autonomy without driving <b>" + plan.autonomyDays + " days</b></span>" : "");
+
+    var tb = $("budgetBody"), rows = "";
+    plan.loads.forEach(function (L) {
+      rows += "<tr><td>" + esc(L.label) + (L.ambientScaled ? " <span style='color:var(--ink-soft)'>(" + plan.ambient + " ambient)</span>" : "") + "</td><td class='num'>" + Math.round(L.wh) + " Wh/day</td></tr>";
+    });
+    if (plan.needACgear) {
+      rows += "<tr><td>WAVE 3 " + (plan.ac.mode === "heat" ? "heating" : "cooling") + ", " + plan.acNights + " of " + plan.nights + " nights (avg " + plan.ac.avgW + "W over 8 h)</td><td class='num'>" + plan.ac.whPerNight + " Wh/night</td></tr>";
+    }
+    rows += "<tr><td>Daily recharge credit (drive " + plan.driveWh + " Wh" + (plan.solar.whPerDay ? " + solar " + plan.solar.whPerDay + " Wh" : "") + ")</td><td class='num'>&minus;" + plan.rechargeWhPerDay + " Wh/day</td></tr>";
+    rows += "<tr class='total'><td>Battery target (worst-day deficit ÷ 0.85 efficiency)</td><td class='num'>" + Math.round(plan.batteryNeedWh) + " Wh</td></tr>";
+    rows += "<tr class='total'><td>Recommended capacity</td><td class='num'>" + kit.capacityWh + " Wh</td></tr>";
+    tb.innerHTML = rows;
+    $("budgetTable").style.display = "";
+
+    var lines = [];
+    var cp = plan.chargePower;
+    if (cp.source === "outlet" && cp.outletW >= 1000) {
+      lines.push("Your " + esc(vname) + "'s " + cp.outletW.toLocaleString("en-US") + "W outlet refills this stack in about " + plan.refillHours + " h of engine-on time (sustained ~" + cp.watts + "W into the charger).");
+    } else if (cp.source === "outlet") {
+      lines.push("Your " + esc(vname) + "'s " + cp.outletW + "W outlet charges at ~" + cp.watts + "W with the engine running — a full refill takes about " + plan.refillHours + " h.");
+    } else if (cp.source === "alt") {
+      lines.push("2 h of driving with the 800W Alternator Charger puts back ~1.4 kWh; a full refill of this stack takes about " + plan.refillHours + " h of driving.");
+    } else {
+      lines.push("Recharging from the 12V socket only (~105W): a full refill of this stack would take about " + plan.refillHours + " h of engine time — plan around it or see the upgrade below.");
+    }
+    if (state.recharge.driveHours > 0) lines.push("Each travel day puts back ~" + fmtKwh(plan.driveWh) + " kWh from driving" + (plan.solar.whPerDay ? " plus ~" + fmtKwh(plan.solar.whPerDay) + " kWh from " + state.recharge.panels + " × " + plan.solar.panel.ratedW + "W solar" : "") + ".");
+    else if (plan.solar.whPerDay) lines.push("Your " + state.recharge.panels + " × " + plan.solar.panel.ratedW + "W panel" + (state.recharge.panels > 1 ? "s" : "") + " put back ~" + fmtKwh(plan.solar.whPerDay) + " kWh per camp day (" + state.recharge.season + " sun).");
+    if (state.recharge.alt && cp.source !== "alt") lines.push("The 800W Alternator Charger you're installing adds a ~700W engine-on charging path — useful when the factory outlet is occupied or the station rides up front.");
+    if (plan.needACgear) lines.push("Run the WAVE 3 from the station stack over its XT150 DC port — it draws ~640W DC and skips inverter losses.");
+    plan.suggestions.forEach(function (s) { lines.push(s); });
+    $("planLines").innerHTML = lines.map(function (l) { return "<li>" + l + "</li>"; }).join("");
+
+    var alts = "";
+    if (plan.budget) {
+      var bN = nightsCovered(plan.budget.combo.capacityWh, plan.grossDailyExact, plan.budget.rechargeWh, plan.nights);
+      var tradeoff = plan.needACgear
+        ? "Trade-off: skip AC on the hottest nights, or shorten to " + Math.max(1, bN) + " night" + (bN === 1 ? "" : "s") + " between recharges."
+        : "Trade-off: covers ~" + Math.max(1, bN) + " night" + (bN === 1 ? "" : "s") + " instead of " + plan.nights + ".";
+      alts += "<div class='alt-card'><div class='at'>Budget option — one tier down</div><div class='an'>" + esc(comboName(plan.budget.combo)) + "</div><div class='ap'>" + fmtUsd(plan.budget.combo.price) + " for the battery side</div><div class='ad'>" + tradeoff + "</div></div>";
+    }
+    if (plan.comfort) {
+      alts += "<div class='alt-card'><div class='at'>Comfort option — one tier up</div><div class='an'>" + esc(comboName(plan.comfort.combo)) + "</div><div class='ap'>" + fmtUsd(plan.comfort.combo.price) + " for the battery side</div><div class='ad'>Adds " + fmtKwh(plan.comfort.combo.capacityWh - plan.kit.capacityWh) + " kWh of headroom — cloudy days, an extra night, or a guest's gear.</div></div>";
+    }
+    $("altGrid").innerHTML = alts;
+    renderSafety(plan);
+  }
+
+  // Compute the CO/air-quality + fire-extinguisher recommendations from the live plan.
+  function renderSafety(plan) {
+    var setup = state.climate.setup;
+    var isTent = setup === "rooftopTent" || setup === "groundTent";
+    var closedVehicle = !isTent; // any non-tent sleeping class is an enclosed cabin
+    var loadKeys = {};
+    (plan.loads || []).forEach(function (L) { loadKeys[L.key] = true; });
+    var hasCombustion = !!loadKeys.dieselHeater; // only combustion heat we model
+    var cooksInside = !!(loadKeys.inductionMeal || loadKeys.kettleBoil);
+    var capWh = plan.kit ? plan.kit.capacityWh : 0;
+    var bigBattery = capWh >= 2000;
+    var waveInKit = !!plan.needACgear;
+
+    var items = [];
+
+    // ---- CO detector(s) ----
+    var coCount = 1;
+    var coCrit = hasCombustion;
+    var coPlace = "Mount one battery-powered, RV-rated CO detector in the sleeping area at roughly breathing height near where your head lies — follow the unit's own mounting instructions: not directly above or beside a combustion appliance, and not tucked into a dead-air corner.";
+    var coTitle = "RV-rated CO detector";
+    if (hasCombustion) {
+      coTitle = "RV-rated CO detector — non-negotiable";
+      coPlace = "You're running a diesel heater, so a working CO detector is non-negotiable: mount one battery-powered, RV-rated unit at breathing height near the sleeper, away from the heater outlet and out of dead-air corners. Never run any combustion heater that isn't ducted fully outside.";
+      if (setup === "rooftopTent") {
+        coCount = 2; // rooftop tent + the vehicle cab below are two separately occupied spaces
+        coPlace += " Because a rooftop tent and the cab below are separate occupied spaces, put a detector in each.";
+      }
+    }
+    items.push(safetyItem("&#128585;", coCount, coCrit, coTitle, coPlace));
+
+    // ---- Ventilation / CO2 note for enclosed cabins ----
+    if (closedVehicle) {
+      var vent = "A sealed cabin also builds up CO2 from your own breathing — not deadly like CO, but it causes the heavy, groggy morning head. Always crack a window or run a vent fan while you sleep.";
+      if (waveInKit) vent += " Good news: running the WAVE 3 on its Car Vent Kit already keeps a window cracked around the hose, so that airflow path is built in.";
+      items.push(safetyNote("&#128168;", "Crack a window — CO2 &amp; air quality", vent));
+    }
+
+    // ---- CO vs CO2 one-liner (always, so nobody buys the wrong device) ----
+    items.push(safetyNote("&#8505;&#65039;", "CO vs CO2 — buy the right sensor",
+      "Two different gases: <b>carbon monoxide (CO)</b> is the silent killer from any combustion (heater, generator, campfire drawn in) — that's what the detector above is for. <b>Carbon dioxide (CO2)</b> is what you exhale; it makes a sealed space stuffy and drowsy but isn't acutely lethal, and a CO detector will not sense it. Fix CO2 with ventilation, not a CO alarm."));
+
+    // ---- Smoke/CO combo near the galley if cooking inside ----
+    if (cooksInside) {
+      items.push(safetyItem("&#128293;", 1, false, "Smoke / CO combo alarm at the galley",
+        "You're cooking inside, so add a smoke/CO combo alarm near — but not directly over — the cooking area. Mounted right above the stove it will nuisance-trip on steam and searing; a few feet to the side catches real smoke without crying wolf."));
+    }
+
+    // ---- Fire extinguisher(s) ----
+    items.push(safetyItem("&#129519;", 1, false, "2.5 lb ABC fire extinguisher (1-A:10-B:C)",
+      "Mount one within arm's reach of your sleeping position — on a bracket, never buried in a drawer you'd have to dig through in the dark. Check the pressure gauge is in the green once a month."));
+    if (cooksInside) {
+      items.push(safetyItem("&#129519;", 1, false, "Second extinguisher at the galley",
+        "Add a second 2.5 lb ABC unit near the galley or tailgate, mounted on the exit-side of the cooking spot so reaching it never means reaching across the flames. Same monthly gauge check."));
+    }
+    if (bigBattery) {
+      items.push(safetyNote("&#9889;", "Lithium battery caveat",
+        "Your recommended kit carries " + fmtKwh(capWh) + " kWh of battery. An ABC extinguisher handles a surrounding fire, but it cannot stop lithium thermal runaway once a cell lets go. If a battery hisses, swells, or vents, don't fight it — get everyone out and put distance between you and the pack. LiFePO4 (what EcoFlow uses) is far more stable than the pouch cells in phones and laptops, but it is not fireproof; keep the station out of direct sun and off soft bedding while charging."));
+    }
+
+    var lead = "Counts below update as you change your loads, sleeping setup, and kit. This is planning guidance — always follow each device's own instructions.";
+    $("safetyLead").innerHTML = lead;
+    $("safetyList").innerHTML = items.join("");
+  }
+  function safetyItem(ico, count, crit, title, body) {
+    return "<div class='safety-item" + (crit ? " crit" : "") + "'>" +
+      "<span class='safety-count'>" + count + "</span>" +
+      "<span class='si-ico' aria-hidden='true'>" + ico + "</span>" +
+      "<span class='si-body'><b>" + title + "</b><span>" + body + "</span></span></div>";
+  }
+  function safetyNote(ico, title, body) {
+    return "<div class='safety-item note-item'>" +
+      "<span class='si-ico' aria-hidden='true'>" + ico + "</span>" +
+      "<span class='si-body'><b>" + title + "</b><span>" + body + "</span></span></div>";
+  }
+
+  function renderModeB(inp) {
+    var ranked = scoreVehicles(inp);
+    var v = $("verdict");
+    v.className = "verdict";
+    v.innerHTML = "Ranked by factory camping power for <b>your</b> trip profile — outlet wattage (log-scaled), hybrid climate-hold, and body thermals. Each shows the EcoFlow kit it pairs with.";
+    $("rankList").innerHTML = ranked.map(function (e, i) {
+      var r = e.row, plan = e.plan, kit = plan.kit;
+      var badges = "";
+      if (r.hybridClimateHold === true) badges += "<span class='badge hold'>Climate-hold</span>";
+      if (e.verify) badges += "<span class='badge verify'>Verify trim</span>";
+      badges += "<span class='badge plain'>" + (r.acOutletW > 0 ? r.acOutletW.toLocaleString("en-US") + "W outlet" : "12V only") + "</span>";
+      var holdLine = e.holdReplacesAC
+        ? "<div class='rstory' style='color:var(--vial);font-weight:700'>Hybrid climate-hold can replace the AC kit entirely — the vehicle holds cabin temperature overnight, so no WAVE 3 or AC battery needed.</div>"
+        : "";
+      var kitLine = kit
+        ? "Pairs with: <b>" + esc(kit.items.map(function (it) { return it.p.name.replace(/\s*\(.*\)$/, "") + (it.qty > 1 ? " ×" + it.qty : ""); }).join(" + ")) + "</b> — " + fmtUsd(kit.totalPrice) + " · " + fmtKwh(kit.capacityWh) + " kWh" + (plan.autonomyDays != null ? " · " + plan.autonomyDays + " days autonomy" : "")
+        : "";
+      return "<div class='rank-card'><div class='pos'>" + (i + 1) + "</div><div class='rbody'>" +
+        "<div class='rv'>" + esc(r.make + " " + r.model) + " <span style='font-weight:400;color:var(--ink-soft)'>" + r.yearStart + "–" + r.yearEnd + "</span></div>" +
+        (r.trim ? "<div class='rtrim'>" + esc(r.trim) + "</div>" : "") +
+        "<div style='margin-top:4px'>" + badges + "</div>" +
+        "<div class='rstory'>" + esc(e.story) + "</div>" + holdLine +
+        "<div class='rkit'>" + kitLine + "</div>" +
+        "</div></div>";
+    }).join("");
+  }
+
+  function recalc() {
+    var inp = buildInputs();
+    if (state.mode === "A") {
+      var plan = computePlan(inp);
+      climateHints(plan);
+      renderModeA(plan);
+    } else {
+      var planB = computePlan(inp); // for climate hints against generic assumptions
+      climateHints(planB);
+      renderModeB(inp);
+    }
+    persist();
+  }
+
+  // ---------- apply restored state to the DOM ----------
+  function applyRestored() {
+    setModePills(state.mode);
+    applyMode();
+    $("nightsVal").textContent = state.nights;
+    $("peopleVal").textContent = state.people;
+    setClimatePills(state.climate.mode);
+    setAltPills(state.recharge.alt ? "yes" : "no");
+    $("setupSelect").value = state.climate.setup;
+    $("lowF").value = state.climate.lowF;
+    $("targetF").value = state.climate.targetF;
+    $("acNights").value = state.climate.acNights;
+    $("acNights").max = state.nights;
+    $("driveHours").value = state.recharge.driveHours;
+    $("driveHoursOut").textContent = state.recharge.driveHours + " h";
+    $("solarSelect").value = String(state.recharge.panels);
+    $("seasonSelect").value = state.recharge.season;
+    // vehicle
+    var vs = state.vehicleSel;
+    if (vs.make) {
+      $("pwMake").value = vs.make;
+      if ($("pwMake").value !== vs.make) { state.vehicleSel = { make: "", model: "", cfg: -1 }; return; }
+      if (vs.make.indexOf("GEN:") === 0) {
+        var gm = vs.make.slice(4);
+        $("pwModel").innerHTML = "<option value=\"\">—</option>"; $("pwModel").disabled = true;
+        showLoadedVehicle(VEHICLES.filter(function (r) { return r.make === "ANY" && r.model === gm; })[0] || null);
+        return;
+      }
+      populateModels(vs.make);
+      if (vs.model) {
+        $("pwModel").value = vs.model;
+        if ($("pwModel").value !== vs.model) return;
+        var rows = rowsFor(vs.make, vs.model);
+        if (rows.length <= 1) { showLoadedVehicle(rows[0] || null); }
+        else {
+          $("pwCfgRow").style.display = "";
+          $("pwCfg").innerHTML = "<option value=\"\">Select one…</option>" + rows.map(function (r, i) {
+            return "<option value=\"" + i + "\">" + cfgLabel(r) + "</option>";
+          }).join("");
+          if (vs.cfg >= 0 && vs.cfg < rows.length) {
+            $("pwCfg").value = String(vs.cfg);
+            showLoadedVehicle(rows[vs.cfg]);
+          }
+        }
+      }
+    }
+  }
+  applyRestored();
+  recalc();
+})();
+</script>
+</body>
+</html>
